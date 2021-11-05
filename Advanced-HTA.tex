@@ -165,7 +165,7 @@ According to \citet{goeree2015health}, the reasons for rejection are:
 
 The use of open-source programming languages, such as \texttt{R}, in health decision sciences is growing and has the potential to facilitate model transparency, reproducibility, and shareability. However, realizing this potential can be challenging. Models are complex and primarily built to answer a research question, with model sharing and transparency relegated to being secondary goals. Moreover, many decision modelers are not formally trained in computer programming and may lack good coding practices, further compounding the problem of model transparency. \textbf{Therefore, throughout this course, the programming language \texttt{R} will be used to show its potential for advanced modelling in the context of HTA.}
 
-To install \texttt{R} and \texttt{Rstudio}, you can follow the next \href{https://rstudio-education.github.io/hopr/starting.html}{link} with instructions.
+For this course, we will be using the book \href{https://r4ds.had.co.nz/}{``R for Data Science''}. To install \texttt{R} and \texttt{Rstudio}, instructions are provided in Chapter 1 of this book. We will also use Excel throughout this course.
 
 \hypertarget{evaluation}{%
 \section*{Evaluation}\label{evaluation}}
@@ -249,6 +249,15 @@ The main assignment will require students to produce a scaled down HTA, with a f
 \hypertarget{HTA}{%
 \chapter{What is HTA?}\label{HTA}}
 
+\hypertarget{pre-session-readings}{%
+\section{Pre-session readings}\label{pre-session-readings}}
+
+\emph{Goodman, C. S. (2004). Introduction to health technology assessment. The Lewin Group. virginia, USA.} \href{https://www.nlm.nih.gov/nichsr/hta101/ta10101.html}{link}. Chapters 1, 2, and 5.
+
+\emph{Briggs, A., Sculpher, M., \& Claxton, K. (2006). Decision modelling for health economic evaluation. Oxford University Press.} Chapter 1.
+
+Chapters 1 and 2 of \emph{R for data science}.
+
 \hypertarget{definition-and-rationale}{%
 \section{Definition and rationale}\label{definition-and-rationale}}
 
@@ -325,31 +334,203 @@ Once we have seen the definition and rationale for conducting HTAs, it is import
 \hypertarget{hta-process}{%
 \section{HTA process}\label{hta-process}}
 
-\hypertarget{literature}{%
-\chapter{Literature}\label{literature}}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Identification and prioritization of technologies
+\item
+  Clear specification of the problem
+\item
+  Technology assessment and review
 
-Here is a review of existing methods.
+  \begin{itemize}
+  \tightlist
+  \item
+    Evidence and systematic literature review
+  \item
+    Aggregation and appraisal of evidence
+  \item
+    Synthesize and consolidate
+  \item
+    Collect primary data (if necessary)
+  \item
+    Economic evaluation, budget and health system impact
+  \item
+    Assessment of social, legal, and ethical consideration
+  \item
+    Formulation of finding
+  \end{itemize}
+\item
+  Dissemination and implementation of recommendations
+\item
+  Monitor the impact of assessment reports
+\end{enumerate}
 
-\hypertarget{methods}{%
-\chapter{Methods}\label{methods}}
+\hypertarget{identification-and-prioritization-of-technologies}{%
+\subsection{Identification and prioritization of technologies}\label{identification-and-prioritization-of-technologies}}
 
-We describe our methods in this chapter.
+\begin{itemize}
+\tightlist
+\item
+  Drugs seeking public or private reimbursement
+\item
+  Variable for non-drug technologies. However candidates:
 
-\hypertarget{applications}{%
-\chapter{Applications}\label{applications}}
+  \begin{itemize}
+  \tightlist
+  \item
+    High potential to improve health outcomes, reduce harm or decrease costs with similar efficacy
+  \item
+    Large numbers of individuals affected
+  \item
+    Political pressure
+  \item
+    Unmet needs---no current treatment
+  \end{itemize}
+\end{itemize}
 
-Some \emph{significant} applications are demonstrated in this chapter.
+\hypertarget{clear-specification-of-the-problem}{%
+\subsection{Clear specification of the problem}\label{clear-specification-of-the-problem}}
 
-\hypertarget{example-one}{%
-\section{Example one}\label{example-one}}
+\begin{itemize}
+\tightlist
+\item
+  Problem statements need to consider:
 
-\hypertarget{example-two}{%
-\section{Example two}\label{example-two}}
+  \begin{itemize}
+  \tightlist
+  \item
+    Patient population affected (indication; epidemiology)
+  \item
+    Intervention being considered (drug, device, new/old)
+  \item
+    Comparators
+  \item
+    Outcome(s) or interest
+  \item
+    Setting (e.g.~hospital, community)
+  \end{itemize}
+\item
+  Well formulated question
+\end{itemize}
 
-\hypertarget{final-words}{%
-\chapter{Final Words}\label{final-words}}
+\hypertarget{technology-assessment-and-review}{%
+\subsection{Technology assessment and review}\label{technology-assessment-and-review}}
 
-We have finished a nice book.
+\hypertarget{evidence-and-systematic-literature-review}{%
+\subsubsection{Evidence and systematic literature review}\label{evidence-and-systematic-literature-review}}
+
+\begin{itemize}
+\tightlist
+\item
+  A comprehensive search of the literature based on systematic methods is essential
+\item
+  2 main types of resources relevant to HTA:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Published literature
+  \item
+    Grey literature
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{identification-aggregation-appraisal-of-evidence}{%
+\subsubsection{Identification, aggregation \& appraisal of evidence}\label{identification-aggregation-appraisal-of-evidence}}
+
+\begin{itemize}
+\tightlist
+\item
+  Objective, systematic process for screening and determine studies to be included in the synthesis
+\item
+  Classify the studies
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Randomised, non-randomised and economic
+  \end{itemize}
+\item
+  Critical appraisal of the quality of the evidence
+\end{itemize}
+
+\hypertarget{synthesize-consolidate}{%
+\subsubsection{Synthesize \& consolidate}\label{synthesize-consolidate}}
+
+\begin{itemize}
+\tightlist
+\item
+  Findings from multiple studies often combined to respond to the HTA question
+\item
+  Techniques commonly used to synthesize data in HTA are:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Meta-analysis, meta-regression
+  \item
+    Network meta-analysis
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{economic-evaluation}{%
+\subsubsection{Economic evaluation}\label{economic-evaluation}}
+
+\begin{itemize}
+\tightlist
+\item
+  Measures the incremental costs and benefits of the technology under review compared to one or more relevant technologies
+\item
+  CEA, CUA and CBA
+\item
+  Budget impact
+\end{itemize}
+
+\hypertarget{assessment-of-social-legal-ethical-considerations}{%
+\subsubsection{Assessment of social, legal \& ethical considerations}\label{assessment-of-social-legal-ethical-considerations}}
+
+\begin{itemize}
+\tightlist
+\item
+  Example: genetic information (why?)
+\item
+  Any access or equity issues following the dissemination and implementation of technologies?
+\end{itemize}
+
+\hypertarget{formulation-of-findings}{%
+\subsubsection{Formulation of findings}\label{formulation-of-findings}}
+
+\begin{itemize}
+\tightlist
+\item
+  Explicitly link quality of the evidence to the strength of findings and recommendations as well as any limitations
+\item
+  Recommendations based on the findings that reflect the original question(s)
+\end{itemize}
+
+\hypertarget{dissemination-of-recommendations}{%
+\subsection{Dissemination of recommendations}\label{dissemination-of-recommendations}}
+
+\begin{itemize}
+\tightlist
+\item
+  Findings translated into relevant and understandable information
+\item
+  Knowledge translation
+\end{itemize}
+
+\hypertarget{monitoring-the-impact-of-reports}{%
+\subsection{Monitoring the impact of reports}\label{monitoring-the-impact-of-reports}}
+
+\begin{itemize}
+\tightlist
+\item
+  Some recommendations are translated into policies with clear and quantifiable impacts (e.g.~adoption of new technology, change in reimbursement)
+\item
+  Others go ignored and are not readily adopted into general practice
+\end{itemize}
 
   \bibliography{book.bib,packages.bib}
 
