@@ -1,0 +1,10 @@
+fig:expectancy
+HTA
+definition-and-rationale
+hta-process
+literature
+methods
+applications
+example-one
+example-two
+final-words
