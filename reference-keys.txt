@@ -14,3 +14,4 @@ assessment-of-social-legal-ethical-considerations
 formulation-of-findings
 dissemination-of-recommendations
 monitoring-the-impact-of-reports
+excercises
