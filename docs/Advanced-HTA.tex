@@ -77,7 +77,7 @@
 
 \title{Advanced decision modelling in the context of Health Technology Assessment}
 \author{Juan Pablo Diaz Martinez}
-\date{2021-11-08}
+\date{2021-11-11}
 
 \begin{document}
 \maketitle
@@ -583,6 +583,32 @@ Chapter 3 of \emph{R for data science}.
 \emph{Gray, A. M., Clarke, P. M., Wolstenholme, J. L., \& Wordsworth, S. (2011). Applied methods of cost-effectiveness analysis in healthcare (Vol. 3). Oxford University Press.} Chapter 2. Sections 8.1 to 8.4
 
 \emph{Buxton, M. J., Drummond, M. F., Van Hout, B. A., Prince, R. L., Sheldon, T. A., Szucs, T., \& Vray, M. (1997). Modelling in ecomomic evaluation: an unavoidable fact of life. Health economics, 6(3), 217-227.}
+
+\hypertarget{economic-evaluation-1}{%
+\section{Economic evaluation}\label{economic-evaluation-1}}
+
+Cost-effectiveness analysis (CEA) and cost-utility analysis (CUA) have been proposed as methods for comparing alternative uses of scarce health-care resources. The difference between CEA and CUA lies in the way outputs are measured.
+
+We can find different objectives of CEA across the literature:
+
+\emph{``The underlying premise of cost-effectiveness analysis in health problems is that for any given level of resources available, society (or the decision making jurisdiction involved) wishes to maximize the total aggregate health benefits conferred''} \citet{weinstein1977foundations}.
+
+\emph{``For any given rate of output {[}the combination of inputs{]} . that costs the decision maker least''} \citet{culyer1980political}
+
+\emph{``a method of determining the most efficient way of dealing with a specified health problem''} \citet{green1988priority}
+
+The goal of CEA is to maximize health benefits produced from a given level of resources. Therefore, it is consistent with welfare economics concept of Pareto efficiency \citep{birch1992cost} (Fig).
+
+In practice, CEA \textbf{relaxes the constraint on available resources}. Because the focus of the evaluation is not a fixed resource pool, but a specific programme making demands on resources, the comparison of the programme under evaluation with an existing programme (e.g., services aimed at improving FS) must consider not only the inter-programme differences in outputs (incremental benefits), but also the inter-programme differences in resources used (incremental costs).
+
+Weinstein and Stason (1977) state that: \emph{``the criterion for cost-effectiveness is the ratio of the net increase of health-care costs to the net effectiveness. The lower the value of this ratio, the higher the priority in terms of maximizing benefits derived from a given health expenditure''}. Issue is that applying a ratio does nod lead to the maximization of benefits from a fixed resource pool (movement from A to C in Figure). \textbf{The real problem of the application of CEA is the failure to adhere strictly to the notion of opportunity cost in the measurement of the (incremental) cost of a programme.} The existing programme represents a true opportunity cost for the entire resource requirements of the new programme, even though it does not absorb this level of resources.
+
+\hypertarget{cost-effectiveness-in-practive}{%
+\subsection{Cost-effectiveness in practive}\label{cost-effectiveness-in-practive}}
+
+As mentioned before, CEA include both costs and effects, which are represented graphically in a plane:
+
+\emph{Figura}
 
   \bibliography{book.bib,packages.bib}
 

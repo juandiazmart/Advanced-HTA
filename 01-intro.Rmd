@@ -1,0 +1,151 @@
+# What is HTA? {#HTA}
+
+## Pre-session readings
+
+*Goodman, C. S. (2004). Introduction to health technology assessment. The Lewin Group. virginia, USA.* [link](https://www.nlm.nih.gov/nichsr/hta101/ta10101.html). Chapters 1, 2, and 5.
+
+*Briggs, A., Sculpher, M., & Claxton, K. (2006). Decision modelling for health economic evaluation. Oxford University Press.* Chapter 1.
+
+Chapters 1 and 2 of *R for data science*.
+
+## Definition and rationale
+
+The first thing that we need to know is the definition of a **health technology**. A health technology is any intervention that may be used to promote health, to prevent, diagnose or treat disease or for rehabilitation or long-term care.
+
+**Questions**
+
+1. List some examples of health technologies.
+
+Depending on the agency, health technology assessment has a broad spectrum of definitions:
+
+*"HTA is a multidisciplinary process that uses explicit methods to determine the value of a health technology at different points in its lifecycle. The purpose is to inform decision-making in order to promote an equitable, efficient, and high-quality health system." [INAHTA](https://www.inahta.org/)*
+
+*"Health technology assessment is a multidisciplinary process that uses explicit methods to determine the value of a health technology at different points in its lifecycle. The purpose is to inform decision-making in order to promote an equitable, efficient, and high-quality health system." [EUnetHTA](https://www.eunethta.eu/)*
+
+*"A comprehensive, objective, evidence-based analysis of the  clinical effectiveness, cost-effectiveness and broader impact  of drugs,  medical technologies and health systems. HTA examines technologies  at all stages of their life cycle, from development  through to maturity and obsolescence." [CADTH](https://www.cadth.ca)*
+
+The purpose of HTA is to support/help decision makers by identifying technologies that will improve health outcomes and  deliver value for every dollar invested.
+
++ Does a new health technology offer a clinical  advantage over the alternatives/standard approaches?
++ Is it worth the investment?
++ Can I pay for it?
++ Who would benefit from it?
++ Any ethical, social or legal issues
+
+But, what are the reasons for conducting HTAs?
+
++ Increased demand for healthcare (why?)
++ Soaring healthcare costs
++ Increased rate of diffusion of new technologies and associated evidence
+
+```{r expectancy, echo=FALSE, fig.cap="Life expectancy in Mexico. Source: CONAPO",fig.align='center'}
+knitr::include_graphics("images/esperanza.png")
+```
+
+Once we have seen the definition and rationale for conducting HTAs, it is important to talk about the potential users.
+
++ Government
++ Managers in hospitals
++ Healthcare workers
++ Researchers
+
+## HTA process
+
+1. Identification and prioritization of technologies
+2. Clear specification of the problem
+3. Technology assessment and review
+    + Evidence and systematic literature review
+    + Aggregation and appraisal  of evidence
+    + Synthesize and consolidate
+    + Collect primary data (if necessary)
+    + Economic evaluation, budget and health system impact
+    + Assessment of social, legal, and ethical consideration
+    + Formulation of finding
+4. Dissemination and implementation of recommendations
+5. Monitor the impact of assessment reports
+
+### Identification and prioritization of technologies
+
++ Drugs seeking public or private reimbursement
++ Variable for non-drug technologies. However candidates:
+  + High potential to improve health outcomes, reduce harm or decrease costs with similar efficacy
+  + Large numbers of individuals affected
+  + Political pressure
+  + Unmet needs—no current treatment
+
+### Clear specification of the problem
+
++ Problem statements need to consider:
+  + Patient population affected (indication; epidemiology)
+  + Intervention being considered (drug, device, new/old)
+  + Comparators
+  + Outcome(s) or interest
+  + Setting (e.g. hospital, community)
++ Well formulated question
+
+### Technology assessment and review
+
+#### Evidence and systematic literature review
+
++ A comprehensive search of the literature based on systematic methods is essential
++ 2 main types of resources relevant to HTA:
+  + Published literature
+  + Grey literature
+  
+#### Identification, aggregation &  appraisal of evidence 
+
++ Objective, systematic process for screening and  determine studies to be included in the synthesis
++ Classify the studies
+  + Randomised, non-randomised and economic
++ Critical appraisal of the quality of the evidence
+
+
+####  Synthesize & consolidate
+
++ Findings from multiple studies often combined to respond to the HTA question
++ Techniques commonly used to synthesize data in HTA are:
+  + Meta-analysis, meta-regression
+  + Network meta-analysis
+  
+####  Economic evaluation
+
++  Measures the incremental costs and benefits of the technology under review compared to one or more relevant technologies
++ CEA, CUA and CBA
++ Budget impact
+  
+#### Assessment of social, legal & ethical considerations
+
++ Example: genetic information (why?)
++ Any access or equity issues following the dissemination and implementation of technologies?
+
+#### Formulation of findings
+
++ Explicitly link quality of the evidence to the  strength of findings and recommendations as well as any limitations
++ Recommendations based on the findings that reflect the original question(s)
+
+### Dissemination of recommendations
+
++ Findings translated into relevant and understandable information
++ Knowledge translation
+
+### Monitoring the impact of reports
+
++ Some recommendations are translated into policies with clear and quantifiable impacts (e.g. adoption of new technology, change in reimbursement)
++ Others go ignored and are not readily adopted into general practice
+
+## Excercises
+
+Read the following [HTA](https://www.nice.org.uk/guidance/ta503/) published by NICE in the UK. Do the following:
+
++ What is the population?
++ What is the intervention and comparators?
++ Is there a reproducible search strategy for the clinical evidence in the HTA?
++ Was the clinical evidence critically appraised? How?
++ Describe the evidence synthesis process
++ What type of economic evaluation they used?
++ What type of model was used in the economic evaluation?
++ How was the uncertainty handled in the economic evaluation?
++ Is there a budget impact in the HTA?
++ What is the recommendation?
+
+  
