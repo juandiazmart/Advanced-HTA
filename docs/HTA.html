@@ -128,7 +128,8 @@ div.csl-indent {
 <li class="chapter" data-level="2.1" data-path="decision.html"><a href="decision.html#pre-session-readings-1"><i class="fa fa-check"></i><b>2.1</b> Pre-session readings</a></li>
 <li class="chapter" data-level="2.2" data-path="decision.html"><a href="decision.html#economic-evaluation-1"><i class="fa fa-check"></i><b>2.2</b> Economic evaluation</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="decision.html"><a href="decision.html#cost-effectiveness-in-practive"><i class="fa fa-check"></i><b>2.2.1</b> Cost-effectiveness in practive</a></li>
+<li class="chapter" data-level="2.2.1" data-path="decision.html"><a href="decision.html#cost-effectiveness-in-practice"><i class="fa fa-check"></i><b>2.2.1</b> Cost-effectiveness in practice</a></li>
+<li class="chapter" data-level="2.2.2" data-path="decision.html"><a href="decision.html#conclusions"><i class="fa fa-check"></i><b>2.2.2</b> Conclusions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -392,6 +393,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

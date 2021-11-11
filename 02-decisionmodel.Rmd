@@ -29,22 +29,89 @@ We can find different objectives of CEA across the literature:
 
 *"For any given rate of output [the combination of inputs] . that costs the decision maker least"* @culyer1980political
 
-*"a method of determining the most efficient way of dealing with a specified health problem"* @green1988priority
+*"A method of determining the most efficient way of dealing with a specified health problem"* @green1988priority
 
-The goal of CEA is to maximize health benefits produced from a given level of resources. Therefore, it is consistent with welfare economics concept of Pareto efficiency [@birch1992cost] (Fig).
+The goal of CEA is to maximize health benefits produced from a given level of resources. Therefore, it is consistent with welfare economics concept of Pareto efficiency [@birch1992cost] (Figure \@ref(fig:fig1)).
+
+```{r fig1, echo=FALSE, fig.cap="Production possibilities frontier",fig.align='center'}
+knitr::include_graphics("images/fig1.png")
+```
 
 In practice, CEA **relaxes the constraint on available resources**. Because the focus of the evaluation is not a fixed resource pool, but a specific programme making demands on resources, the comparison of the programme under evaluation with an existing programme (e.g., services aimed at improving FS) must consider not only the inter-programme differences in outputs (incremental benefits), but also the inter-programme differences in resources used (incremental costs). 
 
-Weinstein and Stason (1977) state that: *"the criterion for cost-effectiveness is the ratio of the net increase of health-care costs to the net effectiveness. The lower the value of this ratio, the higher the priority in terms of maximizing benefits derived from a given health expenditure"*. Issue is that applying a ratio does nod lead to the maximization of benefits from a fixed resource pool (movement from A to C in Figure). **The real problem of the application of CEA is the failure to adhere strictly to the notion of opportunity cost in the measurement of the (incremental) cost of a programme.** The existing programme represents a true opportunity cost for the entire resource requirements of the new programme, even though it does not absorb this level of resources.
+@weinstein1977foundations state that: *"the criterion for cost-effectiveness is the ratio of the net increase of health-care costs to the net effectiveness. The lower the value of this ratio, the higher the priority in terms of maximizing benefits derived from a given health expenditure"*. Issue is that applying a ratio does nod lead to the maximization of benefits from a fixed resource pool (movement from A to C in Figure). **The real problem of the application of CEA is the failure to adhere strictly to the notion of opportunity cost in the measurement of the (incremental) cost of a programme.** The existing programme represents a true opportunity cost for the entire resource requirements of the new programme, even though it does not absorb this level of resources.
 
-### Cost-effectiveness in practive
+### Cost-effectiveness in practice
 
 As mentioned before, CEA include both costs and effects, which are represented graphically in a plane:
 
-*Figura*
+```{r fig2, echo=FALSE, fig.cap="Incremental CE plane",fig.align='center'}
+knitr::include_graphics("images/fig2.png")
+```
+
+**Questions**
+
+1. Describe the plane.
+2. What is the willingness-to-pay in this plane?
+3. What type of uncertainties are encountered in this plane?
+
+Why incremental? We can see it using the example from @gray2011applied applied to mutually exclusive options (see Figure \@ref(fig:fig3)):
+
++ Diet and excercise (C): Reference
++ Metformin (A): $500k/250 life-years
++ New drug (B): $2500k/300 life-years
 
 
+```{r fig3, echo=FALSE, fig.cap="Average and incremental cost-effectivenessr",fig.align='center'}
+knitr::include_graphics("images/fig3.png")
+```
+
+Clearly, as this example shows, it is quite misleading to calculate average cost-effectiveness ratios, as they ignore the alternatives available.
+
+**Questions**
+
+1. What is the difference between average cost-effectiveness ratios vs incremental?
+
+The idea of CEA is to maximize health benefits with the available resources, which in terms of the CE plane represents pushing as far to the right as possible while moving up the vertical axis as little as possible. The next example from @gray2011applied shows the ideas behind **cost-effectivness frontier, dominance, extended dominance** (Table \@ref(tab:table2)).
+
+```{r table2, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+options(knitr.kable.NA = '')
+read_csv("misc/table2_1.csv") %>% 
+  kable(caption="Calculating incremental cost-effectiveness",format.args = list(big.mark = ","))
+```
+
+Once we have the ICERs for different independent programmes. How can we maximize health gains with this information? Note that now we are comparing different programmes as opposed to mutually exclusive options. Let's work in the next example:
 
 
+```{r table3, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+options(knitr.kable.NA = '')
+read_csv("misc/table2_2.csv") %>% 
+  kable(caption="Using cost-effectiveness to maximize health gain",format.args = list(big.mark = ","))
+```
 
+Finally, we can ask ourselves. What is the maximum value of the incremental cost-effectivess ratio ($\lambda$)?
 
++ Rule-based approaches - Adopting arbitrary thresholds. For example, @laupacis1992attractive adopted identical cut-off points of CAN\$20,000 per QALY gained, up to which level they considered that there would be strong grounds for adoption, and CAN\$100,000 per QALY gained, above which they considered that evidence for adoption was weak. An alternative approach is to use the country's gross domestic product (GDP) per capita. @williams2004could advanced one line of reasoning in support of this, arguing that each
+person has an entitlement to a ‘fair share’ of the country’s wealth.
+
++ League table approach - If we had full information on the ICERs of all available interventions, it would be possible to rank them by ICER. See the example in Table \@ref(tab:table2). 
+
+What are the issues with these approaches?
+
+1. $\lambda$ is a function of the budget. Therefore it is constantly changing
+2. The dynamic nature of $\lambda$. As new programs are funded and others replaced, the identification of the last program funded changes.
+
+### Conclusions
+
++ Irrespective of whether the problem face by decision-makers is simple (maximizing health gains from available resources) or complex (subject to considerations of equity, accessibility, etc.), if it is not to be considered in the context of a resource constraint there is little use for economics in the way the problem is considered.
+
++ Other approaches have been considered, such as methods in linear programming, which is consistent with the objective of CEA.
+
+$$
+\max_{x_i,\dots,x_n}\sum_{i=1}^n x_iE_i\\
+\text{s.t.}\ \ \ \ \ \sum_{i=1}^n x_ic_i\leq C
+$$
+
+where $x_i$ is the health intervention presented as a binary outcome (1 or 0), $E_i$ is the present value of the health benefits (measured using QALYs) generated by programme over the planning period, and $c_i$ is the present value of the cost of providing programme $i$ over the planning period.
+
+### Decision modelling

@@ -13,6 +13,13 @@ link-citations: yes
 #   The output format for this example is bookdown::gitbook.
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+library(dplyr)
+library(readr)
+```
+
 # Introduction {-}
 
 Bringing a new health technology to market and into the hands of a patient is a long process. Most of the times patients, who have a medical need, ask themselves why does it take so long to make the health technology available to everyone. When a health technology is in the market, it usually took between 5 to 10 years to make 
@@ -58,7 +65,7 @@ For this course, we will be using the book ["R for Data Science"](https://r4ds.h
 
 ## Evaluation {-}
 
-```{r table2, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+```{r table1, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
 tabl <- " 
 | Item                | Percentage    | Due date      |
 |:-------------------:|:-------------:|:-------------:|

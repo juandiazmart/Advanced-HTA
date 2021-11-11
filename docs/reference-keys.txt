@@ -1,4 +1,9 @@
 fig:expectancy
+fig:fig1
+fig:fig2
+fig:fig3
+tab:table2
+tab:table3
 HTA
 pre-session-readings
 definition-and-rationale
@@ -18,4 +23,5 @@ excercises
 decision
 pre-session-readings-1
 economic-evaluation-1
-cost-effectiveness-in-practive
+cost-effectiveness-in-practice
+conclusions
