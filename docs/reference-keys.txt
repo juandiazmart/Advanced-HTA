@@ -25,3 +25,5 @@ pre-session-readings-1
 economic-evaluation-1
 cost-effectiveness-in-practice
 conclusions
+decision-modelling
+importance-of-decision-analytic-models-in-hta
