@@ -165,4 +165,8 @@ Methods for the conduct of decision-analytic modelling have continued evolving t
 - Discrete event simulation (DES) models.
 - Dynamic transmission models.
 
+## Excercises
+
+1. Question 1 and 2 from Chapter 2 in *Applied methods of cost-effectiveness analysis in healthcare *.
+2. Read the articles in our google classroom.
 
