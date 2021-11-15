@@ -28,3 +28,5 @@ conclusions
 decision-modelling
 importance-of-decision-analytic-models-in-hta
 excercises-1
+tree
+pre-session-readings-2

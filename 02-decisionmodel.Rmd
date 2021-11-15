@@ -15,7 +15,7 @@ Chapter 3 of *R for data science*.
 
 *Briggs, A., Sculpher, M., & Claxton, K. (2006). Decision modelling for health economic evaluation. Oxford University Press.* Chapter 2. Sections 2.1 and 2.2
 
-*Gray, A. M., Clarke, P. M., Wolstenholme, J. L., & Wordsworth, S. (2011). Applied methods of cost-effectiveness analysis in healthcare (Vol. 3). Oxford University Press.* Chapter 2. Sections 8.1 to 8.4
+*Gray, A. M., Clarke, P. M., Wolstenholme, J. L., & Wordsworth, S. (2011). Applied methods of cost-effectiveness analysis in healthcare (Vol. 3). Oxford University Press.* Chapter 8. Sections 8.1 to 8.4
 
 *Buxton, M. J., Drummond, M. F., Van Hout, B. A., Prince, R. L., Sheldon, T. A., Szucs, T., & Vray, M. (1997). Modelling in ecomomic evaluation: an unavoidable fact of life. Health economics, 6(3), 217-227.*
 

@@ -1,0 +1,15 @@
+# Good practices in decision modelling and decion-tree models {#tree}
+
+## Pre-session readings
+
+**Good practices**
+
+*Roberts, M., Russell, L. B., Paltiel, A. D., Chambers, M., McEwan, P., & Krahn, M. (2012). Conceptualizing a model: a report of the ISPOR-SMDM modeling good research practices task force–2. Medical Decision Making, 32(5), 678-689.*
+
+**Decision-tree models**
+
+*Tarride, J. E., Blackhouse, G., Bischof, M., McCarron, E. C., Lim, M., Ferrusi, I. L., ... & Goeree, R. (2009). Approaches for economic evaluations of health care technologies. Journal of the American College of Radiology, 6(5), 307-316.*
+
+*Briggs, A., Sculpher, M., & Claxton, K. (2006). Decision modelling for health economic evaluation. Oxford University Press.* Chapter 2. Sections 2.2 and 2.3.1.
+
+*Gray, A. M., Clarke, P. M., Wolstenholme, J. L., & Wordsworth, S. (2011). Applied methods of cost-effectiveness analysis in healthcare (Vol. 3). Oxford University Press.* Chapter 8. Sections 8.5 and 8.6.
