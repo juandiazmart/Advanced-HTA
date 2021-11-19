@@ -41,6 +41,46 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -77,7 +117,7 @@
 
 \title{Advanced decision modelling in the context of Health Technology Assessment}
 \author{Juan Pablo Diaz Martinez}
-\date{2021-11-15}
+\date{2021-11-19}
 
 \begin{document}
 \maketitle
@@ -880,6 +920,1004 @@ Methods for the conduct of decision-analytic modelling have continued evolving t
 \emph{Briggs, A., Sculpher, M., \& Claxton, K. (2006). Decision modelling for health economic evaluation. Oxford University Press.} Chapter 2. Sections 2.2 and 2.3.1.
 
 \emph{Gray, A. M., Clarke, P. M., Wolstenholme, J. L., \& Wordsworth, S. (2011). Applied methods of cost-effectiveness analysis in healthcare (Vol. 3). Oxford University Press.} Chapter 8. Sections 8.5 and 8.6.
+
+\hypertarget{introduction-to-r}{%
+\chapter*{Introduction to R}\label{introduction-to-r}}
+\addcontentsline{toc}{chapter}{Introduction to R}
+
+The goal of this tutorial is to orient the learner to R Studio and the R programming language.
+
+Please complete the following:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Create a folder somewhere you can easily find it (e.g., on your desktop) called `R Course'.
+\item
+  Open R Studio
+\item
+  Session -\textgreater{} Set Working Directory -\textgreater{} to source file location
+\end{enumerate}
+
+\hypertarget{outline}{%
+\section*{Outline}\label{outline}}
+\addcontentsline{toc}{section}{Outline}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Read in the `babies' data set
+\item
+  Basic data manipulation
+\item
+  Functions
+\item
+  Saving and viewing results
+\end{enumerate}
+
+\hypertarget{babies-dataset}{%
+\section*{Babies Dataset}\label{babies-dataset}}
+\addcontentsline{toc}{section}{Babies Dataset}
+
+The \texttt{babies} dataset will be used throughout this session to illustrate basic R concepts.
+
+The dataset is a collection of variables taken for each new mother in a Child and Health Development Study. It has 1,236 observations on male live births for the following 23 variables.
+
+Variables in data file
+
+\begin{verbatim}
+id            identification number
+date          birth date as character string (mon-dd-yyyy)
+ddate         day of birth
+mdate         month of birth
+ydate         year of birth
+gestation     length of gestation in days
+wt            birth weight in ounces (999 unknown)
+parity        total number of previous pregnancies 
+              including fetal deaths and still births
+age           mother's age in years at end of pregnancy
+                999=unknown
+ed            mother's education 
+                 0=less than 8th grade
+                 1=8th-12th grade - did not graduate
+                 2=HS graduate???no other schooling
+                 3=HS+trade
+                 4=HS+some college
+                 5=College graduate,
+                 6=Trade school HS unclear
+                 9=unknown
+ht            mother's height in inches to the last completed inch 
+                 999=unknown
+wt1           mother prepregnancy wt in pounds
+                 999=unknown
+dage          father's age, coding same as mother's age.
+ded           father's education, coding same as mother's education.
+dht           father's height, coding same as for mother's height
+dwt           father's weight coding same as for mother's weight
+inc           family yearly income in $2500 increments
+                 0=under 2500
+                 1=2500-4999
+                 ..., 
+                 8= 12,500-14,999
+                 9=15000+
+                 998=unknown
+                 999=not asked
+smoke         does mother smoke? 
+                 0=never
+                 1=smokes now
+                 2=until current pregnancy
+                 3=once did, not now
+                 9=unknown
+time          If mother quit smoking, how long ago? 
+                 0=never smoked
+                 1=still smokes
+                 2=during current preg
+                 3=within 1 yr
+                 4=1 to 2 years ago
+                 5=2 to 3 years ago
+                 6=3 to 4 years ago
+                 7=5 to 9 years ago 
+                 8=10+years ago
+                 9=quit and don't know,
+                 998=unknown
+                 999=not asked
+number        number of cigs smoked per day for past and current smokers 
+                 0=never
+                 1=1-4
+                 2=5-9
+                 3=10-14
+                 4=15-19
+                 5=20-29
+                 6=30-39
+                 7=40-60
+                 8=60+
+                 9=smoke but don't know
+                 998=unknown
+                 999=not asked
+race          mother's race 
+marital       marital status of mother
+drace         father's race, coding same as mother's race
+\end{verbatim}
+
+\hypertarget{loading-babies-dataset}{%
+\subsection*{Loading babies dataset}\label{loading-babies-dataset}}
+\addcontentsline{toc}{subsection}{Loading babies dataset}
+
+We can can load the data from our working directory as shown below. It is a .csv file, so can be read in with \texttt{read.csv}. specifying that
+
+\begin{itemize}
+\tightlist
+\item
+  the file has a ``header'' row (\texttt{header=T}) with variable names
+\item
+  values are separated by commas.\\
+\item
+  values of '`, '998' or `999' represent missing data
+\end{itemize}
+
+We need to be confident that 998 and 999 are not legitimate values for any variables, so that R does not interpret legitimate values as missing. We will not distinguish between `unknown' and `not asked' in the data, so the code below will read two consecutive commas (```), 998, and 999 as missing values. We will have to deal separately with the values '9' that mean a value is missing.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{babies }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{\textquotesingle{}babies.csv\textquotesingle{}}\NormalTok{,}\AttributeTok{header=}\NormalTok{T, }\AttributeTok{sep=}\StringTok{","}\NormalTok{, }
+                     \AttributeTok{na.strings=}\FunctionTok{c}\NormalTok{(}\StringTok{""}\NormalTok{, }\StringTok{"998"}\NormalTok{, }\StringTok{"999"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{data-manipulation}{%
+\subsection*{Data manipulation}\label{data-manipulation}}
+\addcontentsline{toc}{subsection}{Data manipulation}
+
+What are the dimensions of the data set?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{dim}\NormalTok{(babies)}
+\end{Highlighting}
+\end{Shaded}
+
+{[}1{]} 1236 23
+
+What are the names of the variables?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{names}\NormalTok{(babies)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "id"        "date"      "gestation" "wt"        "parity"    "age"      
+##  [7] "ed"        "ht"        "wt1"       "dage"      "ded"       "dht"      
+## [13] "dwt"       "inc"       "smoke"     "time"      "number"    "race"     
+## [19] "marital"   "drace"     "ddate"     "mdate"     "ydate"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#head(babies)}
+\CommentTok{\#tail(babies)}
+\end{Highlighting}
+\end{Shaded}
+
+Isolating variables
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# babies$id}
+\CommentTok{\# babies[, 1]}
+\CommentTok{\# babies[, \textquotesingle{}id\textquotesingle{}]}
+\CommentTok{\# babies[1:10, c(\textquotesingle{}id\textquotesingle{}, \textquotesingle{}date\textquotesingle{}, \textquotesingle{}gestation\textquotesingle{})]}
+\end{Highlighting}
+\end{Shaded}
+
+Assignment and subsetting
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{under}\FloatTok{.30}\OtherTok{\textless{}{-}}\NormalTok{ babies}\SpecialCharTok{$}\NormalTok{age}\SpecialCharTok{\textless{}}\DecValTok{30}
+\NormalTok{b}\OtherTok{\textless{}{-}}\NormalTok{ babies[under}\FloatTok{.30}\NormalTok{, ]}
+\FunctionTok{summary}\NormalTok{(b}\SpecialCharTok{$}\NormalTok{age)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##   15.00   22.00   24.00   24.03   27.00   29.00       2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{b}\OtherTok{\textless{}{-}}\NormalTok{ babies[}\FunctionTok{which}\NormalTok{(under}\FloatTok{.30}\NormalTok{), ]}
+\FunctionTok{summary}\NormalTok{(b}\SpecialCharTok{$}\NormalTok{age)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   15.00   22.00   24.00   24.03   27.00   29.00
+\end{verbatim}
+
+\hypertarget{exercises-1}{%
+\subsubsection*{Exercises (1)}\label{exercises-1}}
+\addcontentsline{toc}{subsubsection}{Exercises (1)}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Create a new data set consisting of only the rows where the father's age is 40 or over (use `\textgreater=')
+\item
+  Include only the mother's age, father's age and marital status in the new dataset
+\item
+  Display the dimensions of this data set in the console.
+\item
+  Locate the new dataset in th Global Environment and view it
+\end{enumerate}
+
+NB: Be sure that you have handled missing father's ages properly
+
+\hypertarget{exercises-1-solutions}{%
+\paragraph*{Exercises (1) solutions}\label{exercises-1-solutions}}
+\addcontentsline{toc}{paragraph}{Exercises (1) solutions}
+
+\hypertarget{creating-some-new-variables}{%
+\subsection*{Creating some new variables}\label{creating-some-new-variables}}
+\addcontentsline{toc}{subsection}{Creating some new variables}
+
+A baby weight more than 4kg is defined as macrosomia. We can create this variable (converting ounces to kg) as:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{babies}\SpecialCharTok{$}\NormalTok{wtKg }\OtherTok{\textless{}{-}}\NormalTok{ babies}\SpecialCharTok{$}\NormalTok{wt}\SpecialCharTok{/}\NormalTok{(}\DecValTok{16}\SpecialCharTok{*}\FloatTok{2.2}\NormalTok{)}
+\NormalTok{babies}\SpecialCharTok{$}\NormalTok{macrosomia }\OtherTok{\textless{}{-}}\NormalTok{ babies}\SpecialCharTok{$}\NormalTok{wtKg }\SpecialCharTok{\textgreater{}} \DecValTok{4}
+\end{Highlighting}
+\end{Shaded}
+
+A baby weighing less than 2.5kg is defined as ``small''. We can create this variable as:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{babies}\SpecialCharTok{$}\NormalTok{smallBaby }\OtherTok{\textless{}{-}}\NormalTok{ babies}\SpecialCharTok{$}\NormalTok{wtKg }\SpecialCharTok{\textless{}} \FloatTok{2.5}
+\end{Highlighting}
+\end{Shaded}
+
+We can make a single character variable with three categories of weight:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{babies}\SpecialCharTok{$}\NormalTok{birthWeightCat }\OtherTok{\textless{}{-}} \FunctionTok{ifelse}\NormalTok{(babies}\SpecialCharTok{$}\NormalTok{wtKg }\SpecialCharTok{\textless{}} \FloatTok{2.5}\NormalTok{, }\StringTok{"small"}\NormalTok{,}
+                                \FunctionTok{ifelse}\NormalTok{(babies}\SpecialCharTok{$}\NormalTok{wtKg }\SpecialCharTok{\textgreater{}} \DecValTok{4}\NormalTok{, }\StringTok{"large"}\NormalTok{,}\StringTok{"normal"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+Notice that when we tabulate these, they appear in alphabetical order.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{table}\NormalTok{(babies}\SpecialCharTok{$}\NormalTok{birthWeightCat)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  large normal  small 
+##    145   1033     58
+\end{verbatim}
+
+To impose an order, we can convert to a factor and specify the order:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{babies}\SpecialCharTok{$}\NormalTok{birthWeightCat }\OtherTok{\textless{}{-}} \FunctionTok{factor}\NormalTok{(babies}\SpecialCharTok{$}\NormalTok{birthWeightCat, }
+                                  \AttributeTok{levels=}\FunctionTok{c}\NormalTok{(}\StringTok{"small"}\NormalTok{,}\StringTok{"normal"}\NormalTok{,}\StringTok{"large"}\NormalTok{),}
+                                  \AttributeTok{labels=}\FunctionTok{c}\NormalTok{(}\StringTok{"Small baby"}\NormalTok{,}\StringTok{"Normal weight baby"}\NormalTok{,}\StringTok{"Large baby"}\NormalTok{))}
+\FunctionTok{table}\NormalTok{(babies}\SpecialCharTok{$}\NormalTok{birthWeightCat)                                }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##         Small baby Normal weight baby         Large baby 
+##                 58               1033                145
+\end{verbatim}
+
+A baby born before 37 completed weeks of pregnancy is defined as preterm. We can create this logical variable as:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{babies}\SpecialCharTok{$}\NormalTok{preterm }\OtherTok{\textless{}{-}}\NormalTok{ babies}\SpecialCharTok{$}\NormalTok{gestation }\SpecialCharTok{\textless{}} \DecValTok{37}\SpecialCharTok{*}\DecValTok{7}
+\FunctionTok{table}\NormalTok{(babies}\SpecialCharTok{$}\NormalTok{preterm)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## FALSE  TRUE 
+##  1126    97
+\end{verbatim}
+
+This is just a logical variable (\texttt{TRUE/FALSE} or \texttt{T/F}) so we need to make a factor to have it appear more user-friendly:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{babies}\SpecialCharTok{$}\NormalTok{whenBorn }\OtherTok{\textless{}{-}} \FunctionTok{factor}\NormalTok{(babies}\SpecialCharTok{$}\NormalTok{preterm, }
+                          \AttributeTok{levels=}\FunctionTok{c}\NormalTok{(}\ConstantTok{TRUE}\NormalTok{,}\ConstantTok{FALSE}\NormalTok{), }
+                          \AttributeTok{labels=}\FunctionTok{c}\NormalTok{(}\StringTok{"Preterm"}\NormalTok{,}\StringTok{"Full{-}term"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+We can make a binary variable for the mother's and father's races:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{babies}\SpecialCharTok{$}\NormalTok{whiteRace }\OtherTok{\textless{}{-}} \FunctionTok{ifelse}\NormalTok{(babies}\SpecialCharTok{$}\NormalTok{race}\SpecialCharTok{==}\StringTok{"white"}\NormalTok{,}\StringTok{"white"}\NormalTok{,}\StringTok{"other"}\NormalTok{)}
+\NormalTok{babies}\SpecialCharTok{$}\NormalTok{dwhiteRace }\OtherTok{\textless{}{-}} \FunctionTok{ifelse}\NormalTok{(babies}\SpecialCharTok{$}\NormalTok{drace}\SpecialCharTok{==}\StringTok{"white"}\NormalTok{,}\StringTok{"white"}\NormalTok{,}\StringTok{"other"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{exercises-2}{%
+\subsubsection*{Exercises (2)}\label{exercises-2}}
+\addcontentsline{toc}{subsubsection}{Exercises (2)}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Starting with the numeric variable \texttt{smoke}, in the babies dataset, create a new variable \texttt{smokeCat} in the data set that has three levels: \texttt{never\ smoker}, \texttt{past\ smoker},\texttt{current\ smoker}. Use the \texttt{factor} function and ensure that the levels appear in that order.
+\item
+  Tabulate the numerical variable against the new one to make sure you have not made an error.
+\item
+  Make a binary variable in the babies dataset \texttt{smokeNow} that is `Yes' when the mother smokes and `No' otherwise (i.e., it is not yes (1) or it is missing (9).)
+\item
+  {[}optional{]} Make a factor variable \texttt{eduCat} from the mother's education variable \texttt{ed} using the information at the top if this file about the meaning of 1,2,3,\ldots{}
+\end{enumerate}
+
+\hypertarget{exercises-2-solutions}{%
+\paragraph*{Exercises (2) solutions}\label{exercises-2-solutions}}
+\addcontentsline{toc}{paragraph}{Exercises (2) solutions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Make the two variables:
+\item
+  Check the coding was correct
+\item
+  Make a binary variable
+\item
+  {[}optional{]} make the education variable and check it
+\end{enumerate}
+
+\hypertarget{functions}{%
+\section*{Functions}\label{functions}}
+\addcontentsline{toc}{section}{Functions}
+
+Two types:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Built in functions
+\item
+  User defined functions
+\end{enumerate}
+
+\hypertarget{built-in-functions}{%
+\subsection*{Built in Functions}\label{built-in-functions}}
+\addcontentsline{toc}{subsection}{Built in Functions}
+
+When you open R, there are many functions available to you: Here, we will review a few useful built in functions.
+
+If you need help using a function, execute ? followed by the function name, with or without the parentheses.
+
+\begin{verbatim}
+? table
+\end{verbatim}
+
+The following functions are widely used in descriptive statistics
+
+\hypertarget{table-prop.table}{%
+\subsubsection*{table(), prop.table()}\label{table-prop.table}}
+\addcontentsline{toc}{subsubsection}{table(), prop.table()}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{t}\OtherTok{\textless{}{-}} \FunctionTok{with}\NormalTok{(babies, }\FunctionTok{table}\NormalTok{(marital))}
+\NormalTok{t}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## marital
+##          divorced legally separated           married     never married 
+##                 5                15              1208                 6 
+##           unknown 
+##                 2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{p}\OtherTok{\textless{}{-}} \FunctionTok{prop.table}\NormalTok{(t)}
+\NormalTok{p}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## marital
+##          divorced legally separated           married     never married 
+##       0.004045307       0.012135922       0.977346278       0.004854369 
+##           unknown 
+##       0.001618123
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{p}\SpecialCharTok{*}\DecValTok{100}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## marital
+##          divorced legally separated           married     never married 
+##         0.4045307         1.2135922        97.7346278         0.4854369 
+##           unknown 
+##         0.1618123
+\end{verbatim}
+
+\hypertarget{ifelse}{%
+\subsubsection*{ifelse()}\label{ifelse}}
+\addcontentsline{toc}{subsubsection}{ifelse()}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{babies}\SpecialCharTok{$}\NormalTok{first.preg}\OtherTok{\textless{}{-}} \FunctionTok{with}\NormalTok{(babies, }\FunctionTok{ifelse}\NormalTok{(parity}\SpecialCharTok{==}\DecValTok{0}\NormalTok{, }\StringTok{\textquotesingle{}first\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}not first\textquotesingle{}}\NormalTok{))}
+\FunctionTok{table}\NormalTok{(babies}\SpecialCharTok{$}\NormalTok{first.preg)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##     first not first 
+##       315       921
+\end{verbatim}
+
+\hypertarget{summary-mean-median-sd-quantile}{%
+\subsubsection*{summary(), mean(), median(), sd(), quantile()}\label{summary-mean-median-sd-quantile}}
+\addcontentsline{toc}{subsubsection}{summary(), mean(), median(), sd(), quantile()}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(babies)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##        id           date             gestation           wt       
+##  Min.   :  15   Length:1236        Min.   :148.0   Min.   : 55.0  
+##  1st Qu.:5286   Class :character   1st Qu.:272.0   1st Qu.:108.8  
+##  Median :6730   Mode  :character   Median :280.0   Median :120.0  
+##  Mean   :6001                      Mean   :279.3   Mean   :119.6  
+##  3rd Qu.:7583                      3rd Qu.:288.0   3rd Qu.:131.0  
+##  Max.   :9263                      Max.   :353.0   Max.   :176.0  
+##                                    NA's   :13                     
+##      parity            age              ed              ht       
+##  Min.   : 0.000   Min.   :15.00   Min.   :0.000   Min.   :53.00  
+##  1st Qu.: 0.000   1st Qu.:23.00   1st Qu.:2.000   1st Qu.:62.00  
+##  Median : 1.000   Median :26.00   Median :2.000   Median :64.00  
+##  Mean   : 1.932   Mean   :27.26   Mean   :2.916   Mean   :64.05  
+##  3rd Qu.: 3.000   3rd Qu.:31.00   3rd Qu.:4.000   3rd Qu.:66.00  
+##  Max.   :13.000   Max.   :45.00   Max.   :9.000   Max.   :72.00  
+##                   NA's   :2                       NA's   :22     
+##       wt1             dage            ded             dht            dwt       
+##  Min.   : 87.0   Min.   :18.00   Min.   :0.000   Min.   :60.0   Min.   :110.0  
+##  1st Qu.:114.8   1st Qu.:25.00   1st Qu.:2.000   1st Qu.:68.0   1st Qu.:155.0  
+##  Median :125.0   Median :29.00   Median :4.000   Median :71.0   Median :170.0  
+##  Mean   :128.6   Mean   :30.35   Mean   :3.189   Mean   :70.2   Mean   :171.2  
+##  3rd Qu.:139.0   3rd Qu.:34.00   3rd Qu.:5.000   3rd Qu.:72.0   3rd Qu.:185.0  
+##  Max.   :250.0   Max.   :62.00   Max.   :9.000   Max.   :78.0   Max.   :260.0  
+##  NA's   :36      NA's   :7                       NA's   :492    NA's   :499    
+##       inc            smoke             time            number     
+##  Min.   :0.000   Min.   :0.0000   Min.   :0.0000   Min.   :0.000  
+##  1st Qu.:2.000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.000  
+##  Median :3.000   Median :1.0000   Median :1.0000   Median :1.000  
+##  Mean   :3.701   Mean   :0.8681   Mean   :0.9625   Mean   :1.825  
+##  3rd Qu.:5.000   3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:3.000  
+##  Max.   :9.000   Max.   :9.0000   Max.   :9.0000   Max.   :9.000  
+##  NA's   :124                      NA's   :10       NA's   :10     
+##      race             marital             drace               ddate      
+##  Length:1236        Length:1236        Length:1236        Min.   : 1.00  
+##  Class :character   Class :character   Class :character   1st Qu.: 8.00  
+##  Mode  :character   Mode  :character   Mode  :character   Median :15.00  
+##                                                           Mean   :15.37  
+##                                                           3rd Qu.:23.00  
+##                                                           Max.   :31.00  
+##                                                                          
+##      mdate            ydate           wtKg       macrosomia     
+##  Min.   : 1.000   Min.   :1961   Min.   :1.562   Mode :logical  
+##  1st Qu.: 4.000   1st Qu.:1961   1st Qu.:3.089   FALSE:1091     
+##  Median : 7.000   Median :1962   Median :3.409   TRUE :145      
+##  Mean   : 6.617   Mean   :1962   Mean   :3.397                  
+##  3rd Qu.: 9.000   3rd Qu.:1962   3rd Qu.:3.722                  
+##  Max.   :12.000   Max.   :1962   Max.   :5.000                  
+##                                                                 
+##  smallBaby                  birthWeightCat  preterm             whenBorn   
+##  Mode :logical   Small baby        :  58   Mode :logical   Preterm  :  97  
+##  FALSE:1178      Normal weight baby:1033   FALSE:1126      Full-term:1126  
+##  TRUE :58        Large baby        : 145   TRUE :97        NA's     :  13  
+##                                            NA's :13                        
+##                                                                            
+##                                                                            
+##                                                                            
+##   whiteRace          dwhiteRace                  smokeCat     smokeNow        
+##  Length:1236        Length:1236        Never smoker  :544   Length:1236       
+##  Class :character   Class :character   Past smoker   :198   Class :character  
+##  Mode  :character   Mode  :character   Current smoker:484   Mode  :character  
+##                                        NA's          : 10                     
+##                                                                               
+##                                                                               
+##                                                                               
+##               eduCat     first.preg       
+##  HS graduate     :444   Length:1236       
+##  HS+some college :298   Class :character  
+##  College graduate:219   Mode  :character  
+##  8th-12th grade  :183                     
+##  HS+trade        : 65                     
+##  (Other)         : 26                     
+##  NA's            :  1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{gestAge}\OtherTok{\textless{}{-}}\NormalTok{ babies}\SpecialCharTok{$}\NormalTok{gestation}
+\FunctionTok{mean}\NormalTok{(gestAge)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] NA
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{mean}\NormalTok{(gestAge, }\AttributeTok{na.rm=}\NormalTok{T)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 279.3385
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{gestAge}\OtherTok{\textless{}{-}}\NormalTok{ gestAge[}\FunctionTok{complete.cases}\NormalTok{(gestAge)]}
+\FunctionTok{summary}\NormalTok{(gestAge)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   148.0   272.0   280.0   279.3   288.0   353.0
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{mean}\NormalTok{(gestAge)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 279.3385
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{median}\NormalTok{(gestAge)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 280
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sd}\NormalTok{(gestAge)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 16.02769
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{range}\NormalTok{(gestAge)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 148 353
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{min}\NormalTok{(gestAge)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 148
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{max}\NormalTok{(gestAge)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 353
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{quantile}\NormalTok{(gestAge)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   0%  25%  50%  75% 100% 
+##  148  272  280  288  353
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{quantile}\NormalTok{(gestAge, }\FunctionTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{, }\AttributeTok{by =} \FloatTok{0.2}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   0%  20%  40%  60%  80% 100% 
+##  148  270  277  283  290  353
+\end{verbatim}
+
+\hypertarget{round}{%
+\subsubsection*{round()}\label{round}}
+\addcontentsline{toc}{subsubsection}{round()}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x}\OtherTok{\textless{}{-}} \FloatTok{1121.933384}
+\FunctionTok{round}\NormalTok{(x, }\DecValTok{3}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1121.933
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{round}\NormalTok{(x, }\SpecialCharTok{{-}}\DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1100
+\end{verbatim}
+
+\hypertarget{paste}{%
+\subsubsection*{paste()}\label{paste}}
+\addcontentsline{toc}{subsubsection}{paste()}
+
+We can build up complex quoted strings with \texttt{paste}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{paste}\NormalTok{(}\StringTok{"Mean (days) ="}\NormalTok{, }\FunctionTok{mean}\NormalTok{(gestAge))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Mean (days) = 279.338511856092"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{paste}\NormalTok{(}\StringTok{"Mean (days) ="}\NormalTok{, }\FunctionTok{round}\NormalTok{(}\FunctionTok{mean}\NormalTok{(gestAge)))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Mean (days) = 279"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{paste}\NormalTok{(}\StringTok{\textquotesingle{}mean day (sd) = \textquotesingle{}}\NormalTok{, }
+      \FunctionTok{round}\NormalTok{(}\FunctionTok{mean}\NormalTok{(gestAge)), }
+      \StringTok{\textquotesingle{} (\textquotesingle{}}\NormalTok{, }
+      \FunctionTok{round}\NormalTok{(}\FunctionTok{sd}\NormalTok{(gestAge), }\DecValTok{1}\NormalTok{), }
+      \StringTok{\textquotesingle{})\textquotesingle{}}\NormalTok{, }
+      \AttributeTok{sep=}\StringTok{\textquotesingle{}\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "mean day (sd) = 279 (16)"
+\end{verbatim}
+
+\hypertarget{apply}{%
+\subsubsection*{apply()}\label{apply}}
+\addcontentsline{toc}{subsubsection}{apply()}
+
+Carries out an operation on the rows or columns of a dataset. We pick the \texttt{MARGIN} to specify whether we want
+this to be rows or columns
+
+\begin{itemize}
+\tightlist
+\item
+  1 = rows
+\item
+  2 = columns
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{apply}\NormalTok{(babies[, }\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}age\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}dage\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}wtKg\textquotesingle{}}\NormalTok{)], }\AttributeTok{MARGIN =} \DecValTok{2}\NormalTok{, }\AttributeTok{FUN =}\NormalTok{ mean, }\AttributeTok{na.rm=}\NormalTok{T)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##      age     dage     wtKg 
+## 27.25527 30.34825  3.39707
+\end{verbatim}
+
+\hypertarget{tapply}{%
+\subsubsection*{tapply()}\label{tapply}}
+\addcontentsline{toc}{subsubsection}{tapply()}
+
+Carries out an operation on one variable, split by a second variable (or group of variables) - e.g., means by group:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{wt.by.smoke.term}\OtherTok{\textless{}{-}} \FunctionTok{with}\NormalTok{(babies, }
+                       \FunctionTok{tapply}\NormalTok{(wt, }\FunctionTok{list}\NormalTok{(smokeCat, whenBorn), mean, }\AttributeTok{na.rm=}\NormalTok{T))}
+\NormalTok{rw}\OtherTok{\textless{}{-}} \FunctionTok{round}\NormalTok{(wt.by.smoke.term, }\DecValTok{1}\NormalTok{)}
+\NormalTok{rw}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                Preterm Full-term
+## Never smoker     107.0     124.1
+## Past smoker      103.4     125.9
+## Current smoker    91.7     116.2
+\end{verbatim}
+
+\hypertarget{user-defined-functions}{%
+\subsection*{User Defined Functions}\label{user-defined-functions}}
+\addcontentsline{toc}{subsection}{User Defined Functions}
+
+You can write your own functions, text(arguments)\{ body \}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{custom.summary}\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(x)\{}
+\NormalTok{  out}\OtherTok{\textless{}{-}} \FunctionTok{paste}\NormalTok{(}\FunctionTok{round}\NormalTok{(}\FunctionTok{mean}\NormalTok{(x, }\AttributeTok{na.rm=}\NormalTok{T), }\DecValTok{2}\NormalTok{), }
+              \StringTok{\textquotesingle{} (SD=\textquotesingle{}}\NormalTok{, }
+              \FunctionTok{round}\NormalTok{(}\FunctionTok{sd}\NormalTok{(x, }\AttributeTok{na.rm=}\NormalTok{T), }\DecValTok{2}\NormalTok{), }
+              \StringTok{\textquotesingle{})\textquotesingle{}}\NormalTok{, }
+              \AttributeTok{sep=}\StringTok{\textquotesingle{}\textquotesingle{}}\NormalTok{) }
+  \FunctionTok{return}\NormalTok{(out)}
+\NormalTok{\}}
+\FunctionTok{custom.summary}\NormalTok{(babies}\SpecialCharTok{$}\NormalTok{age)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "27.26 (SD=5.78)"
+\end{verbatim}
+
+\hypertarget{saving-output-and-opening-in-word}{%
+\subsection*{Saving output and opening in word}\label{saving-output-and-opening-in-word}}
+\addcontentsline{toc}{subsection}{Saving output and opening in word}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{write.csv}\NormalTok{(rw, }\StringTok{\textquotesingle{}test.csv\textquotesingle{}}\NormalTok{, }\AttributeTok{quote=}\NormalTok{ F)}
+\end{Highlighting}
+\end{Shaded}
+
+Now open `test.csv' with word. Highlight and click Table -\textgreater{} convert text to table -\textgreater{} ok.
+
+\hypertarget{exercises-3}{%
+\subsubsection*{Exercises (3)}\label{exercises-3}}
+\addcontentsline{toc}{subsubsection}{Exercises (3)}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Create a function to summarize a binary (0/1 or FALSE/TRUE)) variable and return a character string that looks like, for example ``18/54 (33.3\%)''
+\end{enumerate}
+
+Framework
+
+\begin{verbatim}
+bin.sum <- function(x){
+t <- # tabulate x
+n <- # how many nonmissing observations?
+x <- # how many 1's?
+pct <- round()
+paste()
+
+}
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Use \texttt{tapply} to apply your function to the macrosomia using smokeCat as the grouping variable
+\end{enumerate}
+
+Hint
+
+\begin{verbatim}
+result <- tapply(X = 
+                 INDEX= 
+                 FUN=bin.sum)
+        
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+  View your results as a Word table using by using write.csv to save to a CSV file.
+\item
+  {[}Advanced{]} Create a function to summarize a continuous variable in the following format: ``Median (IQR.low, IQR.high), n''. Use \texttt{apply} to apply this function to the variables \texttt{age}, \texttt{dage}, `ht', `dht'. The result should be a table that you can save in the same way as in question 3.
+\item
+  {[}More advanced{]} Use the function from question 4. to summarize a the variables \texttt{age}, \texttt{dage}, `ht', `dht' in groups formed by `preterm'. Hint: Look at the help for the function \texttt{aggregate}.
+\end{enumerate}
+
+Hint:
+
+\begin{verbatim}
+aggregate(x=DATASET, 
+          by=list(BY VARIABLES HERE), 
+          FUN=FUNCTION.FROM.4)
+\end{verbatim}
+
+\hypertarget{exercises-3-solutions}{%
+\paragraph*{Exercises (3) solutions}\label{exercises-3-solutions}}
+\addcontentsline{toc}{paragraph}{Exercises (3) solutions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+\item
+\item
+\item
+\item
+\end{enumerate}
+
+\newpage
+
+\hypertarget{working-with-more-than-one-dataset}{%
+\section*{Working with more than one dataset}\label{working-with-more-than-one-dataset}}
+\addcontentsline{toc}{section}{Working with more than one dataset}
+
+Suppose you want to know how far from the average for the ethnic group each baby's birth weight is as a Z-score:
+
+\begin{verbatim}
+Z = (wt - average)/SD
+\end{verbatim}
+
+You need to
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  find the average and SD for each group
+\item
+  merge this data with the full babies dataset
+\item
+  calculate each baby's Z score
+\end{enumerate}
+
+The R code for these steps is shown below
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  find the average and SD for each group and save it in a data.frame
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{average.by.group }\OtherTok{\textless{}{-}} \FunctionTok{tapply}\NormalTok{(}\AttributeTok{X =}\NormalTok{ babies}\SpecialCharTok{$}\NormalTok{wtKg, }
+                           \AttributeTok{INDEX=}\NormalTok{babies}\SpecialCharTok{$}\NormalTok{race, }
+\NormalTok{                           mean,}\AttributeTok{na.rm=}\NormalTok{T)}
+                           
+\NormalTok{sd.by.group }\OtherTok{\textless{}{-}} \FunctionTok{tapply}\NormalTok{(}\AttributeTok{X =}\NormalTok{ babies}\SpecialCharTok{$}\NormalTok{wtKg, }
+                     \AttributeTok{INDEX=}\NormalTok{babies}\SpecialCharTok{$}\NormalTok{race, }
+\NormalTok{                     sd,}\AttributeTok{na.rm=}\NormalTok{T)}
+\NormalTok{stats }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{race=}\FunctionTok{names}\NormalTok{(average.by.group),}
+                    \AttributeTok{average=}\NormalTok{average.by.group,}
+                    \AttributeTok{SD=}\NormalTok{sd.by.group)}
+\FunctionTok{print}\NormalTok{(stats)               }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##            race  average        SD
+## asian     asian 3.137268 0.4543554
+## black     black 3.216980 0.5422872
+## mexican mexican 3.526989 0.4017935
+## mixed     mixed 3.360719 0.5363923
+## unknown unknown 3.892045        NA
+## white     white 3.455721 0.5027514
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  merge this data with the full babies dataset
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{babies }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(babies, }
+\NormalTok{                stats, }
+                \AttributeTok{by=}\StringTok{"race"}\NormalTok{)}
+
+\FunctionTok{head}\NormalTok{(babies[ , }\FunctionTok{c}\NormalTok{(}\StringTok{"wtKg"}\NormalTok{,}\StringTok{"average"}\NormalTok{, }\StringTok{"SD"}\NormalTok{,}\StringTok{"race"}\NormalTok{)])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##       wtKg  average        SD  race
+## 1 3.409091 3.137268 0.4543554 asian
+## 2 3.125000 3.137268 0.4543554 asian
+## 3 2.642045 3.137268 0.4543554 asian
+## 4 3.352273 3.137268 0.4543554 asian
+## 5 2.982955 3.137268 0.4543554 asian
+## 6 2.840909 3.137268 0.4543554 asian
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  calculate each baby's Z score
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{babies}\SpecialCharTok{$}\NormalTok{Z.wt }\OtherTok{\textless{}{-}}\NormalTok{ (babies}\SpecialCharTok{$}\NormalTok{wtKg }\SpecialCharTok{{-}}\NormalTok{ babies}\SpecialCharTok{$}\NormalTok{average)}\SpecialCharTok{/}\NormalTok{babies}\SpecialCharTok{$}\NormalTok{SD}
+\end{Highlighting}
+\end{Shaded}
+
+Finally, please save the alterations to the babies data set for the next session:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{write.csv}\NormalTok{(babies, }\StringTok{\textquotesingle{}babiesAugmented.csv\textquotesingle{}}\NormalTok{, }\AttributeTok{quote=}\NormalTok{F, }\AttributeTok{row.names =}\NormalTok{ F)}
+\end{Highlighting}
+\end{Shaded}
+
 
   \bibliography{book.bib,packages.bib}
 

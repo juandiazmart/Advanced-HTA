@@ -1,0 +1,574 @@
+# Introduction to R {-}
+
+The goal of this tutorial is to orient the learner to R Studio and the R programming language. 
+
+Please complete the following:
+
+1. Create a folder somewhere you can easily find it (e.g., on your desktop) called 'R Course'.
+2. Open R Studio
+3. Session -> Set Working Directory -> to source file location
+
+## Outline {-}
+
+1. Read in the 'babies' data set 
+2. Basic data manipulation
+3. Functions
+4. Saving and viewing results
+
+## Babies Dataset {-}
+
+The  `babies` dataset  will be used throughout this session to illustrate basic R concepts. 
+
+The dataset is a collection of variables taken for each new mother in a Child and Health Development Study.  It has  1,236 observations on male live births for the following 23 variables.
+
+Variables in data file
+
+```
+id            identification number
+date          birth date as character string (mon-dd-yyyy)
+ddate         day of birth
+mdate         month of birth
+ydate         year of birth
+gestation     length of gestation in days
+wt            birth weight in ounces (999 unknown)
+parity        total number of previous pregnancies 
+              including fetal deaths and still births
+age           mother's age in years at end of pregnancy
+                999=unknown
+ed            mother's education 
+                 0=less than 8th grade
+                 1=8th-12th grade - did not graduate
+                 2=HS graduate???no other schooling
+                 3=HS+trade
+                 4=HS+some college
+                 5=College graduate,
+                 6=Trade school HS unclear
+                 9=unknown
+ht            mother's height in inches to the last completed inch 
+                 999=unknown
+wt1           mother prepregnancy wt in pounds
+                 999=unknown
+dage          father's age, coding same as mother's age.
+ded           father's education, coding same as mother's education.
+dht           father's height, coding same as for mother's height
+dwt           father's weight coding same as for mother's weight
+inc           family yearly income in $2500 increments
+                 0=under 2500
+                 1=2500-4999
+                 ..., 
+                 8= 12,500-14,999
+                 9=15000+
+                 998=unknown
+                 999=not asked
+smoke         does mother smoke? 
+                 0=never
+                 1=smokes now
+                 2=until current pregnancy
+                 3=once did, not now
+                 9=unknown
+time          If mother quit smoking, how long ago? 
+                 0=never smoked
+                 1=still smokes
+                 2=during current preg
+                 3=within 1 yr
+                 4=1 to 2 years ago
+                 5=2 to 3 years ago
+                 6=3 to 4 years ago
+                 7=5 to 9 years ago 
+                 8=10+years ago
+                 9=quit and don't know,
+                 998=unknown
+                 999=not asked
+number        number of cigs smoked per day for past and current smokers 
+                 0=never
+                 1=1-4
+                 2=5-9
+                 3=10-14
+                 4=15-19
+                 5=20-29
+                 6=30-39
+                 7=40-60
+                 8=60+
+                 9=smoke but don't know
+                 998=unknown
+                 999=not asked
+race          mother's race 
+marital       marital status of mother
+drace         father's race, coding same as mother's race
+```
+
+### Loading babies dataset {-}
+
+We can can load the data from our working directory as shown below.  It is a .csv file, so can be read in with `read.csv`. specifying that 
+
+- the file has a "header" row (`header=T`) with variable names 
+- values are separated by commas.  
+- values of '', '998' or '999' represent missing data
+
+We need to be confident that 998 and 999 are not legitimate values for any variables, so that R does not interpret legitimate values as missing.  We will not distinguish between 'unknown' and 'not asked' in the data, so the code below will read two consecutive commas (``'), 998, and 999 as missing values.  We will have to deal separately with the values '9' that mean a value is missing.
+
+```{r, include=FALSE}
+knitr::opts_knit$set(root.dir = 'R/')
+```
+
+```{r}
+babies <- read.csv('babies.csv',header=T, sep=",", 
+                     na.strings=c("", "998", "999"))
+```
+
+### Data manipulation {-}
+
+What are the dimensions of the data set?
+```{r, results = 'asis', echo=T}
+dim(babies)
+```
+
+What are the names of the variables?
+```{r,  echo=T}
+names(babies)
+#head(babies)
+#tail(babies)
+```
+
+Isolating variables
+```{r, results = 'markup', echo=T}
+# babies$id
+# babies[, 1]
+# babies[, 'id']
+# babies[1:10, c('id', 'date', 'gestation')]
+```
+
+Assignment and subsetting
+```{r, results = 'markup', echo=T}
+under.30<- babies$age<30
+b<- babies[under.30, ]
+summary(b$age)
+b<- babies[which(under.30), ]
+summary(b$age)
+```
+
+#### Exercises (1) {-}
+
+1. Create a new data set consisting of only the rows where the father's age is 40 or over (use '>=')
+
+2. Include only the mother's age, father's age and marital status in the new dataset
+
+3. Display the dimensions of this data set in the console.
+
+4. Locate the new dataset in th Global Environment and view it
+
+NB: Be sure that you have handled missing father's ages properly
+
+
+##### Exercises (1) solutions {-}
+
+```{r, eval=T, echo=params$SOLUTION,results=ifelse(!params$SOLUTION, "hide","asis")}
+dad.over.40<- which(babies$dage>=40)
+d<- babies[dad.over.40, c("age","dage","marital")]
+dim(d)
+# can also call the function directly
+# View(d)
+```
+
+### Creating some new variables {-}
+
+A baby weight more than 4kg is defined as macrosomia.  We can create this variable (converting ounces to kg) as:
+
+```{r}
+babies$wtKg <- babies$wt/(16*2.2)
+babies$macrosomia <- babies$wtKg > 4
+```
+
+A baby weighing less than 2.5kg is defined as "small".  We can create this variable as:
+
+```{r}
+
+babies$smallBaby <- babies$wtKg < 2.5
+```
+
+We can make a single character variable with three categories of weight:
+
+```{r}
+babies$birthWeightCat <- ifelse(babies$wtKg < 2.5, "small",
+                                ifelse(babies$wtKg > 4, "large","normal"))
+```
+
+Notice that when we tabulate these, they  appear in alphabetical order.  
+
+```{r}
+table(babies$birthWeightCat)
+```
+
+To impose an order, we can convert to  a factor and specify the order:
+
+```{r}
+babies$birthWeightCat <- factor(babies$birthWeightCat, 
+                                  levels=c("small","normal","large"),
+                                  labels=c("Small baby","Normal weight baby","Large baby"))
+table(babies$birthWeightCat)                                
+```
+
+A baby born before 37 completed weeks of pregnancy is defined as preterm.  We can create this logical variable as:
+
+```{r}
+babies$preterm <- babies$gestation < 37*7
+table(babies$preterm)
+```
+
+This is just a logical variable (`TRUE/FALSE` or `T/F`) so we need to make a factor to have it appear more user-friendly:
+
+```{r}
+babies$whenBorn <- factor(babies$preterm, 
+                          levels=c(TRUE,FALSE), 
+                          labels=c("Preterm","Full-term"))
+```
+
+We can make a binary variable for the mother's and father's races:
+
+```{r}
+babies$whiteRace <- ifelse(babies$race=="white","white","other")
+babies$dwhiteRace <- ifelse(babies$drace=="white","white","other")
+```
+
+#### Exercises (2) {-}
+
+1. Starting with the numeric variable `smoke`, in the babies dataset, create a new variable `smokeCat` in the data set that has three levels: `never smoker`, `past smoker`,`current smoker`.  Use the `factor` function and ensure that the levels appear in that order.
+2. Tabulate the numerical variable against the new one to make sure you have not made an error. 
+3. Make a binary variable in the babies dataset `smokeNow` that is 'Yes' when the mother smokes and 'No' otherwise (i.e., it is not yes (1) or it is  missing (9).)
+4. [optional] Make a factor variable `eduCat` from the mother's education variable `ed` using the information at the top if this file about the meaning of 1,2,3,...
+
+##### Exercises (2) solutions {-}
+
+1. Make the two variables:
+
+```{r, eval=T, echo=params$SOLUTION,results=ifelse(!params$SOLUTION, "hide","asis")}
+babies$smokeCat <- with(babies, 
+                        factor(smoke, 
+                               levels=c(0,2,3,1),
+                               labels=c("Never smoker","Past smoker","Past smoker","Current smoker")))
+
+```
+
+2. Check the coding was correct
+
+```{r, eval=T, echo=params$SOLUTION,results=ifelse(!params$SOLUTION, "hide","asis")}
+with(babies, table(smoke, smokeCat,useNA = 'always'), exclude=NULL)
+```
+
+3. Make a binary variable
+
+```{r, eval=T, echo=params$SOLUTION,results=ifelse(!params$SOLUTION, "hide","asis")}
+babies$smokeNow <- ifelse(babies$smoke==1 , "Yes", "No")
+```
+
+4. [optional] make the education variable and check it
+
+```{r, eval=T, echo=params$SOLUTION,results=ifelse(!params$SOLUTION, "hide","asis")}
+babies$eduCat <- factor(babies$ed, 
+                        levels=0:6, 
+                        labels=c("< 8th grade",
+                                "8th-12th grade",
+                                 "HS graduate",
+                                  "HS+trade",
+                                  "HS+some college",
+                                  "College graduate",
+                                  "Trade school/HS unclear"))
+with(babies, table(ed, eduCat, useNA='always'))
+```
+
+## Functions {-}
+
+Two types:
+
+1. Built in functions
+2. User defined functions
+
+### Built in Functions {-}
+
+When you open R, there are many functions available to you: Here, we will review a few useful built in functions. 
+
+If you need help using a function, execute ? followed by the function name, with or without the parentheses.
+
+```
+? table
+```
+
+The following functions are widely used in descriptive statistics
+
+#### table(), prop.table() {-}
+
+```{r, echo=T}
+t<- with(babies, table(marital))
+t
+p<- prop.table(t)
+p
+p*100
+```
+
+#### ifelse() {-}
+
+```{r}
+babies$first.preg<- with(babies, ifelse(parity==0, 'first','not first'))
+table(babies$first.preg)
+
+```
+
+#### summary(), mean(), median(), sd(), quantile() {-}
+
+```{r, echo=T}
+summary(babies)
+gestAge<- babies$gestation
+mean(gestAge)
+mean(gestAge, na.rm=T)
+
+gestAge<- gestAge[complete.cases(gestAge)]
+summary(gestAge)
+
+mean(gestAge)
+median(gestAge)
+sd(gestAge)
+range(gestAge)
+min(gestAge)
+max(gestAge)
+quantile(gestAge)
+quantile(gestAge, seq(0, 1, by = 0.2))
+```
+
+#### round() {-}
+
+```{r, echo=T}
+
+x<- 1121.933384
+round(x, 3)
+round(x, -2)
+```
+
+#### paste() {-}
+
+We can build up complex quoted strings with `paste`:
+
+```{r, echo=T}
+paste("Mean (days) =", mean(gestAge))
+
+paste("Mean (days) =", round(mean(gestAge)))
+
+
+paste('mean day (sd) = ', 
+      round(mean(gestAge)), 
+      ' (', 
+      round(sd(gestAge), 1), 
+      ')', 
+      sep='')
+
+```
+
+#### apply() {-}
+ 
+Carries out an operation on the rows or columns of a dataset.  We pick the `MARGIN` to specify whether we want
+this to be rows or columns
+
+- 1 = rows
+- 2 = columns
+
+```{r, echo=T}
+
+apply(babies[, c('age', 'dage', 'wtKg')], MARGIN = 2, FUN = mean, na.rm=T)
+
+```
+
+#### tapply() {-}
+
+Carries out an operation on one variable, split by a second variable (or group of variables) - e.g., means by group:
+
+```{r, echo=T}
+wt.by.smoke.term<- with(babies, 
+                       tapply(wt, list(smokeCat, whenBorn), mean, na.rm=T))
+rw<- round(wt.by.smoke.term, 1)
+rw
+```
+
+### User Defined Functions {-}
+
+You can write your own functions, text(arguments){ body }
+
+```{r, echo=T}
+custom.summary<- function(x){
+  out<- paste(round(mean(x, na.rm=T), 2), 
+              ' (SD=', 
+              round(sd(x, na.rm=T), 2), 
+              ')', 
+              sep='') 
+  return(out)
+}
+custom.summary(babies$age)
+```
+
+### Saving output and opening in word {-}
+
+```{r, echo=T}
+write.csv(rw, 'test.csv', quote= F)
+
+```
+
+Now open 'test.csv' with word. Highlight and click Table -> convert text to table -> ok.
+
+#### Exercises (3) {-}
+
+1. Create a function to summarize a binary (0/1 or FALSE/TRUE)) variable and return a character string that looks like, for example "18/54 (33.3%)"
+
+Framework
+
+```
+bin.sum <- function(x){
+t <- # tabulate x
+n <- # how many nonmissing observations?
+x <- # how many 1's?
+pct <- round()
+paste()
+
+}
+```
+
+2. Use `tapply` to apply your function to the macrosomia using smokeCat as the grouping variable
+
+Hint
+
+```
+result <- tapply(X = 
+                 INDEX= 
+                 FUN=bin.sum)
+        
+```
+
+3. View your results as a Word table using by using write.csv to save to a CSV file.
+
+4. [Advanced] Create a function to summarize a continuous variable in the following format: "Median (IQR.low, IQR.high), n".  Use `apply` to apply this function to the variables `age`, `dage`, 'ht', 'dht'.  The result should be a table that you can save in the same way as in question 3.
+
+5. [More advanced] Use the function from question 4. to summarize a the  variables `age`, `dage`, 'ht', 'dht' in groups formed by 'preterm'.  Hint: Look at the help  for the function `aggregate`.
+
+Hint:
+
+```
+aggregate(x=DATASET, 
+          by=list(BY VARIABLES HERE), 
+          FUN=FUNCTION.FROM.4)
+```
+
+
+##### Exercises (3) solutions {-}
+
+1. 
+```{r, eval=T, echo=params$SOLUTION,results=ifelse(!params$SOLUTION, "hide","asis")}
+bin.sum<- function(x){
+  t<- table(x)
+  pct<- round(100*prop.table(t), 1)
+  out<- paste(t[2],
+              "/",
+              sum(t),
+              " (", pct[2], "%)", sep="")
+  out
+}
+
+
+x<- babies$macrosomia
+bin.sum(babies$macrosomia)
+```
+
+2. 
+```{r, eval=T, echo=params$SOLUTION,results=ifelse(!params$SOLUTION, "hide","asis")}
+macro.smoke<- with(babies, tapply(macrosomia, smokeCat, bin.sum))
+macro.smoke
+```
+
+3. 
+```{r, eval=T, echo=params$SOLUTION,results=ifelse(!params$SOLUTION, "hide","asis")}
+write.csv(macro.smoke, 'test2.csv', quote=F)
+
+```
+
+4. 
+```{r, eval=T, echo=params$SOLUTION,results=ifelse(!params$SOLUTION, "hide","asis")}
+custom.summary.q<- function(x){
+  out<- paste(round(median(x, na.rm=T), 2), 
+              ' (', 
+              round(quantile(x, 0.25,na.rm=T), 2),
+              ", ",
+              round(quantile(x, 0.75,na.rm=T), 2), 
+              ')', 
+              sep='') 
+  return(out)
+}
+
+apply(babies[,c("age", "dage", "ht", "dht")], MARGIN=2,FUN=custom.summary.q)
+```
+
+
+
+5. 
+```{r, eval=T, echo=params$SOLUTION,results=ifelse(!params$SOLUTION, "hide","asis")}
+aggregate(x=babies[,c("age","dage","ht","dht")], 
+          by=list(babies$preterm), 
+          FUN=custom.summary.q)
+```
+
+\newpage
+
+## Working with more than one dataset {-}
+
+Suppose you want to know how far from the average for the ethnic group each baby's birth weight is as a Z-score:
+
+```
+Z = (wt - average)/SD
+```
+
+
+You need to
+
+1. find the average and SD for each group
+2. merge this data with the full babies dataset
+3. calculate each baby's Z score
+
+The R code for these steps is shown below
+
+1. find the average and SD for each group and save it in a data.frame
+
+```{r}
+
+average.by.group <- tapply(X = babies$wtKg, 
+                           INDEX=babies$race, 
+                           mean,na.rm=T)
+                           
+sd.by.group <- tapply(X = babies$wtKg, 
+                     INDEX=babies$race, 
+                     sd,na.rm=T)
+stats <- data.frame(race=names(average.by.group),
+                    average=average.by.group,
+                    SD=sd.by.group)
+print(stats)               
+```
+
+2. merge this data with the full babies dataset
+
+```{r}
+babies <- merge(babies, 
+                stats, 
+                by="race")
+
+head(babies[ , c("wtKg","average", "SD","race")])
+```
+
+
+
+3. calculate each baby's Z score
+
+```{r}
+babies$Z.wt <- (babies$wtKg - babies$average)/babies$SD
+```
+
+
+Finally, please save the alterations to the babies data set for the next session:
+
+```{r, echo=T}
+write.csv(babies, 'babiesAugmented.csv', quote=F, row.names = F)
+```
+
