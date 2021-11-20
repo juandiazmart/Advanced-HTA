@@ -4,6 +4,7 @@ fig:fig2
 fig:fig3
 tab:table2
 tab:table3
+fig:tree
 HTA
 pre-session-readings
 definition-and-rationale
@@ -30,3 +31,6 @@ importance-of-decision-analytic-models-in-hta
 excercises-1
 tree
 pre-session-readings-2
+good-practices-in-decision-modelling
+decision-tree-models
+structure-and-order

@@ -24,7 +24,7 @@
 <meta name="author" content="Juan Pablo Diaz Martinez" />
 
 
-<meta name="date" content="2021-11-19" />
+<meta name="date" content="2021-11-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -204,6 +204,11 @@ div.csl-indent {
 <li class="chapter" data-level="3" data-path="tree.html"><a href="tree.html"><i class="fa fa-check"></i><b>3</b> Good practices in decision modelling and decion-tree models</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="tree.html"><a href="tree.html#pre-session-readings-2"><i class="fa fa-check"></i><b>3.1</b> Pre-session readings</a></li>
+<li class="chapter" data-level="3.2" data-path="tree.html"><a href="tree.html#good-practices-in-decision-modelling"><i class="fa fa-check"></i><b>3.2</b> Good practices in decision modelling</a></li>
+<li class="chapter" data-level="3.3" data-path="tree.html"><a href="tree.html#decision-tree-models"><i class="fa fa-check"></i><b>3.3</b> Decision-tree models</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="tree.html"><a href="tree.html#structure-and-order"><i class="fa fa-check"></i><b>3.3.1</b> Structure and order</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="introduction-to-r.html"><a href="introduction-to-r.html"><i class="fa fa-check"></i>Introduction to R</a>
 <ul>
@@ -253,7 +258,65 @@ div.csl-indent {
 <p><em>Tarride, J. E., Blackhouse, G., Bischof, M., McCarron, E. C., Lim, M., Ferrusi, I. L., … &amp; Goeree, R. (2009). Approaches for economic evaluations of health care technologies. Journal of the American College of Radiology, 6(5), 307-316.</em></p>
 <p><em>Briggs, A., Sculpher, M., &amp; Claxton, K. (2006). Decision modelling for health economic evaluation. Oxford University Press.</em> Chapter 2. Sections 2.2 and 2.3.1.</p>
 <p><em>Gray, A. M., Clarke, P. M., Wolstenholme, J. L., &amp; Wordsworth, S. (2011). Applied methods of cost-effectiveness analysis in healthcare (Vol. 3). Oxford University Press.</em> Chapter 8. Sections 8.5 and 8.6.</p>
+</div>
+<div id="good-practices-in-decision-modelling" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Good practices in decision modelling</h2>
+<p>Best practives according to <span class="citation"><a href="#ref-roberts2012conceptualizing" role="doc-biblioref">Roberts et al.</a> (<a href="#ref-roberts2012conceptualizing" role="doc-biblioref">2012</a>)</span>:</p>
+<ol style="list-style-type: decimal">
+<li>The modeling team should consult widely with subject experts and stakeholders to ensure that the model represents disease processes appropriately and adequately addresses the decision problem.</li>
+<li>A clear, written statement of the decision problem, modeling objective, and scope should be developed. This should include disease spectrum considered, analytic perspective, target population, alternative interventions, health and other outcomes, and time horizon.
+<ul>
+<li>A model’s scope and structure should be consistent with, and adequate to address, the decision problem and policy context.</li>
+<li>The analytic perspective should be stated and defined. Outcomes modeled should be consistent with the perspective. Analyses that take a perspective narrower than societal should report which outcomes are included and excluded.</li>
+<li>The target population should be defined in terms of features relevant to the decision (e.g., geography and patient characteristics, including comorbid conditions, disease prevalence, and stage).</li>
+<li>Health outcomes, which may be events, cases of disease, deaths, life years gained, quality-adjusted life years, disability-adjusted life years, or other measures important to stakeholders, should be directly relevant to the question being asked.</li>
+<li>Interventions modeled in the analysis should be clearly defined in terms of frequency, component services, dose or intensity, duration, and any variations required for subgroups and should include standard care and other strategies routinely considered and in use.</li>
+</ul></li>
+<li>Although data are essential to a model, the conceptual structure should be driven by the decision problem or research question and not determined by data availability.
+<ul>
+<li>The choice of comparators crucially affects results and should be determined by the problem, not by data availability or quality. All feasible and practical strategies should be considered. Constraining the range of strategies should be justified</li>
+<li>The time horizon of the model should be long enough to capture relevant differences in outcomes across strategies. A lifetime time horizon may be required.</li>
+</ul></li>
+<li>The problem conceptualization should be used to identify key uncertainties in model structure where sensitivity analyses could inform their impact.</li>
+<li>The policy context of the model should be clearly stated. This includes the funder, developer, whether the model is for single or multiple application, and the policy audience.</li>
+<li>An explicit process (expert consultations, influence diagrams, concept mapping, or similar method) should be used to convert the problem conceptualization into an appropriate model structure, ensuring it reflects current disease knowledge and the process modeled.</li>
+<li>Several model types may be suitable. Some problems are more naturally represented in some types than others.
+<ul>
+<li>For simple models or problems with special characteristics (e.g., very short time horizons, very few outcomes), a decision tree may be appropriate.</li>
+<li>If the conceptualization involves representing the disease or treatment process as a series of health states, state-transition models are appropriate. Their primary disadvantage, the Markovian assumption that transition probabilities do not depend on history, can be addressed by increasing the number of states. Individual state-transition models, which do not require this assumption, are an alternative when the number of states grows too large.</li>
+<li>When the disease or treatment process includes interactions between individuals, the methods should be able to represent those interactions and evaluate their effects.</li>
+<li>When the problem involves resource constraints, the modeling method should be able to represent them and evaluate their effects.</li>
+<li>For some problems, combinations of model types, hybrid models, and other modeling methodologies are appropriate.</li>
+</ul></li>
+<li>Model simplicity is desirable for transparency, ease of analysis, validation, and description. However, the model must be complex enough to ensure that differences in value (e.g., health or cost) across the strategies considered are faithfully represented. Some degree of model complexity may be desirable to preserve face validity to clinical experts. Greater complexity may be necessary in policy models that are intended to be used for many problems.</li>
+</ol>
+</div>
+<div id="decision-tree-models" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Decision-tree models</h2>
+<p>A decision-tree, is a branching structure in which each branch represents an event that may take place in the future. Identifying alternatives and specifying the sequence and linkage of events are essential steps in constructing such a model, but are also in themselves of great value in clarifying complex decisions.</p>
+<div id="structure-and-order" class="section level3" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Structure and order</h3>
+<p>A hypothetical policy question concerning whether to introduce a breast cancer screening programme. It can be represented as:</p>
+<div class="figure" style="text-align: center"><span id="fig:tree"></span>
+<img src="images/decision_tree.png" alt="Decision problem, decision node, chance nodes, terminal nodes, and branches. Source: Gray et al., 2016" width="887" />
+<p class="caption">
+Figure 3.1: Decision problem, decision node, chance nodes, terminal nodes, and branches. Source: Gray et al., 2016
+</p>
+</div>
+<ul>
+<li>Decision trees are by convention constructed from left to right, starting with the decision node and ending with the outcomes on the right, and follow the logical structure of the decision problem, usually following the sequence of events over time.</li>
+<li>Moving from left to right along the decision tree, the addition of chance nodes corresponds to the addition of subsequent uncertain events.</li>
+</ul>
+<p>In general, the order of the events in the decision tree usually follows the sequence of events over time according to the logical progression of the decision pathway. We can look at the next example:</p>
+<p><strong>Falta imagen</strong></p>
 
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-roberts2012conceptualizing" class="csl-entry">
+Roberts, Mark, Louise B Russell, A David Paltiel, Michael Chambers, Phil McEwan, and Murray Krahn. 2012. <span>“Conceptualizing a Model: A Report of the ISPOR-SMDM Modeling Good Research Practices Task Force–2.”</span> <em>Medical Decision Making</em> 32 (5): 678–89.
 </div>
 </div>
             </section>
