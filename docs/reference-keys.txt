@@ -5,6 +5,7 @@ fig:fig3
 tab:table2
 tab:table3
 fig:tree
+fig:tree2
 HTA
 pre-session-readings
 definition-and-rationale
@@ -34,3 +35,6 @@ pre-session-readings-2
 good-practices-in-decision-modelling
 decision-tree-models
 structure-and-order
+probabilities-in-a-tree
+payoffs
+expected-value

@@ -71,10 +71,10 @@ For this course, we will be using the book ["R for Data Science"](https://r4ds.h
 tabl <- " 
 | Item                | Percentage    | Due date      |
 |:-------------------:|:-------------:|:-------------:|
-| Assignment 1        | 15%           | Nov 27, 2021  |  
+| Assignment 1        | 15%           | Dec 5, 2021  |  
 | Assignment 2        | 15%           | Dec 23, 2021  |  
 | Take-home exam      | 30%           | Jan 7, 2022   |
-| Project proposal    | 5%            | Nov 22, 2021  | 
+| Project proposal    | 5%            | Dec 2, 2021  | 
 | Project presentation| 5%            | Jan 14, 2022  | 
 | Final project       | 30%           | Jan 17, 2022  | 
 "

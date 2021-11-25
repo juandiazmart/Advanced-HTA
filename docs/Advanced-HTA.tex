@@ -117,7 +117,7 @@
 
 \title{Advanced decision modelling in the context of Health Technology Assessment}
 \author{Juan Pablo Diaz Martinez}
-\date{2021-11-20}
+\date{2021-11-25}
 
 \begin{document}
 \maketitle
@@ -216,10 +216,10 @@ For this course, we will be using the book \href{https://r4ds.had.co.nz/}{``R fo
 Item & Percentage & Due date \\
 \midrule
 \endhead
-Assignment 1 & 15\% & Nov 27, 2021 \\
+Assignment 1 & 15\% & Dec 5, 2021 \\
 Assignment 2 & 15\% & Dec 23, 2021 \\
 Take-home exam & 30\% & Jan 7, 2022 \\
-Project proposal & 5\% & Nov 22, 2021 \\
+Project proposal & 5\% & Dec 2, 2021 \\
 Project presentation & 5\% & Jan 14, 2022 \\
 Final project & 30\% & Jan 17, 2022 \\
 \bottomrule
@@ -1012,7 +1012,66 @@ A hypothetical policy question concerning whether to introduce a breast cancer s
 
 In general, the order of the events in the decision tree usually follows the sequence of events over time according to the logical progression of the decision pathway. We can look at the next example:
 
-\textbf{Falta imagen}
+\begin{figure}
+
+{\centering \includegraphics[width=13.28in]{images/decision_tree2} 
+
+}
+
+\caption{Structure of the tree: process ordered Source: Gray et al., 2016}\label{fig:tree2}
+\end{figure}
+
+\hypertarget{probabilities-in-a-tree}{%
+\subsection{Probabilities in a tree}\label{probabilities-in-a-tree}}
+
+\begin{itemize}
+\tightlist
+\item
+  Once the structure of the model has been developed, the next step in the process is to start populating the model.
+\item
+  Probabilities are usually derived from published studies. When there is more than one source of information on a probability, information will need to be synthesized.
+\item
+  Probabilities (branch probabilities) are entered under the branches emanating from a chance node to represent the probability/likelihood of the uncertain event occurring. Since the events at a chance node must be mutually exclusive and exhaustive, the sum of the probabilities at each chance node must equal 1.
+\end{itemize}
+
+\hypertarget{payoffs}{%
+\subsection{Payoffs}\label{payoffs}}
+
+\begin{itemize}
+\tightlist
+\item
+  Payoffs include the costs related to the events in the decision tree and the final outcomes (life-years, utilities, quality-adjusted life-years), and are entered at the terminal node.
+\end{itemize}
+
+\hypertarget{expected-value}{%
+\subsection{Expected value}\label{expected-value}}
+
+\begin{itemize}
+\tightlist
+\item
+  The decision tree is `averaged out' and `folded back' (or `rolled back'). By folding back the tree, the expected values of each strategy are calculated. The folding-back process starts at the right-hand side of the tree and then averages back.
+\item
+  The expected value is the sum of products of the estimates of the probability of events occurring and the consequence of the events, their outcomes, or their costs, i.e.~the weighted average of the outcome or cost values. This process is conducted separately for costs and effects.
+\end{itemize}
+
+\hypertarget{assignments}{%
+\chapter*{Assignments}\label{assignments}}
+\addcontentsline{toc}{chapter}{Assignments}
+
+\hypertarget{assignment-1}{%
+\section*{Assignment 1}\label{assignment-1}}
+\addcontentsline{toc}{section}{Assignment 1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Section 3.5 in \emph{Edlin, R., McCabe, C., Hulme, C., Hall, P., \& Wright, J. (2015). Cost effectiveness modelling for health technology assessment: a practical course. Springer.}
+\item
+  Build the precious excercise in R.
+\item
+  From Google Classroom week 2, fill the CHEERS table 1 checklist using the next CE \href{https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2775235}{article}.
+\end{enumerate}
 
 \hypertarget{introduction-to-r}{%
 \chapter*{Introduction to R}\label{introduction-to-r}}

@@ -56,8 +56,22 @@ knitr::include_graphics("images/decision_tree.png")
 
 In general, the order of the events in the decision tree usually follows the sequence of events over time according to the logical progression of the decision pathway. We can look at the next example:
 
-**Falta imagen**
+```{r tree2, echo=FALSE, fig.cap="Structure of the tree: process ordered Source: Gray et al., 2016",fig.align='center'}
+knitr::include_graphics("images/decision_tree2.png")
+```
 
+### Probabilities in a tree
 
++ Once the structure of the model has been developed, the next step in the process is to start populating the model.
++ Probabilities are usually derived from published studies. When there is more than one source of information on a probability, information will need to be synthesized.
++ Probabilities (branch probabilities) are entered under the branches emanating from a chance node to represent the probability/likelihood of the uncertain event occurring. Since the events at a chance node must be mutually exclusive and exhaustive, the sum of the probabilities at each chance node must equal 1.
 
+### Payoffs
+
++ Payoffs include the costs related to the events in the decision tree and the final outcomes (life-years, utilities, quality-adjusted life-years), and are entered at the terminal node.
+
+### Expected value
+
++ The decision tree is ‘averaged out’ and ‘folded back’ (or ‘rolled back’). By folding back the tree, the expected values of each strategy are calculated. The folding-back process starts at the right-hand side of the tree and then averages back.
++ The expected value is the sum of products of the estimates of the probability of events occurring and the consequence of the events, their outcomes, or their costs, i.e. the weighted average of the outcome or cost values. This process is conducted separately for costs and effects.
 
