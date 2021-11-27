@@ -572,3 +572,42 @@ Finally, please save the alterations to the babies data set for the next session
 write.csv(babies, 'babiesAugmented.csv', quote=F, row.names = F)
 ```
 
+
+## Matrices {-}
+
+A  data structure useful in statistical programming and for more advanced data analysis is a matrix.  A matrix is a 2-dimensional array, with rows and columns, that all contains items of the same type (as it is with vectors). We access their content using two indices (given the two dimensions).
+
+```{r}
+M1 <- matrix(1:12,nrow=3,byrow = F)	
+M1a <- matrix(1:12,nrow=3,byrow = T)	
+M2 <- matrix(letters[1:25],nrow=5,ncol = 5)	
+M3 <- matrix(c(letters,LETTERS[1:4]),nrow=5,ncol = 6)	
+```
+
+
+```{r}
+M3[1,1]	
+M3[1:3,1:3]	
+```
+	
+## Lists	{-}
+	
+The most versatile data structure is the `list`. It can be used as a collection of different, even heterogeneous, objects. It can have one or many dimentions (e.g. list array). We need to access a list's items using double square brackets `[[]]`.	
+
+```{r}
+some.stuff <- list(first.matrix=M1,	
+                   second.matrix=M2, 	
+                   my.data.frame=babies, 	
+                   OldDads=babies$dage > 50)	
+```
+
+```{r}
+class(some.stuff)	
+length(some.stuff)	
+names(some.stuff)	
+some.stuff[[1]]	
+table(some.stuff[["OldDads"]])	
+	
+some.stuff$my.vector[3]	
+some.stuff$my.data.frame$gestation[41:45]
+```
