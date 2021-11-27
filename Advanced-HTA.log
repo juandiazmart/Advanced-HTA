@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.11.16)  27 NOV 2021 12:57
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.11.16)  27 NOV 2021 15:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -992,28 +992,100 @@ Overfull \hbox (98.96233pt too wide) has occurred while \output is active
 ING AND DECION-TREE MODELS
  []
 
-[38] [39]
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1601--1601
+[38]
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1491--1491
 []\TU/lmtt/m/n/10 ##          divorced legally separated           married     
 never married[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1601--1601
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1491--1491
 []\TU/lmtt/m/n/10 ##                 5                15              1208     
             6[] 
  []
 
-
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1616--1616
+[39]
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1506--1506
 []\TU/lmtt/m/n/10 ##          divorced legally separated           married     
 never married[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1616--1616
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1506--1506
 []\TU/lmtt/m/n/10 ##       0.004045307       0.012135922       0.977346278     
   0.004854369[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1520--1520
+[]\TU/lmtt/m/n/10 ##          divorced legally separated           married     
+never married[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1520--1520
+[]\TU/lmtt/m/n/10 ##         0.4045307         1.2135922        97.7346278     
+    0.4854369[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 1622--1622
+[]\TU/lmtt/m/n/10 ##  Min.   :  15   Length:1236        Min.   :148.0   Min.   
+: 55.0[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 1622--1622
+[]\TU/lmtt/m/n/10 ##  1st Qu.:5286   Class :character   1st Qu.:272.0   1st Qu.
+:108.8[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 1622--1622
+[]\TU/lmtt/m/n/10 ##  Median :6730   Mode  :character   Median :280.0   Median 
+:120.0[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 1622--1622
+[]\TU/lmtt/m/n/10 ##  Mean   :6001                      Mean   :279.3   Mean   
+:119.6[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 1622--1622
+[]\TU/lmtt/m/n/10 ##  3rd Qu.:7583                      3rd Qu.:288.0   3rd Qu.
+:131.0[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 1622--1622
+[]\TU/lmtt/m/n/10 ##  Max.   :9263                      Max.   :353.0   Max.   
+:176.0[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 1622--1622
+[]\TU/lmtt/m/n/10 ##  Min.   : 0.000   Min.   :15.00   Min.   :0.000   Min.   :
+53.00[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 1622--1622
+[]\TU/lmtt/m/n/10 ##  1st Qu.: 0.000   1st Qu.:23.00   1st Qu.:2.000   1st Qu.:
+62.00[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 1622--1622
+[]\TU/lmtt/m/n/10 ##  Median : 1.000   Median :26.00   Median :2.000   Median :
+64.00[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 1622--1622
+[]\TU/lmtt/m/n/10 ##  Mean   : 1.932   Mean   :27.26   Mean   :2.916   Mean   :
+64.05[] 
  []
 
 
@@ -1023,259 +1095,187 @@ ING AND DECION-TREE MODELS
  []
 
 [40]
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1630--1630
-[]\TU/lmtt/m/n/10 ##          divorced legally separated           married     
-never married[] 
- []
-
-
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1630--1630
-[]\TU/lmtt/m/n/10 ##         0.4045307         1.2135922        97.7346278     
-    0.4854369[] 
- []
-
-
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1732--1732
-[]\TU/lmtt/m/n/10 ##  Min.   :  15   Length:1236        Min.   :148.0   Min.   
-: 55.0[] 
- []
-
-
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1732--1732
-[]\TU/lmtt/m/n/10 ##  1st Qu.:5286   Class :character   1st Qu.:272.0   1st Qu.
-:108.8[] 
- []
-
-
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1732--1732
-[]\TU/lmtt/m/n/10 ##  Median :6730   Mode  :character   Median :280.0   Median 
-:120.0[] 
- []
-
-
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1732--1732
-[]\TU/lmtt/m/n/10 ##  Mean   :6001                      Mean   :279.3   Mean   
-:119.6[] 
- []
-
-
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1732--1732
-[]\TU/lmtt/m/n/10 ##  3rd Qu.:7583                      3rd Qu.:288.0   3rd Qu.
-:131.0[] 
- []
-
-
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1732--1732
-[]\TU/lmtt/m/n/10 ##  Max.   :9263                      Max.   :353.0   Max.   
-:176.0[] 
- []
-
-
-Overfull \hbox (1.5pt too wide) in paragraph at lines 1732--1732
-[]\TU/lmtt/m/n/10 ##  Min.   : 0.000   Min.   :15.00   Min.   :0.000   Min.   :
-53.00[] 
- []
-
-
-Overfull \hbox (1.5pt too wide) in paragraph at lines 1732--1732
-[]\TU/lmtt/m/n/10 ##  1st Qu.: 0.000   1st Qu.:23.00   1st Qu.:2.000   1st Qu.:
-62.00[] 
- []
-
-
-Overfull \hbox (1.5pt too wide) in paragraph at lines 1732--1732
-[]\TU/lmtt/m/n/10 ##  Median : 1.000   Median :26.00   Median :2.000   Median :
-64.00[] 
- []
-
-
-Overfull \hbox (1.5pt too wide) in paragraph at lines 1732--1732
-[]\TU/lmtt/m/n/10 ##  Mean   : 1.932   Mean   :27.26   Mean   :2.916   Mean   :
-64.05[] 
- []
-
-
-Overfull \hbox (1.5pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (1.5pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  3rd Qu.: 3.000   3rd Qu.:31.00   3rd Qu.:4.000   3rd Qu.:
 66.00[] 
  []
 
 
-Overfull \hbox (1.5pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (1.5pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  Max.   :13.000   Max.   :45.00   Max.   :9.000   Max.   :
 72.00[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (48.75pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##       wt1             dage            ded             dht 
            dwt[] 
  []
 
-[41]
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1732--1732
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  Min.   : 87.0   Min.   :18.00   Min.   :0.000   Min.   :6
 0.0   Min.   :110.0[] 
  []
 
 
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  1st Qu.:114.8   1st Qu.:25.00   1st Qu.:2.000   1st Qu.:6
 8.0   1st Qu.:155.0[] 
  []
 
 
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  Median :125.0   Median :29.00   Median :4.000   Median :7
 1.0   Median :170.0[] 
  []
 
 
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  Mean   :128.6   Mean   :30.35   Mean   :3.189   Mean   :7
 0.2   Mean   :171.2[] 
  []
 
 
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  3rd Qu.:139.0   3rd Qu.:34.00   3rd Qu.:5.000   3rd Qu.:7
 2.0   3rd Qu.:185.0[] 
  []
 
 
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  Max.   :250.0   Max.   :62.00   Max.   :9.000   Max.   :7
 8.0   Max.   :260.0[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (64.5pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  NA's   :36      NA's   :7                       NA's   :4
 92    NA's   :499[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (6.75pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  Min.   :0.000   Min.   :0.0000   Min.   :0.0000   Min.   
 :0.000[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (6.75pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  1st Qu.:2.000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.
 :0.000[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (6.75pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  Median :3.000   Median :1.0000   Median :1.0000   Median 
 :1.000[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (6.75pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  Mean   :3.701   Mean   :0.8681   Mean   :0.9625   Mean   
 :1.825[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (6.75pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  3rd Qu.:5.000   3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.
 :3.000[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (6.75pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  Max.   :9.000   Max.   :9.0000   Max.   :9.0000   Max.   
 :9.000[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (22.5pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##      race             marital             drace           
     ddate[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  Length:1236        Length:1236        Length:1236        
 Min.   : 1.00[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  Class :character   Class :character   Class :character   
 1st Qu.: 8.00[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  Mode  :character   Mode  :character   Mode  :character   
 Median :15.00[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##                                                           
 Mean   :15.37[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##                                                           
 3rd Qu.:23.00[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##                                                           
 Max.   :31.00[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (48.75pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  smallBaby                  birthWeightCat  preterm       
       whenBorn[] 
  []
 
 
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (54.0pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  Mode :logical   Small baby        :  58   Mode :logical  
  Preterm  :  97[] 
  []
 
 
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (54.0pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  FALSE:1178      Normal weight baby:1033   FALSE:1126     
  Full-term:1126[] 
  []
 
 
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (54.0pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  TRUE :58        Large baby        : 145   TRUE :97       
  NA's     :  13[] 
  []
 
-
-Overfull \hbox (38.25pt too wide) in paragraph at lines 1732--1732
+[41]
+Overfull \hbox (38.25pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##   whiteRace          dwhiteRace                  smokeCat 
     smokeNow[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  Length:1236        Length:1236        Never smoker  :544 
   Length:1236[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (69.75pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  Class :character   Class :character   Past smoker   :198 
   Class :character[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 1732--1732
+Overfull \hbox (69.75pt too wide) in paragraph at lines 1622--1622
 []\TU/lmtt/m/n/10 ##  Mode  :character   Mode  :character   Current smoker:484 
   Mode  :character[] 
  []
@@ -1304,21 +1304,15 @@ Overfull \hbox (98.96233pt too wide) has occurred while \output is active
 ING AND DECION-TREE MODELS
  []
 
-[48] [49]
+[48] [49] (./Advanced-HTA.bbl
 Overfull \hbox (98.96233pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 50 \TU/lmr/m/sl/10 CHAPTER 3.  GOOD PRACTICES IN DECISION MODELL
 ING AND DECION-TREE MODELS
  []
 
-[50] [51] (./Advanced-HTA.bbl
-Overfull \hbox (98.96233pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 52 \TU/lmr/m/sl/10 CHAPTER 3.  GOOD PRACTICES IN DECISION MODELL
-ING AND DECION-TREE MODELS
- []
+[50] [51
 
-[52] [53
-
-]) [54] (./Advanced-HTA.aux)
+]) [52] (./Advanced-HTA.aux)
 Package rerunfilecheck Info: File `Advanced-HTA.out' has not changed.
 (rerunfilecheck)             Checksum: ACC118593D59A2630519742390E4C4EF;4388.
  ) 
@@ -1329,6 +1323,6 @@ Here is how much of TeX's memory you used:
  39330 multiletter control sequences out of 15000+600000
  409921 words of font info for 85 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 86i,8n,121p,1009b,605s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 86i,8n,121p,1009b,597s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Advanced-HTA.pdf (54 pages).
+Output written on Advanced-HTA.pdf (52 pages).

@@ -1314,23 +1314,6 @@ NB: Be sure that you have handled missing father's ages properly
 \paragraph*{Exercises (1) solutions}\label{exercises-1-solutions}}
 \addcontentsline{toc}{paragraph}{Exercises (1) solutions}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{dad.over}\FloatTok{.40}\OtherTok{\textless{}{-}} \FunctionTok{which}\NormalTok{(babies}\SpecialCharTok{$}\NormalTok{dage}\SpecialCharTok{\textgreater{}=}\DecValTok{40}\NormalTok{)}
-\NormalTok{d}\OtherTok{\textless{}{-}}\NormalTok{ babies[dad.over}\FloatTok{.40}\NormalTok{, }\FunctionTok{c}\NormalTok{(}\StringTok{"age"}\NormalTok{,}\StringTok{"dage"}\NormalTok{,}\StringTok{"marital"}\NormalTok{)]}
-\FunctionTok{dim}\NormalTok{(d)}
-\end{Highlighting}
-\end{Shaded}
-
-{[}1{]} 125 3
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# can also call the function directly}
-\CommentTok{\# View(d)}
-\end{Highlighting}
-\end{Shaded}
-
 \hypertarget{creating-some-new-variables}{%
 \subsection*{Creating some new variables}\label{creating-some-new-variables}}
 \addcontentsline{toc}{subsection}{Creating some new variables}
@@ -1449,108 +1432,15 @@ We can make a binary variable for the mother's and father's races:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   Make the two variables:
-\end{enumerate}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{babies}\SpecialCharTok{$}\NormalTok{smokeCat }\OtherTok{\textless{}{-}} \FunctionTok{with}\NormalTok{(babies, }
-                        \FunctionTok{factor}\NormalTok{(smoke, }
-                               \AttributeTok{levels=}\FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{1}\NormalTok{),}
-                               \AttributeTok{labels=}\FunctionTok{c}\NormalTok{(}\StringTok{"Never smoker"}\NormalTok{,}\StringTok{"Past smoker"}\NormalTok{,}\StringTok{"Past smoker"}\NormalTok{,}\StringTok{"Current smoker"}\NormalTok{)))}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\tightlist
 \item
   Check the coding was correct
-\end{enumerate}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{with}\NormalTok{(babies, }\FunctionTok{table}\NormalTok{(smoke, smokeCat,}\AttributeTok{useNA =} \StringTok{\textquotesingle{}always\textquotesingle{}}\NormalTok{), }\AttributeTok{exclude=}\ConstantTok{NULL}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-  smokeCat
-\end{verbatim}
-
-smoke Never smoker Past smoker Current smoker
-0 544 0 0 0
-1 0 0 484 0
-2 0 95 0 0
-3 0 103 0 0
-9 0 0 0 10
-0 0 0 0
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-\tightlist
 \item
   Make a binary variable
-\end{enumerate}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{babies}\SpecialCharTok{$}\NormalTok{smokeNow }\OtherTok{\textless{}{-}} \FunctionTok{ifelse}\NormalTok{(babies}\SpecialCharTok{$}\NormalTok{smoke}\SpecialCharTok{==}\DecValTok{1}\NormalTok{ , }\StringTok{"Yes"}\NormalTok{, }\StringTok{"No"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-\tightlist
 \item
   {[}optional{]} make the education variable and check it
 \end{enumerate}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{babies}\SpecialCharTok{$}\NormalTok{eduCat }\OtherTok{\textless{}{-}} \FunctionTok{factor}\NormalTok{(babies}\SpecialCharTok{$}\NormalTok{ed, }
-                        \AttributeTok{levels=}\DecValTok{0}\SpecialCharTok{:}\DecValTok{6}\NormalTok{, }
-                        \AttributeTok{labels=}\FunctionTok{c}\NormalTok{(}\StringTok{"\textless{} 8th grade"}\NormalTok{,}
-                                \StringTok{"8th{-}12th grade"}\NormalTok{,}
-                                 \StringTok{"HS graduate"}\NormalTok{,}
-                                  \StringTok{"HS+trade"}\NormalTok{,}
-                                  \StringTok{"HS+some college"}\NormalTok{,}
-                                  \StringTok{"College graduate"}\NormalTok{,}
-                                  \StringTok{"Trade school/HS unclear"}\NormalTok{))}
-\FunctionTok{with}\NormalTok{(babies, }\FunctionTok{table}\NormalTok{(ed, eduCat, }\AttributeTok{useNA=}\StringTok{\textquotesingle{}always\textquotesingle{}}\NormalTok{))}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-  eduCat
-\end{verbatim}
-
-ed \textless{} 8th grade 8th-12th grade HS graduate HS+trade HS+some college
-0 19 0 0 0 0
-1 0 183 0 0 0
-2 0 0 444 0 0
-3 0 0 0 65 0
-4 0 0 0 0 298
-5 0 0 0 0 0
-6 0 0 0 0 0
-9 0 0 0 0 0
-0 0 0 0 0
-eduCat
-ed College graduate Trade school/HS unclear
-0 0 0 0
-1 0 0 0
-2 0 0 0
-3 0 0 0
-4 0 0 0
-5 219 0 0
-6 0 7 0
-9 0 0 1
-0 0 0
 
 \hypertarget{functions}{%
 \section*{Functions}\label{functions}}
@@ -2064,109 +1954,11 @@ aggregate(x=DATASET,
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-\end{enumerate}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{bin.sum}\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(x)\{}
-\NormalTok{  t}\OtherTok{\textless{}{-}} \FunctionTok{table}\NormalTok{(x)}
-\NormalTok{  pct}\OtherTok{\textless{}{-}} \FunctionTok{round}\NormalTok{(}\DecValTok{100}\SpecialCharTok{*}\FunctionTok{prop.table}\NormalTok{(t), }\DecValTok{1}\NormalTok{)}
-\NormalTok{  out}\OtherTok{\textless{}{-}} \FunctionTok{paste}\NormalTok{(t[}\DecValTok{2}\NormalTok{],}
-              \StringTok{"/"}\NormalTok{,}
-              \FunctionTok{sum}\NormalTok{(t),}
-              \StringTok{" ("}\NormalTok{, pct[}\DecValTok{2}\NormalTok{], }\StringTok{"\%)"}\NormalTok{, }\AttributeTok{sep=}\StringTok{""}\NormalTok{)}
-\NormalTok{  out}
-\NormalTok{\}}
-
-
-\NormalTok{x}\OtherTok{\textless{}{-}}\NormalTok{ babies}\SpecialCharTok{$}\NormalTok{macrosomia}
-\FunctionTok{bin.sum}\NormalTok{(babies}\SpecialCharTok{$}\NormalTok{macrosomia)}
-\end{Highlighting}
-\end{Shaded}
-
-{[}1{]} ``145/1236 (11.7\%)''
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\tightlist
+\item
+\item
+\item
 \item
 \end{enumerate}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{macro.smoke}\OtherTok{\textless{}{-}} \FunctionTok{with}\NormalTok{(babies, }\FunctionTok{tapply}\NormalTok{(macrosomia, smokeCat, bin.sum))}
-\NormalTok{macro.smoke}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-Never smoker      Past smoker   Current smoker 
-\end{verbatim}
-
-``61/544 (11.2\%)'' ``38/198 (19.2\%)'' ``42/484 (8.7\%)''
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-\tightlist
-\item
-\end{enumerate}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{write.csv}\NormalTok{(macro.smoke, }\StringTok{\textquotesingle{}test2.csv\textquotesingle{}}\NormalTok{, }\AttributeTok{quote=}\NormalTok{F)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-\tightlist
-\item
-\end{enumerate}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{custom.summary.q}\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(x)\{}
-\NormalTok{  out}\OtherTok{\textless{}{-}} \FunctionTok{paste}\NormalTok{(}\FunctionTok{round}\NormalTok{(}\FunctionTok{median}\NormalTok{(x, }\AttributeTok{na.rm=}\NormalTok{T), }\DecValTok{2}\NormalTok{), }
-              \StringTok{\textquotesingle{} (\textquotesingle{}}\NormalTok{, }
-              \FunctionTok{round}\NormalTok{(}\FunctionTok{quantile}\NormalTok{(x, }\FloatTok{0.25}\NormalTok{,}\AttributeTok{na.rm=}\NormalTok{T), }\DecValTok{2}\NormalTok{),}
-              \StringTok{", "}\NormalTok{,}
-              \FunctionTok{round}\NormalTok{(}\FunctionTok{quantile}\NormalTok{(x, }\FloatTok{0.75}\NormalTok{,}\AttributeTok{na.rm=}\NormalTok{T), }\DecValTok{2}\NormalTok{), }
-              \StringTok{\textquotesingle{})\textquotesingle{}}\NormalTok{, }
-              \AttributeTok{sep=}\StringTok{\textquotesingle{}\textquotesingle{}}\NormalTok{) }
-  \FunctionTok{return}\NormalTok{(out)}
-\NormalTok{\}}
-
-\FunctionTok{apply}\NormalTok{(babies[,}\FunctionTok{c}\NormalTok{(}\StringTok{"age"}\NormalTok{, }\StringTok{"dage"}\NormalTok{, }\StringTok{"ht"}\NormalTok{, }\StringTok{"dht"}\NormalTok{)], }\AttributeTok{MARGIN=}\DecValTok{2}\NormalTok{,}\AttributeTok{FUN=}\NormalTok{custom.summary.q)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-      age          dage            ht           dht 
-\end{verbatim}
-
-``26 (23, 31)'' ``29 (25, 34)'' ``64 (62, 66)'' ``71 (68, 72)''
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{4}
-\tightlist
-\item
-\end{enumerate}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{aggregate}\NormalTok{(}\AttributeTok{x=}\NormalTok{babies[,}\FunctionTok{c}\NormalTok{(}\StringTok{"age"}\NormalTok{,}\StringTok{"dage"}\NormalTok{,}\StringTok{"ht"}\NormalTok{,}\StringTok{"dht"}\NormalTok{)], }
-          \AttributeTok{by=}\FunctionTok{list}\NormalTok{(babies}\SpecialCharTok{$}\NormalTok{preterm), }
-          \AttributeTok{FUN=}\NormalTok{custom.summary.q)}
-\end{Highlighting}
-\end{Shaded}
-
-Group.1 age dage ht dht
-1 FALSE 26 (23, 31) 29 (25, 34) 64 (62, 66) 71 (68, 72)
-2 TRUE 26 (23, 33) 29 (25, 36) 64 (62, 66) 70 (68, 73)
 
 \newpage
 

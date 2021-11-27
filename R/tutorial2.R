@@ -116,3 +116,42 @@ babies$macrosomia <- babies$wtKg > 4
 
 macro.smoke<- with(babies, tapply(macrosomia, smokeCat, bin.sum))
 macro.smoke
+
+
+######################################## Functions #######################
+
+vector1 <- c(3,5,62,4)
+sum(vector1)
+
+table()
+prop.table()
+
+ifelse()
+
+x <- c(3.5678,2.34,3,4.5,.78)
+round(x,digits = 2)
+round(x,2)
+
+mean(gestAge,na.rm = T)
+paste("Mean (days) =",round(mean(gestAge,na.rm = T),digits = 1))
+
+?apply
+
+names(babies)
+
+mean(babies[,"age"],na.rm = T)
+mean(babies[,"dage"],na.rm = T)
+mean(babies[,"wtKg"],na.rm = T)
+
+apply(babies[,c("age","dage","wtKg")],MARGIN = 2,FUN = mean,na.rm=T)
+?tapply()
+
+with(babies, 
+     tapply(wt, list(whenBorn,smokeCat), median, na.rm=T))
+
+calculadora <- function(a,b){
+  c=c(a+b,a*b)
+  return(c)
+}
+
+calculadora(8,9)
