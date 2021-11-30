@@ -38,3 +38,5 @@ structure-and-order
 probabilities-in-a-tree
 payoffs
 expected-value
+markov
+pre-session-readings-3

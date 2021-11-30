@@ -1,0 +1,11 @@
+# Markov models {#markov}
+
+## Pre-session readings
+
+*Siebert, U., Alagoz, O., Bayoumi, A. M., Jahn, B., Owens, D. K., Cohen, D. J., & Kuntz, K. M. (2012). State-transition modeling: a report of the ISPOR-SMDM modeling good research practices task force–3. Medical Decision Making, 32(5), 690-700.* [link](https://www.valueinhealthjournal.com/action/showPdf?pii=S1098-3015%2812%2901654-3)
+
+*Briggs, A., Sculpher, M., & Claxton, K. (2006). Decision modelling for health economic evaluation. Oxford University Press.* Chapter 2.3.2.
+
+*Gray, A. M., Clarke, P. M., Wolstenholme, J. L., & Wordsworth, S. (2011). Applied methods of cost-effectiveness analysis in healthcare (Vol. 3). Oxford University Press.* Chapter 9.
+
+

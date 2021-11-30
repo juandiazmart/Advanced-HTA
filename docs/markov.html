@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 What is HTA? | Advanced decision modelling in the context of Health Technology Assessment</title>
-  <meta name="description" content="Chapter 1 What is HTA? | Advanced decision modelling in the context of Health Technology Assessment" />
+  <title>Chapter 4 Markov models | Advanced decision modelling in the context of Health Technology Assessment</title>
+  <meta name="description" content="Chapter 4 Markov models | Advanced decision modelling in the context of Health Technology Assessment" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 What is HTA? | Advanced decision modelling in the context of Health Technology Assessment" />
+  <meta property="og:title" content="Chapter 4 Markov models | Advanced decision modelling in the context of Health Technology Assessment" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 What is HTA? | Advanced decision modelling in the context of Health Technology Assessment" />
+  <meta name="twitter:title" content="Chapter 4 Markov models | Advanced decision modelling in the context of Health Technology Assessment" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="decision.html"/>
+<link rel="prev" href="tree.html"/>
+<link rel="next" href="assignments.html"/>
 <script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -261,186 +261,13 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="HTA" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> What is HTA?</h1>
-<div id="pre-session-readings" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Pre-session readings</h2>
-<p><em>Goodman, C. S. (2004). Introduction to health technology assessment. The Lewin Group. virginia, USA.</em> <a href="https://www.nlm.nih.gov/nichsr/hta101/ta10101.html">link</a>. Chapters 1, 2, and 5.</p>
-<p><em>Briggs, A., Sculpher, M., &amp; Claxton, K. (2006). Decision modelling for health economic evaluation. Oxford University Press.</em> Chapter 1.</p>
-<p>Chapters 1 and 2 of <em>R for data science</em>.</p>
-</div>
-<div id="definition-and-rationale" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Definition and rationale</h2>
-<p>The first thing that we need to know is the definition of a <strong>health technology</strong>. A health technology is any intervention that may be used to promote health, to prevent, diagnose or treat disease or for rehabilitation or long-term care.</p>
-<p><strong>Questions</strong></p>
-<ol style="list-style-type: decimal">
-<li>List some examples of health technologies.</li>
-</ol>
-<p>Depending on the agency, health technology assessment has a broad spectrum of definitions:</p>
-<p><em>“HTA is a multidisciplinary process that uses explicit methods to determine the value of a health technology at different points in its lifecycle. The purpose is to inform decision-making in order to promote an equitable, efficient, and high-quality health system.” <a href="https://www.inahta.org/">INAHTA</a></em></p>
-<p><em>“Health technology assessment is a multidisciplinary process that uses explicit methods to determine the value of a health technology at different points in its lifecycle. The purpose is to inform decision-making in order to promote an equitable, efficient, and high-quality health system.” <a href="https://www.eunethta.eu/">EUnetHTA</a></em></p>
-<p><em>“A comprehensive, objective, evidence-based analysis of the clinical effectiveness, cost-effectiveness and broader impact of drugs, medical technologies and health systems. HTA examines technologies at all stages of their life cycle, from development through to maturity and obsolescence.” <a href="https://www.cadth.ca">CADTH</a></em></p>
-<p>The purpose of HTA is to support/help decision makers by identifying technologies that will improve health outcomes and deliver value for every dollar invested.</p>
-<ul>
-<li>Does a new health technology offer a clinical advantage over the alternatives/standard approaches?</li>
-<li>Is it worth the investment?</li>
-<li>Can I pay for it?</li>
-<li>Who would benefit from it?</li>
-<li>Any ethical, social or legal issues</li>
-</ul>
-<p>But, what are the reasons for conducting HTAs?</p>
-<ul>
-<li>Increased demand for healthcare (why?)</li>
-<li>Soaring healthcare costs</li>
-<li>Increased rate of diffusion of new technologies and associated evidence</li>
-</ul>
-<div class="figure" style="text-align: center"><span id="fig:expectancy"></span>
-<img src="images/esperanza.png" alt="Life expectancy in Mexico. Source: CONAPO" width="323" />
-<p class="caption">
-Figure 1.1: Life expectancy in Mexico. Source: CONAPO
-</p>
-</div>
-<p>Once we have seen the definition and rationale for conducting HTAs, it is important to talk about the potential users.</p>
-<ul>
-<li>Government</li>
-<li>Managers in hospitals</li>
-<li>Healthcare workers</li>
-<li>Researchers</li>
-</ul>
-</div>
-<div id="hta-process" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> HTA process</h2>
-<ol style="list-style-type: decimal">
-<li>Identification and prioritization of technologies</li>
-<li>Clear specification of the problem</li>
-<li>Technology assessment and review
-<ul>
-<li>Evidence and systematic literature review</li>
-<li>Aggregation and appraisal of evidence</li>
-<li>Synthesize and consolidate</li>
-<li>Collect primary data (if necessary)</li>
-<li>Economic evaluation, budget and health system impact</li>
-<li>Assessment of social, legal, and ethical consideration</li>
-<li>Formulation of finding</li>
-</ul></li>
-<li>Dissemination and implementation of recommendations</li>
-<li>Monitor the impact of assessment reports</li>
-</ol>
-<div id="identification-and-prioritization-of-technologies" class="section level3" number="1.3.1">
-<h3><span class="header-section-number">1.3.1</span> Identification and prioritization of technologies</h3>
-<ul>
-<li>Drugs seeking public or private reimbursement</li>
-<li>Variable for non-drug technologies. However candidates:
-<ul>
-<li>High potential to improve health outcomes, reduce harm or decrease costs with similar efficacy</li>
-<li>Large numbers of individuals affected</li>
-<li>Political pressure</li>
-<li>Unmet needs—no current treatment</li>
-</ul></li>
-</ul>
-</div>
-<div id="clear-specification-of-the-problem" class="section level3" number="1.3.2">
-<h3><span class="header-section-number">1.3.2</span> Clear specification of the problem</h3>
-<ul>
-<li>Problem statements need to consider:
-<ul>
-<li>Patient population affected (indication; epidemiology)</li>
-<li>Intervention being considered (drug, device, new/old)</li>
-<li>Comparators</li>
-<li>Outcome(s) or interest</li>
-<li>Setting (e.g. hospital, community)</li>
-</ul></li>
-<li>Well formulated question</li>
-</ul>
-</div>
-<div id="technology-assessment-and-review" class="section level3" number="1.3.3">
-<h3><span class="header-section-number">1.3.3</span> Technology assessment and review</h3>
-<div id="evidence-and-systematic-literature-review" class="section level4" number="1.3.3.1">
-<h4><span class="header-section-number">1.3.3.1</span> Evidence and systematic literature review</h4>
-<ul>
-<li>A comprehensive search of the literature based on systematic methods is essential</li>
-<li>2 main types of resources relevant to HTA:
-<ul>
-<li>Published literature</li>
-<li>Grey literature</li>
-</ul></li>
-</ul>
-</div>
-<div id="identification-aggregation-appraisal-of-evidence" class="section level4" number="1.3.3.2">
-<h4><span class="header-section-number">1.3.3.2</span> Identification, aggregation &amp; appraisal of evidence</h4>
-<ul>
-<li>Objective, systematic process for screening and determine studies to be included in the synthesis</li>
-<li>Classify the studies
-<ul>
-<li>Randomised, non-randomised and economic</li>
-</ul></li>
-<li>Critical appraisal of the quality of the evidence</li>
-</ul>
-</div>
-<div id="synthesize-consolidate" class="section level4" number="1.3.3.3">
-<h4><span class="header-section-number">1.3.3.3</span> Synthesize &amp; consolidate</h4>
-<ul>
-<li>Findings from multiple studies often combined to respond to the HTA question</li>
-<li>Techniques commonly used to synthesize data in HTA are:
-<ul>
-<li>Meta-analysis, meta-regression</li>
-<li>Network meta-analysis</li>
-</ul></li>
-</ul>
-</div>
-<div id="economic-evaluation" class="section level4" number="1.3.3.4">
-<h4><span class="header-section-number">1.3.3.4</span> Economic evaluation</h4>
-<ul>
-<li>Measures the incremental costs and benefits of the technology under review compared to one or more relevant technologies</li>
-<li>CEA, CUA and CBA</li>
-<li>Budget impact</li>
-</ul>
-</div>
-<div id="assessment-of-social-legal-ethical-considerations" class="section level4" number="1.3.3.5">
-<h4><span class="header-section-number">1.3.3.5</span> Assessment of social, legal &amp; ethical considerations</h4>
-<ul>
-<li>Example: genetic information (why?)</li>
-<li>Any access or equity issues following the dissemination and implementation of technologies?</li>
-</ul>
-</div>
-<div id="formulation-of-findings" class="section level4" number="1.3.3.6">
-<h4><span class="header-section-number">1.3.3.6</span> Formulation of findings</h4>
-<ul>
-<li>Explicitly link quality of the evidence to the strength of findings and recommendations as well as any limitations</li>
-<li>Recommendations based on the findings that reflect the original question(s)</li>
-</ul>
-</div>
-</div>
-<div id="dissemination-of-recommendations" class="section level3" number="1.3.4">
-<h3><span class="header-section-number">1.3.4</span> Dissemination of recommendations</h3>
-<ul>
-<li>Findings translated into relevant and understandable information</li>
-<li>Knowledge translation</li>
-</ul>
-</div>
-<div id="monitoring-the-impact-of-reports" class="section level3" number="1.3.5">
-<h3><span class="header-section-number">1.3.5</span> Monitoring the impact of reports</h3>
-<ul>
-<li>Some recommendations are translated into policies with clear and quantifiable impacts (e.g. adoption of new technology, change in reimbursement)</li>
-<li>Others go ignored and are not readily adopted into general practice</li>
-</ul>
-</div>
-</div>
-<div id="excercises" class="section level2" number="1.4">
-<h2><span class="header-section-number">1.4</span> Excercises</h2>
-<p>Read the following <a href="https://www.nice.org.uk/guidance/ta503/">HTA</a> published by NICE in the UK. Do the following:</p>
-<ul>
-<li>What is the population?</li>
-<li>What is the intervention and comparators?</li>
-<li>Is there a reproducible search strategy for the clinical evidence in the HTA?</li>
-<li>Was the clinical evidence critically appraised? How?</li>
-<li>Describe the evidence synthesis process</li>
-<li>What type of economic evaluation they used?</li>
-<li>What type of model was used in the economic evaluation?</li>
-<li>How was the uncertainty handled in the economic evaluation?</li>
-<li>Is there a budget impact in the HTA?</li>
-<li>What is the recommendation?</li>
-</ul>
+<div id="markov" class="section level1" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Markov models</h1>
+<div id="pre-session-readings-3" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Pre-session readings</h2>
+<p><em>Siebert, U., Alagoz, O., Bayoumi, A. M., Jahn, B., Owens, D. K., Cohen, D. J., &amp; Kuntz, K. M. (2012). State-transition modeling: a report of the ISPOR-SMDM modeling good research practices task force–3. Medical Decision Making, 32(5), 690-700.</em> <a href="https://www.valueinhealthjournal.com/action/showPdf?pii=S1098-3015%2812%2901654-3">link</a></p>
+<p><em>Briggs, A., Sculpher, M., &amp; Claxton, K. (2006). Decision modelling for health economic evaluation. Oxford University Press.</em> Chapter 2.3.2.</p>
+<p><em>Gray, A. M., Clarke, P. M., Wolstenholme, J. L., &amp; Wordsworth, S. (2011). Applied methods of cost-effectiveness analysis in healthcare (Vol. 3). Oxford University Press.</em> Chapter 9.</p>
 
 </div>
 </div>
@@ -449,8 +276,8 @@ Figure 1.1: Life expectancy in Mexico. Source: CONAPO
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="decision.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tree.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="assignments.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

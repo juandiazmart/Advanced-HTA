@@ -155,3 +155,49 @@ calculadora <- function(a,b){
 }
 
 calculadora(8,9)
+
+custom <- function(x){
+  paste(median(x,na.rm = T), "(",quantile(x,.25,na.rm = T),"-",quantile(x,.75,na.rm = T),")",sep = "")
+}
+
+apply(babies[,c("age","dage","ht","dht")],MARGIN = 2,FUN = custom)
+
+custom(babies$age)
+
+### Estructura de los datos
+
+# vectores
+
+x <- c(2,"a")
+x
+
+x[1]
+x <- c(2,4)
+x[1:2]
+
+y <- c(2,3,4,5,7,4)
+y[c(1,3,5)]
+
+# matrices 
+
+M1 <- matrix(1:12,nrow=3,byrow = T) 
+M1[3,3]
+M2 <- matrix(letters[1:25],nrow=4,ncol = 5) 
+M2
+
+## arreglos
+
+D <- 1:12
+dim(D) <- c(2, 3, 2)
+D
+
+# listas
+
+milista<-list(primera=M1,segunda=M2,
+  tercera=D,cuarta=babies
+)
+
+milista[[1]][3,4]
+milista$primera[3,4]
+
+
