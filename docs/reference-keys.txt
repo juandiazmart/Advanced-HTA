@@ -40,3 +40,5 @@ payoffs
 expected-value
 markov
 pre-session-readings-3
+introduction-1
+best-practices

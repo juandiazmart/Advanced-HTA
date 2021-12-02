@@ -8,4 +8,46 @@
 
 *Gray, A. M., Clarke, P. M., Wolstenholme, J. L., & Wordsworth, S. (2011). Applied methods of cost-effectiveness analysis in healthcare (Vol. 3). Oxford University Press.* Chapter 9.
 
+## Introduction
+
+Many clinical situations can be described in terms of the conditions that individuals can be in (“states”), how they can move among such states (“transitions”), and how likely such moves are (“transition probabilities”). In these situations, state-transition models (STMs) are often well suited to the decision problem, as they conceptualize it in terms of a set of states and transitions among these states. **This chapter focuses in Markov Models**. An STM is a reasonable choice when the decision problem can be framed in terms of states, the interactions between individuals are not relevant, and the population of interest is a closed cohort. 
+
+## Best practices
+
+1. If the decision problem can be represented with a manageable number of health states that incorporate all characteristics relevant to the decision problem, including the relevant history, a cohort simulation should be chosen because of its transparency, efficiency, ease of debugging, and ability to conduct specific value of information analyses. If, however, a valid representation of any aspect of the decision problem would lead to an unmanageable number of states, then an individual-level state-transition model is recommended. Validity should not be sacrificed for simplicity.
+
+2. The strategies being evaluated should be clearly defined. In particular, sequential decisions should not be modeled within the Markov cycle tree but rather be part of the specification of the alternative intervention strategies that precede the Markov tree
+
+3. The starting cohort should be defined by the demographic and clinical characteristics that affect the transition probabilities or state values (e.g., quality of life and cost).
+
+4. Specification of states and transitions should generally reflect the biological/theoretical understanding of the disease or condition being modeled.
+
+5. States should adequately capture the type of intervention (i.e., prevention, screening, diagnostics, treatment) as well as the intervention's benefits and harms.
+
+6. States need to be homogeneous with respect to both observed and unobserved (i.e., not known by the decision maker) characteristics that affect transition probabilities.
+
+7. The time horizon for the model should be sufficiently large to capture all health effects and costs relevant to the decision problem.
+
+8. Cycle length should be short enough to represent the frequency of clinical events and interventions.
+
+9. Components of state-transition models that reflect similar clinical courses should not be recreated but rather should be incorporated once and linked to that structure throughout the model.
+
+10. Transition probabilities and intervention effects should be derived from the most representative data sources for the decision problem.
+
+11. All methods and assumptions used to derive transition probabilities and intervention effects should be described.
+
+12. All parameters relating to the effectiveness of interventions derived from observational studies should be correctly controlled for confounding. Time-varying confounding is of particular concern in estimating intervention effects.
+
+13. The valuation of intermediate outcomes/states should be justified.
+
+14. A half-cycle correction should be applied to costs and effectiveness in the first cycle and in the final cycle if not using a lifetime horizon.
+
+15. For certain decision problems, it may be important to report not only the expected value but also the distribution of the outcomes of interest.
+
+16. The number of individuals simulated should be large enough to generate stable estimates of the expected values.
+
+17. The report should use nontechnical language and clear figures and tables that enhance understanding of the STM to communicate its key structural elements, assumptions, and parameters. 
+
+18. In addition to final outcomes, intermediate outcomes that enhance the understanding and transparency of the model results should also be presented.
+
 
