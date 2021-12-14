@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Markov models | Advanced decision modelling in the context of Health Technology Assessment</title>
-  <meta name="description" content="Chapter 4 Markov models | Advanced decision modelling in the context of Health Technology Assessment" />
+  <title>Chapter 5 Evidence synthesis | Advanced decision modelling in the context of Health Technology Assessment</title>
+  <meta name="description" content="Chapter 5 Evidence synthesis | Advanced decision modelling in the context of Health Technology Assessment" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Markov models | Advanced decision modelling in the context of Health Technology Assessment" />
+  <meta property="og:title" content="Chapter 5 Evidence synthesis | Advanced decision modelling in the context of Health Technology Assessment" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Markov models | Advanced decision modelling in the context of Health Technology Assessment" />
+  <meta name="twitter:title" content="Chapter 5 Evidence synthesis | Advanced decision modelling in the context of Health Technology Assessment" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="tree.html"/>
-<link rel="next" href="evidence.html"/>
+<link rel="prev" href="markov.html"/>
+<link rel="next" href="assignments.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -267,40 +267,12 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="markov" class="section level1" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Markov models</h1>
-<div id="pre-session-readings-3" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Pre-session readings</h2>
-<p><em>Siebert, U., Alagoz, O., Bayoumi, A. M., Jahn, B., Owens, D. K., Cohen, D. J., &amp; Kuntz, K. M. (2012). State-transition modeling: a report of the ISPOR-SMDM modeling good research practices task force–3. Medical Decision Making, 32(5), 690-700.</em> <a href="https://www.valueinhealthjournal.com/action/showPdf?pii=S1098-3015%2812%2901654-3">link</a></p>
-<p><em>Briggs, A., Sculpher, M., &amp; Claxton, K. (2006). Decision modelling for health economic evaluation. Oxford University Press.</em> Chapter 2.3.2.</p>
-<p><em>Gray, A. M., Clarke, P. M., Wolstenholme, J. L., &amp; Wordsworth, S. (2011). Applied methods of cost-effectiveness analysis in healthcare (Vol. 3). Oxford University Press.</em> Chapter 9.</p>
-</div>
-<div id="introduction-1" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Introduction</h2>
-<p>Many clinical situations can be described in terms of the conditions that individuals can be in (“states”), how they can move among such states (“transitions”), and how likely such moves are (“transition probabilities”). In these situations, state-transition models (STMs) are often well suited to the decision problem, as they conceptualize it in terms of a set of states and transitions among these states. <strong>This chapter focuses in Markov Models</strong>. An STM is a reasonable choice when the decision problem can be framed in terms of states, the interactions between individuals are not relevant, and the population of interest is a closed cohort.</p>
-</div>
-<div id="best-practices" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Best practices</h2>
-<ol style="list-style-type: decimal">
-<li><p>If the decision problem can be represented with a manageable number of health states that incorporate all characteristics relevant to the decision problem, including the relevant history, a cohort simulation should be chosen because of its transparency, efficiency, ease of debugging, and ability to conduct specific value of information analyses. If, however, a valid representation of any aspect of the decision problem would lead to an unmanageable number of states, then an individual-level state-transition model is recommended. Validity should not be sacrificed for simplicity.</p></li>
-<li><p>The strategies being evaluated should be clearly defined. In particular, sequential decisions should not be modeled within the Markov cycle tree but rather be part of the specification of the alternative intervention strategies that precede the Markov tree</p></li>
-<li><p>The starting cohort should be defined by the demographic and clinical characteristics that affect the transition probabilities or state values (e.g., quality of life and cost).</p></li>
-<li><p>Specification of states and transitions should generally reflect the biological/theoretical understanding of the disease or condition being modeled.</p></li>
-<li><p>States should adequately capture the type of intervention (i.e., prevention, screening, diagnostics, treatment) as well as the intervention’s benefits and harms.</p></li>
-<li><p>States need to be homogeneous with respect to both observed and unobserved (i.e., not known by the decision maker) characteristics that affect transition probabilities.</p></li>
-<li><p>The time horizon for the model should be sufficiently large to capture all health effects and costs relevant to the decision problem.</p></li>
-<li><p>Cycle length should be short enough to represent the frequency of clinical events and interventions.</p></li>
-<li><p>Components of state-transition models that reflect similar clinical courses should not be recreated but rather should be incorporated once and linked to that structure throughout the model.</p></li>
-<li><p>Transition probabilities and intervention effects should be derived from the most representative data sources for the decision problem.</p></li>
-<li><p>All methods and assumptions used to derive transition probabilities and intervention effects should be described.</p></li>
-<li><p>All parameters relating to the effectiveness of interventions derived from observational studies should be correctly controlled for confounding. Time-varying confounding is of particular concern in estimating intervention effects.</p></li>
-<li><p>The valuation of intermediate outcomes/states should be justified.</p></li>
-<li><p>A half-cycle correction should be applied to costs and effectiveness in the first cycle and in the final cycle if not using a lifetime horizon.</p></li>
-<li><p>For certain decision problems, it may be important to report not only the expected value but also the distribution of the outcomes of interest.</p></li>
-<li><p>The number of individuals simulated should be large enough to generate stable estimates of the expected values.</p></li>
-<li><p>The report should use nontechnical language and clear figures and tables that enhance understanding of the STM to communicate its key structural elements, assumptions, and parameters.</p></li>
-<li><p>In addition to final outcomes, intermediate outcomes that enhance the understanding and transparency of the model results should also be presented.</p></li>
-</ol>
+<div id="evidence" class="section level1" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Evidence synthesis</h1>
+<div id="pre-session-readings-4" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Pre-session readings</h2>
+<p><em>Murad, M. H., Montori, V. M., Ioannidis, J. P., Jaeschke, R., Devereaux, P. J., Prasad, K., … &amp; Guyatt, G. (2014). How to read a systematic review and meta-analysis and apply the results to patient care: users’ guides to the medical literature. Jama, 312(2), 171-179.</em> <a href="https://https://jamanetwork.com/journals/jama/article-abstract/1886196">link</a></p>
+<p><em>Schulz, K. F., Altman, D. G., Moher, D., &amp; CONSORT Group. (2010). WITHDRAWN: CONSORT 2010 statement: Updated guidelines for reporting parallel group randomised trials.</em> <a href="https://www.bmj.com/content/340/bmj.c332">link</a></p>
 
 </div>
 </div>
@@ -309,8 +281,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="tree.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="evidence.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="markov.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="assignments.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

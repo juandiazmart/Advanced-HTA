@@ -4,10 +4,14 @@
 %
 \documentclass[
 ]{book}
+\title{Advanced decision modelling in the context of Health Technology Assessment}
+\author{Juan Pablo Diaz Martinez}
+\date{2021-12-14}
+
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{ifxetex,ifluatex}
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+\usepackage{iftex}
+\ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
@@ -109,15 +113,11 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
-\ifluatex
+\ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
-
-\title{Advanced decision modelling in the context of Health Technology Assessment}
-\author{Juan Pablo Diaz Martinez}
-\date{2021-12-02}
 
 \begin{document}
 \maketitle
@@ -350,7 +350,7 @@ But, what are the reasons for conducting HTAs?
 
 \begin{figure}
 
-{\centering \includegraphics[width=8.97in]{images/esperanza} 
+{\centering \includegraphics{images/esperanza} 
 
 }
 
@@ -641,7 +641,7 @@ The goal of CEA is to maximize health benefits produced from a given level of re
 
 \begin{figure}
 
-{\centering \includegraphics[width=11.58in]{images/fig1} 
+{\centering \includegraphics{images/fig1} 
 
 }
 
@@ -659,7 +659,7 @@ As mentioned before, CEA include both costs and effects, which are represented g
 
 \begin{figure}
 
-{\centering \includegraphics[width=12.31in]{images/fig2} 
+{\centering \includegraphics{images/fig2} 
 
 }
 
@@ -693,7 +693,7 @@ Why incremental? We can see it using the example from \citet{gray2011applied} ap
 
 \begin{figure}
 
-{\centering \includegraphics[width=9.25in]{images/fig3} 
+{\centering \includegraphics{images/fig3} 
 
 }
 
@@ -995,7 +995,7 @@ A hypothetical policy question concerning whether to introduce a breast cancer s
 
 \begin{figure}
 
-{\centering \includegraphics[width=24.64in]{images/decision_tree} 
+{\centering \includegraphics{images/decision_tree} 
 
 }
 
@@ -1014,7 +1014,7 @@ In general, the order of the events in the decision tree usually follows the seq
 
 \begin{figure}
 
-{\centering \includegraphics[width=13.28in]{images/decision_tree2} 
+{\centering \includegraphics{images/decision_tree2} 
 
 }
 
@@ -1113,6 +1113,16 @@ Many clinical situations can be described in terms of the conditions that indivi
 \item
   In addition to final outcomes, intermediate outcomes that enhance the understanding and transparency of the model results should also be presented.
 \end{enumerate}
+
+\hypertarget{evidence}{%
+\chapter{Evidence synthesis}\label{evidence}}
+
+\hypertarget{pre-session-readings-4}{%
+\section{Pre-session readings}\label{pre-session-readings-4}}
+
+\emph{Murad, M. H., Montori, V. M., Ioannidis, J. P., Jaeschke, R., Devereaux, P. J., Prasad, K., \ldots{} \& Guyatt, G. (2014). How to read a systematic review and meta-analysis and apply the results to patient care: users' guides to the medical literature. Jama, 312(2), 171-179.} \href{https://https://jamanetwork.com/journals/jama/article-abstract/1886196}{link}
+
+\emph{Schulz, K. F., Altman, D. G., Moher, D., \& CONSORT Group. (2010). WITHDRAWN: CONSORT 2010 statement: Updated guidelines for reporting parallel group randomised trials.} \href{https://www.bmj.com/content/340/bmj.c332}{link}
 
 \hypertarget{assignments}{%
 \chapter*{Assignments}\label{assignments}}

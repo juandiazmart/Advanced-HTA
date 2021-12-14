@@ -1,0 +1,7 @@
+# Evidence synthesis {#evidence}
+
+## Pre-session readings
+
+*Murad, M. H., Montori, V. M., Ioannidis, J. P., Jaeschke, R., Devereaux, P. J., Prasad, K., ... & Guyatt, G. (2014). How to read a systematic review and meta-analysis and apply the results to patient care: users’ guides to the medical literature. Jama, 312(2), 171-179.* [link](https://https://jamanetwork.com/journals/jama/article-abstract/1886196)
+
+*Schulz, K. F., Altman, D. G., Moher, D., & CONSORT Group. (2010). WITHDRAWN: CONSORT 2010 statement: Updated guidelines for reporting parallel group randomised trials.* [link](https://www.bmj.com/content/340/bmj.c332)

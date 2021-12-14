@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Introduction to decision-analytic models | Advanced decision modelling in the context of Health Technology Assessment</title>
   <meta name="description" content="Chapter 2 Introduction to decision-analytic models | Advanced decision modelling in the context of Health Technology Assessment" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Introduction to decision-analytic models | Advanced decision modelling in the context of Health Technology Assessment" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Juan Pablo Diaz Martinez" />
 
 
-<meta name="date" content="2021-12-02" />
+<meta name="date" content="2021-12-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   
 <link rel="prev" href="HTA.html"/>
 <link rel="next" href="tree.html"/>
-<script src="libs/header-attrs-2.8/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -42,7 +43,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -219,6 +219,10 @@ div.csl-indent {
 <li class="chapter" data-level="4.2" data-path="markov.html"><a href="markov.html#introduction-1"><i class="fa fa-check"></i><b>4.2</b> Introduction</a></li>
 <li class="chapter" data-level="4.3" data-path="markov.html"><a href="markov.html#best-practices"><i class="fa fa-check"></i><b>4.3</b> Best practices</a></li>
 </ul></li>
+<li class="chapter" data-level="5" data-path="evidence.html"><a href="evidence.html"><i class="fa fa-check"></i><b>5</b> Evidence synthesis</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="evidence.html"><a href="evidence.html#pre-session-readings-4"><i class="fa fa-check"></i><b>5.1</b> Pre-session readings</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="assignments.html"><a href="assignments.html"><i class="fa fa-check"></i>Assignments</a>
 <ul>
 <li class="chapter" data-level="" data-path="assignments.html"><a href="assignments.html#assignment-1"><i class="fa fa-check"></i>Assignment 1</a></li>
@@ -285,8 +289,8 @@ div.csl-indent {
 <p><em>“For any given rate of output [the combination of inputs] . that costs the decision maker least”</em> <span class="citation"><a href="#ref-culyer1980political" role="doc-biblioref">Culyer</a> (<a href="#ref-culyer1980political" role="doc-biblioref">1980</a>)</span></p>
 <p><em>“A method of determining the most efficient way of dealing with a specified health problem”</em> <span class="citation"><a href="#ref-green1988priority" role="doc-biblioref">Green and Barker</a> (<a href="#ref-green1988priority" role="doc-biblioref">1988</a>)</span></p>
 <p>The goal of CEA is to maximize health benefits produced from a given level of resources. Therefore, it is consistent with welfare economics concept of Pareto efficiency <span class="citation">(<a href="#ref-birch1992cost" role="doc-biblioref">Birch and Gafni 1992</a>)</span> (Figure <a href="decision.html#fig:fig1">2.1</a>).</p>
-<div class="figure" style="text-align: center"><span id="fig:fig1"></span>
-<img src="images/fig1.png" alt="Production possibilities frontier" width="417" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig1"></span>
+<img src="images/fig1.png" alt="Production possibilities frontier"  />
 <p class="caption">
 Figure 2.1: Production possibilities frontier
 </p>
@@ -296,8 +300,8 @@ Figure 2.1: Production possibilities frontier
 <div id="cost-effectiveness-in-practice" class="section level3" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> Cost-effectiveness in practice</h3>
 <p>As mentioned before, CEA include both costs and effects, which are represented graphically in a plane:</p>
-<div class="figure" style="text-align: center"><span id="fig:fig2"></span>
-<img src="images/fig2.png" alt="Incremental CE plane" width="443" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig2"></span>
+<img src="images/fig2.png" alt="Incremental CE plane"  />
 <p class="caption">
 Figure 2.2: Incremental CE plane
 </p>
@@ -314,8 +318,8 @@ Figure 2.2: Incremental CE plane
 <li>Metformin (A): $500k/250 life-years</li>
 <li>New drug (B): $2500k/300 life-years</li>
 </ul>
-<div class="figure" style="text-align: center"><span id="fig:fig3"></span>
-<img src="images/fig3.png" alt="Average and incremental cost-effectivenessr" width="333" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig3"></span>
+<img src="images/fig3.png" alt="Average and incremental cost-effectivenessr"  />
 <p class="caption">
 Figure 2.3: Average and incremental cost-effectivenessr
 </p>
@@ -439,7 +443,7 @@ Figure 2.3: Average and incremental cost-effectivenessr
 </table>
 <p>Finally, we can ask ourselves. What is the maximum value of the incremental cost-effectivess ratio (<span class="math inline">\(\lambda\)</span>)?</p>
 <ul>
-<li><p>Rule-based approaches - Adopting arbitrary thresholds. For example, <span class="citation"><a href="#ref-laupacis1992attractive" role="doc-biblioref">Laupacis et al.</a> (<a href="#ref-laupacis1992attractive" role="doc-biblioref">1992</a>)</span> adopted identical cut-off points of CAN$20,000 per QALY gained, up to which level they considered that there would be strong grounds for adoption, and CAN$100,000 per QALY gained, above which they considered that evidence for adoption was weak. An alternative approach is to use the country’s gross domestic product (GDP) per capita. <span class="citation"><a href="#ref-williams2004could" role="doc-biblioref">Williams and others</a> (<a href="#ref-williams2004could" role="doc-biblioref">2004</a>)</span> advanced one line of reasoning in support of this, arguing that each
+<li><p>Rule-based approaches - Adopting arbitrary thresholds. For example, <span class="citation"><a href="#ref-laupacis1992attractive" role="doc-biblioref">Laupacis et al.</a> (<a href="#ref-laupacis1992attractive" role="doc-biblioref">1992</a>)</span> adopted identical cut-off points of CAN$20,000 per QALY gained, up to which level they considered that there would be strong grounds for adoption, and CAN$100,000 per QALY gained, above which they considered that evidence for adoption was weak. An alternative approach is to use the country’s gross domestic product (GDP) per capita. <span class="citation"><a href="#ref-williams2004could" role="doc-biblioref">Williams et al.</a> (<a href="#ref-williams2004could" role="doc-biblioref">2004</a>)</span> advanced one line of reasoning in support of this, arguing that each
 person has an entitlement to a ‘fair share’ of the country’s wealth.</p></li>
 <li><p>League table approach - If we had full information on the ICERs of all available interventions, it would be possible to rank them by ICER. See the example in Table <a href="decision.html#tab:table2">2.1</a>.</p></li>
 </ul>
@@ -558,7 +562,7 @@ Sculpher, Mark J, Karl Claxton, Mike Drummond, and Chris McCabe. 2006. <span>“
 Weinstein, Milton C, and William B Stason. 1977. <span>“Foundations of Cost-Effectiveness Analysis for Health and Medical Practices.”</span> <em>New England Journal of Medicine</em> 296 (13): 716–21.
 </div>
 <div id="ref-williams2004could" class="csl-entry">
-Williams, Alan, and others. 2004. <span>“What Could Be Nicer Than NICE?”</span> <em>Monographs</em>.
+Williams, Alan et al. 2004. <span>“What Could Be Nicer Than NICE?”</span> <em>Monographs</em>.
 </div>
 </div>
             </section>
@@ -571,7 +575,6 @@ Williams, Alan, and others. 2004. <span>“What Could Be Nicer Than NICE?”</sp
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -611,6 +614,10 @@ gitbook.start({
 "text": null
 },
 "download": ["Advanced HTA.pdf", "Advanced HTA.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
