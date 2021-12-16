@@ -6,6 +6,8 @@ tab:table2
 tab:table3
 fig:tree
 fig:tree2
+fig:unnamed-chunk-1
+fig:unnamed-chunk-2
 HTA
 pre-session-readings
 definition-and-rationale
@@ -44,3 +46,10 @@ introduction-1
 best-practices
 evidence
 pre-session-readings-4
+identifying-aggregating-and-appraising-the-evidence
+identifying-the-evidence
+how-to-search
+aggregating-and-appraising-the-evidence
+aggregate
+abstract
+appraise
