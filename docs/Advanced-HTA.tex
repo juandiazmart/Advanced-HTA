@@ -6,7 +6,7 @@
 ]{book}
 \title{Advanced decision modelling in the context of Health Technology Assessment}
 \author{Juan Pablo Diaz Martinez}
-\date{2021-12-16}
+\date{2021-12-17}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -1328,6 +1328,149 @@ Many quality assessment tools exist depending on the type of literature:
 \item
   \href{https://www.nlm.nih.gov/nichsr/edu/healthecon/drummond_list.html}{Economic evaluation}
 \end{itemize}
+
+\hypertarget{evidence-synthesis}{%
+\subsection{Evidence synthesis}\label{evidence-synthesis}}
+
+\hypertarget{outcome-measures}{%
+\subsubsection{Outcome measures}\label{outcome-measures}}
+
+\begin{itemize}
+\tightlist
+\item
+  Continuous: means
+\item
+  Nominal data: proportions
+\item
+  Nominal data: ranks
+\end{itemize}
+
+Before conducting a meta-analysis, it is important to define the outcome of interest.
+
+\begin{longtable}[]{@{}cc@{}}
+\toprule
+Types of data & Outcome measures \\
+\midrule
+\endhead
+Continous & Mean difrerence. Standardized mean diference \\
+Dichotomous & Risk difference. Relative Risk. Odds Ratio \\
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\tightlist
+\item
+  Use mean difference (MD) when studies have comparable outcome measures (i.e.~same scale) \(m_1 -m_2\)
+\item
+  Standardized mean diference (SMD) is used when studies use different outcome measurements which address the same clinical outcome (e.g.~different instruments to measure pain intensity, anxiety\ldots) \((m_1 -m_2)/sd_p\) where \(sd_p= \sqrt{(sd_1+sd_2)/2}\)
+\item
+  Risk difference (RD) \(p_1 - p_2\)
+\item
+  Relative risk (RR) \(p_1/p_2\)
+\item
+  Odds ratio (OR) \(\frac{p_1/(1-p1)}{p_2/(1-p2)}\)
+\end{itemize}
+
+In general, health practitioners are more familiar to the concept of relative risk than odds ratios. Remember that point estimates may be misleading. therefore uncertainty can be expressed by confidence intervals.
+
+\hypertarget{meta-analysis}{%
+\subsection{Meta-Analysis}\label{meta-analysis}}
+
+A meta-analysis is a statistical analysis that combines the results of multiple scientific studies (more than 2 comparative studies). Studies may differ in terms of results or sample size.
+
+\begin{itemize}
+\item
+  The results of a study (e.g.~effect size) with 1,000 subjects is assumed to be a more precise estimate than an estimate derived from a study
+  based on 10 subjects.
+\item
+  Larger studies should carry more weight than smaller studies
+\end{itemize}
+
+\hypertarget{heterogeneity}{%
+\subsubsection{Heterogeneity}\label{heterogeneity}}
+
+Patients, interventions or outcomes may differ within and between studies. This is what is called heterogeneity. In order to take into account this heterogeneity, two models have been proposed: fixed effects and random effects models:
+
+\begin{itemize}
+\tightlist
+\item
+  Fixed effects model: Every study evaluates a common effect size. Variation between studies only due by chance.
+\item
+  Random effects model: The effect sizes are different between studies and they follow a distribution.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=17.71in]{images/fixed} 
+
+}
+
+\caption{Fixed vs Random effects}\label{fig:unnamed-chunk-4}
+\end{figure}
+
+In the presence of heterogeneity:
+
+\begin{itemize}
+\tightlist
+\item
+  Ignore heterogeneity
+\item
+  Incorporate heterogeneity into a random effects model
+\item
+  Explain heterogeneity by sub-group analyses or meta-regressions
+\end{itemize}
+
+Presence of heterogeneity can bedetermined through a chi-squared test. Also, we can calculate a statistic (\(I^2\)) that describes the percentage of
+variation across studies that is due to heterogeneity rather than chance (i.e.~how much heterogeneity).
+
+\textbf{Which one to use?} Heterogenity can be explained either by:
+
+\begin{itemize}
+\tightlist
+\item
+  Sub-group analyses
+\item
+  Meta regression
+\end{itemize}
+
+\hypertarget{example}{%
+\subsubsection{Example}\label{example}}
+
+\begin{itemize}
+\tightlist
+\item
+  Type 2 Diabetes mellitus management
+
+  \begin{itemize}
+  \tightlist
+  \item
+    P: Type II DM
+  \item
+    I: Glitazones
+  \item
+    C: Sulfonylurea
+  \item
+    O: HbA1c
+  \end{itemize}
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=18.08in]{images/fixed_example} 
+
+}
+
+\caption{Fixed effects}\label{fig:unnamed-chunk-5}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=18.28in]{images/random_example} 
+
+}
+
+\caption{Random effects}\label{fig:unnamed-chunk-6}
+\end{figure}
 
 \hypertarget{assignments}{%
 \chapter*{Assignments}\label{assignments}}

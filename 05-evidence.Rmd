@@ -115,4 +115,80 @@ Many quality assessment tools exist depending on the type of literature:
 + [Prognosis studies](https://www.acpjournals.org/doi/10.7326/M18-1376)
 + [Economic evaluation](https://www.nlm.nih.gov/nichsr/edu/healthecon/drummond_list.html)
 
+### Evidence synthesis 
 
+#### Outcome measures
+
++ Continuous: means
++ Nominal data: proportions
++ Nominal data: ranks
+
+Before conducting a meta-analysis, it is important to define the outcome of interest.
+
+```{r echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+tabl2 <- " 
+| Types of data               | Outcome measures   |
+|:-------------------:|:-------------:|
+| Continous       | Mean difrerence. Standardized mean diference|
+| Dichotomous        | Risk difference. Relative Risk. Odds Ratio         | 
+"
+cat(tabl2)
+```
+
++ Use mean difference (MD) when studies have comparable outcome measures (i.e. same scale) $m_1 -m_2$
++  Standardized mean diference (SMD) is used when studies use different outcome measurements which address the same clinical outcome (e.g. different instruments to measure pain intensity, anxiety...) $(m_1 -m_2)/sd_p$ where $sd_p= \sqrt{(sd_1+sd_2)/2}$ 
++ Risk difference (RD) $p_1 - p_2$
++ Relative risk (RR) $p_1/p_2$
++ Odds ratio (OR) $\frac{p_1/(1-p1)}{p_2/(1-p2)}$
+
+In general, health practitioners are more familiar to the concept of relative risk than odds ratios. Remember that point estimates may be misleading. therefore uncertainty can be expressed by confidence intervals. 
+
+### Meta-Analysis
+ 
+A meta-analysis is a statistical analysis that combines the results of multiple scientific studies (more than 2 comparative studies). Studies may differ in terms of results or sample size.
+
++ The results of a study (e.g. effect size) with 1,000 subjects is assumed to be a more precise estimate than an estimate derived from a study
+based on 10 subjects.
+
++ Larger studies should carry more weight than smaller studies
+
+#### Heterogeneity
+
+Patients, interventions or outcomes may differ within and between studies. This is what is called heterogeneity. In order to take into account this heterogeneity, two models have been proposed: fixed effects and random effects models:
+
++ Fixed effects model: Every study evaluates a common effect size. Variation between studies only due by chance.
++ Random effects model: The effect sizes are different between studies and they follow a distribution.
+
+```{r echo=FALSE, fig.cap="Fixed vs Random effects",fig.align='center'}
+knitr::include_graphics("images/fixed.png")
+```
+
+In the presence of heterogeneity:
+
++ Ignore heterogeneity
++ Incorporate heterogeneity into a random effects model
++ Explain heterogeneity by sub-group analyses or meta-regressions
+
+Presence of heterogeneity can bedetermined through a chi-squared test. Also, we can calculate a statistic ($I^2$) that describes the percentage of
+variation across studies that is due to heterogeneity rather than chance (i.e. how much heterogeneity).
+
+**Which one to use?** Heterogenity can be explained either by:
+
++ Sub-group analyses
++ Meta regression
+
+#### Example
+
++ Type 2 Diabetes mellitus management
+    + P: Type II DM
+    + I: Glitazones
+    + C: Sulfonylurea
+    + O: HbA1c
+    
+```{r echo=FALSE, fig.cap="Fixed effects",fig.align='center'}
+knitr::include_graphics("images/fixed_example.png")
+```  
+
+```{r echo=FALSE, fig.cap="Random effects",fig.align='center'}
+knitr::include_graphics("images/random_example.png")
+``` 

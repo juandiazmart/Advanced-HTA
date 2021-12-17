@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.12.8)  16 DEC 2021 23:13
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.12.8)  17 DEC 2021 23:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -854,273 +854,75 @@ Overfull \hbox (10.07564pt too wide) has occurred while \output is active
 \TU/lmr/m/sl/10 5.2.  IDENTIFYING, AGGREGATING AND APPRAISING THE EVIDENCE \TU/lmr/m/n/10 39
  []
 
-[39] [40] [41
+[39] [40]
+File: images/fixed.png Graphic file (type bmp)
+<images/fixed.png>
 
-] [42
-
-] [43]
-Overfull \hbox (1.5pt too wide) in paragraph at lines 1469--1469
-[]\TU/lmtt/m/n/10 ht            mother's height in inches to the last completed inch[] 
+Overfull \hbox (390.06787pt too wide) in paragraph at lines 1404--1405
+ [][] 
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 1469--1469
-[]\TU/lmtt/m/n/10 ded           father's education, coding same as mother's education.[] 
+LaTeX Warning: Float too large for page by 24.0637pt on input line 1409.
+
+
+Overfull \hbox (10.07564pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 5.2.  IDENTIFYING, AGGREGATING AND APPRAISING THE EVIDENCE \TU/lmr/m/n/10 41
  []
 
-[44]
-Overfull \hbox (33.0pt too wide) in paragraph at lines 1469--1469
-[]\TU/lmtt/m/n/10 number        number of cigs smoked per day for past and current smokers[] 
+[41] [42]
+File: images/fixed_example.png Graphic file (type bmp)
+<images/fixed_example.png>
+
+Overfull \hbox (779.19614pt too wide) in paragraph at lines 1459--1460
+ [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1482--1484
+LaTeX Warning: Float too large for page by 24.06992pt on input line 1464.
 
+File: images/random_example.png Graphic file (type bmp)
+<images/random_example.png>
+
+Overfull \hbox (710.09671pt too wide) in paragraph at lines 1468--1469
+ [][] 
  []
 
 
+LaTeX Warning: Float too large for page by 24.05717pt on input line 1473.
+
+
+Overfull \hbox (10.07564pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 5.2.  IDENTIFYING, AGGREGATING AND APPRAISING THE EVIDENCE \TU/lmr/m/n/10 43
+ []
+
+[43] [44]
 Overfull \hbox (10.07564pt too wide) has occurred while \output is active
 \TU/lmr/m/sl/10 5.2.  IDENTIFYING, AGGREGATING AND APPRAISING THE EVIDENCE \TU/lmr/m/n/10 45
  []
 
-[45]
-Overfull \hbox (38.25pt too wide) in paragraph at lines 1523--1523
-[]\TU/lmtt/m/n/10 ##  [1] "id"        "date"      "gestation" "wt"        "parity"    "age"[] 
+[45] [46
+
+] [47] [48
+
+] [49]
+Overfull \hbox (1.5pt too wide) in paragraph at lines 1612--1612
+[]\TU/lmtt/m/n/10 ht            mother's height in inches to the last completed inch[] 
  []
 
 
-Overfull \hbox (38.25pt too wide) in paragraph at lines 1523--1523
-[]\TU/lmtt/m/n/10 ##  [7] "ed"        "ht"        "wt1"       "dage"      "ded"       "dht"[] 
- []
-
-
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1523--1523
-[]\TU/lmtt/m/n/10 ## [13] "dwt"       "inc"       "smoke"     "time"      "number"    "race"[] 
- []
-
-[46]
-Overfull \hbox (10.07564pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 5.2.  IDENTIFYING, AGGREGATING AND APPRAISING THE EVIDENCE \TU/lmr/m/n/10 47
- []
-
-[47] [48]
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1766--1766
-[]\TU/lmtt/m/n/10 ##          divorced legally separated           married     never married[] 
- []
-
-
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1766--1766
-[]\TU/lmtt/m/n/10 ##                 5                15              1208                 6[] 
- []
-
-
-Overfull \hbox (10.07564pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 5.2.  IDENTIFYING, AGGREGATING AND APPRAISING THE EVIDENCE \TU/lmr/m/n/10 49
- []
-
-[49]
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1781--1781
-[]\TU/lmtt/m/n/10 ##          divorced legally separated           married     never married[] 
- []
-
-
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1781--1781
-[]\TU/lmtt/m/n/10 ##       0.004045307       0.012135922       0.977346278       0.004854369[] 
- []
-
-
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1795--1795
-[]\TU/lmtt/m/n/10 ##          divorced legally separated           married     never married[] 
- []
-
-
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1795--1795
-[]\TU/lmtt/m/n/10 ##         0.4045307         1.2135922        97.7346278         0.4854369[] 
- []
-
-
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Min.   :  15   Length:1236        Min.   :148.0   Min.   : 55.0[] 
- []
-
-
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  1st Qu.:5286   Class :character   1st Qu.:272.0   1st Qu.:108.8[] 
- []
-
-
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Median :6730   Mode  :character   Median :280.0   Median :120.0[] 
- []
-
-
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Mean   :6001                      Mean   :279.3   Mean   :119.6[] 
- []
-
-
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  3rd Qu.:7583                      3rd Qu.:288.0   3rd Qu.:131.0[] 
- []
-
-
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Max.   :9263                      Max.   :353.0   Max.   :176.0[] 
- []
-
-
-Overfull \hbox (1.5pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Min.   : 0.000   Min.   :15.00   Min.   :0.000   Min.   :53.00[] 
- []
-
-
-Overfull \hbox (1.5pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  1st Qu.: 0.000   1st Qu.:23.00   1st Qu.:2.000   1st Qu.:62.00[] 
- []
-
-
-Overfull \hbox (1.5pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Median : 1.000   Median :26.00   Median :2.000   Median :64.00[] 
- []
-
-
-Overfull \hbox (1.5pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Mean   : 1.932   Mean   :27.26   Mean   :2.916   Mean   :64.05[] 
+Overfull \hbox (12.0pt too wide) in paragraph at lines 1612--1612
+[]\TU/lmtt/m/n/10 ded           father's education, coding same as mother's education.[] 
  []
 
 [50]
-Overfull \hbox (1.5pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  3rd Qu.: 3.000   3rd Qu.:31.00   3rd Qu.:4.000   3rd Qu.:66.00[] 
+Overfull \hbox (33.0pt too wide) in paragraph at lines 1612--1612
+[]\TU/lmtt/m/n/10 number        number of cigs smoked per day for past and current smokers[] 
  []
 
 
-Overfull \hbox (1.5pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Max.   :13.000   Max.   :45.00   Max.   :9.000   Max.   :72.00[] 
- []
+Underfull \hbox (badness 10000) in paragraph at lines 1625--1627
 
-
-Overfull \hbox (48.75pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##       wt1             dage            ded             dht            dwt[] 
- []
-
-
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Min.   : 87.0   Min.   :18.00   Min.   :0.000   Min.   :60.0   Min.   :110.0[] 
- []
-
-
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  1st Qu.:114.8   1st Qu.:25.00   1st Qu.:2.000   1st Qu.:68.0   1st Qu.:155.0[] 
- []
-
-
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Median :125.0   Median :29.00   Median :4.000   Median :71.0   Median :170.0[] 
- []
-
-
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Mean   :128.6   Mean   :30.35   Mean   :3.189   Mean   :70.2   Mean   :171.2[] 
- []
-
-
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  3rd Qu.:139.0   3rd Qu.:34.00   3rd Qu.:5.000   3rd Qu.:72.0   3rd Qu.:185.0[] 
- []
-
-
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Max.   :250.0   Max.   :62.00   Max.   :9.000   Max.   :78.0   Max.   :260.0[] 
- []
-
-
-Overfull \hbox (64.5pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  NA's   :36      NA's   :7                       NA's   :492    NA's   :499[] 
- []
-
-
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Min.   :0.000   Min.   :0.0000   Min.   :0.0000   Min.   :0.000[] 
- []
-
-
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  1st Qu.:2.000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.000[] 
- []
-
-
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Median :3.000   Median :1.0000   Median :1.0000   Median :1.000[] 
- []
-
-
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Mean   :3.701   Mean   :0.8681   Mean   :0.9625   Mean   :1.825[] 
- []
-
-
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  3rd Qu.:5.000   3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:3.000[] 
- []
-
-
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Max.   :9.000   Max.   :9.0000   Max.   :9.0000   Max.   :9.000[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##      race             marital             drace               ddate[] 
- []
-
-
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Length:1236        Length:1236        Length:1236        Min.   : 1.00[] 
- []
-
-
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Class :character   Class :character   Class :character   1st Qu.: 8.00[] 
- []
-
-
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Mode  :character   Mode  :character   Mode  :character   Median :15.00[] 
- []
-
-
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##                                                           Mean   :15.37[] 
- []
-
-
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##                                                           3rd Qu.:23.00[] 
- []
-
-
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##                                                           Max.   :31.00[] 
- []
-
-
-Overfull \hbox (48.75pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  smallBaby                  birthWeightCat  preterm             whenBorn[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Mode :logical   Small baby        :  58   Mode :logical   Preterm  :  97[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  FALSE:1178      Normal weight baby:1033   FALSE:1126      Full-term:1126[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  TRUE :58        Large baby        : 145   TRUE :97        NA's     :  13[] 
  []
 
 
@@ -1129,23 +931,18 @@ Overfull \hbox (10.07564pt too wide) has occurred while \output is active
  []
 
 [51]
-Overfull \hbox (38.25pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##   whiteRace          dwhiteRace                  smokeCat     smokeNow[] 
+Overfull \hbox (38.25pt too wide) in paragraph at lines 1666--1666
+[]\TU/lmtt/m/n/10 ##  [1] "id"        "date"      "gestation" "wt"        "parity"    "age"[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Length:1236        Length:1236        Never smoker  :544   Length:1236[] 
+Overfull \hbox (38.25pt too wide) in paragraph at lines 1666--1666
+[]\TU/lmtt/m/n/10 ##  [7] "ed"        "ht"        "wt1"       "dage"      "ded"       "dht"[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Class :character   Class :character   Past smoker   :198   Class :character[] 
- []
-
-
-Overfull \hbox (69.75pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ##  Mode  :character   Mode  :character   Current smoker:484   Mode  :character[] 
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1666--1666
+[]\TU/lmtt/m/n/10 ## [13] "dwt"       "inc"       "smoke"     "time"      "number"    "race"[] 
  []
 
 [52]
@@ -1154,33 +951,283 @@ Overfull \hbox (10.07564pt too wide) has occurred while \output is active
  []
 
 [53] [54]
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1909--1909
+[]\TU/lmtt/m/n/10 ##          divorced legally separated           married     never married[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1909--1909
+[]\TU/lmtt/m/n/10 ##                 5                15              1208                 6[] 
+ []
+
+
 Overfull \hbox (10.07564pt too wide) has occurred while \output is active
 \TU/lmr/m/sl/10 5.2.  IDENTIFYING, AGGREGATING AND APPRAISING THE EVIDENCE \TU/lmr/m/n/10 55
  []
 
-[55] [56]
+[55]
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1924--1924
+[]\TU/lmtt/m/n/10 ##          divorced legally separated           married     never married[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1924--1924
+[]\TU/lmtt/m/n/10 ##       0.004045307       0.012135922       0.977346278       0.004854369[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1938--1938
+[]\TU/lmtt/m/n/10 ##          divorced legally separated           married     never married[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1938--1938
+[]\TU/lmtt/m/n/10 ##         0.4045307         1.2135922        97.7346278         0.4854369[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Min.   :  15   Length:1236        Min.   :148.0   Min.   : 55.0[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  1st Qu.:5286   Class :character   1st Qu.:272.0   1st Qu.:108.8[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Median :6730   Mode  :character   Median :280.0   Median :120.0[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Mean   :6001                      Mean   :279.3   Mean   :119.6[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  3rd Qu.:7583                      3rd Qu.:288.0   3rd Qu.:131.0[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Max.   :9263                      Max.   :353.0   Max.   :176.0[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Min.   : 0.000   Min.   :15.00   Min.   :0.000   Min.   :53.00[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  1st Qu.: 0.000   1st Qu.:23.00   1st Qu.:2.000   1st Qu.:62.00[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Median : 1.000   Median :26.00   Median :2.000   Median :64.00[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Mean   : 1.932   Mean   :27.26   Mean   :2.916   Mean   :64.05[] 
+ []
+
+[56]
+Overfull \hbox (1.5pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  3rd Qu.: 3.000   3rd Qu.:31.00   3rd Qu.:4.000   3rd Qu.:66.00[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Max.   :13.000   Max.   :45.00   Max.   :9.000   Max.   :72.00[] 
+ []
+
+
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##       wt1             dage            ded             dht            dwt[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Min.   : 87.0   Min.   :18.00   Min.   :0.000   Min.   :60.0   Min.   :110.0[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  1st Qu.:114.8   1st Qu.:25.00   1st Qu.:2.000   1st Qu.:68.0   1st Qu.:155.0[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Median :125.0   Median :29.00   Median :4.000   Median :71.0   Median :170.0[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Mean   :128.6   Mean   :30.35   Mean   :3.189   Mean   :70.2   Mean   :171.2[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  3rd Qu.:139.0   3rd Qu.:34.00   3rd Qu.:5.000   3rd Qu.:72.0   3rd Qu.:185.0[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Max.   :250.0   Max.   :62.00   Max.   :9.000   Max.   :78.0   Max.   :260.0[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  NA's   :36      NA's   :7                       NA's   :492    NA's   :499[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Min.   :0.000   Min.   :0.0000   Min.   :0.0000   Min.   :0.000[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  1st Qu.:2.000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.000[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Median :3.000   Median :1.0000   Median :1.0000   Median :1.000[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Mean   :3.701   Mean   :0.8681   Mean   :0.9625   Mean   :1.825[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  3rd Qu.:5.000   3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:3.000[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Max.   :9.000   Max.   :9.0000   Max.   :9.0000   Max.   :9.000[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##      race             marital             drace               ddate[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Length:1236        Length:1236        Length:1236        Min.   : 1.00[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Class :character   Class :character   Class :character   1st Qu.: 8.00[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Mode  :character   Mode  :character   Mode  :character   Median :15.00[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##                                                           Mean   :15.37[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##                                                           3rd Qu.:23.00[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##                                                           Max.   :31.00[] 
+ []
+
+
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  smallBaby                  birthWeightCat  preterm             whenBorn[] 
+ []
+
+
+Overfull \hbox (54.0pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Mode :logical   Small baby        :  58   Mode :logical   Preterm  :  97[] 
+ []
+
+
+Overfull \hbox (54.0pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  FALSE:1178      Normal weight baby:1033   FALSE:1126      Full-term:1126[] 
+ []
+
+
+Overfull \hbox (54.0pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  TRUE :58        Large baby        : 145   TRUE :97        NA's     :  13[] 
+ []
+
+
 Overfull \hbox (10.07564pt too wide) has occurred while \output is active
 \TU/lmr/m/sl/10 5.2.  IDENTIFYING, AGGREGATING AND APPRAISING THE EVIDENCE \TU/lmr/m/n/10 57
  []
 
-[57] [58]
+[57]
+Overfull \hbox (38.25pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##   whiteRace          dwhiteRace                  smokeCat     smokeNow[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Length:1236        Length:1236        Never smoker  :544   Length:1236[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Class :character   Class :character   Past smoker   :198   Class :character[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 2040--2040
+[]\TU/lmtt/m/n/10 ##  Mode  :character   Mode  :character   Current smoker:484   Mode  :character[] 
+ []
+
+[58]
 Overfull \hbox (10.07564pt too wide) has occurred while \output is active
 \TU/lmr/m/sl/10 5.2.  IDENTIFYING, AGGREGATING AND APPRAISING THE EVIDENCE \TU/lmr/m/n/10 59
  []
 
-[59] (./Advanced-HTA.bbl [60] [61
+[59] [60]
+Overfull \hbox (10.07564pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 5.2.  IDENTIFYING, AGGREGATING AND APPRAISING THE EVIDENCE \TU/lmr/m/n/10 61
+ []
 
-]) [62] (./Advanced-HTA.aux)
+[61] [62]
+Overfull \hbox (10.07564pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 5.2.  IDENTIFYING, AGGREGATING AND APPRAISING THE EVIDENCE \TU/lmr/m/n/10 63
+ []
+
+[63] [64]
+Overfull \hbox (10.07564pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 5.2.  IDENTIFYING, AGGREGATING AND APPRAISING THE EVIDENCE \TU/lmr/m/n/10 65
+ []
+
+[65] (./Advanced-HTA.bbl [66] [67
+
+]) [68] (./Advanced-HTA.aux)
 Package rerunfilecheck Info: File `Advanced-HTA.out' has not changed.
 (rerunfilecheck)             Checksum: 7C454FC6F3AC2C37CCF4AF0B4095403F;5526.
  ) 
 Here is how much of TeX's memory you used:
- 17679 strings out of 478256
- 322914 string characters out of 5855705
- 785810 words of memory out of 5000000
- 37955 multiletter control sequences out of 15000+600000
+ 17741 strings out of 478256
+ 324452 string characters out of 5855705
+ 786239 words of memory out of 5000000
+ 38015 multiletter control sequences out of 15000+600000
  409921 words of font info for 85 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  86i,8n,121p,934b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Advanced-HTA.pdf (62 pages).
+Output written on Advanced-HTA.pdf (68 pages).

@@ -24,7 +24,7 @@
 <meta name="author" content="Juan Pablo Diaz Martinez" />
 
 
-<meta name="date" content="2021-12-16" />
+<meta name="date" content="2021-12-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -227,6 +227,8 @@ div.csl-indent {
 <li class="chapter" data-level="5.2.1" data-path="evidence.html"><a href="evidence.html#identifying-the-evidence"><i class="fa fa-check"></i><b>5.2.1</b> Identifying the evidence</a></li>
 <li class="chapter" data-level="5.2.2" data-path="evidence.html"><a href="evidence.html#how-to-search"><i class="fa fa-check"></i><b>5.2.2</b> How to search</a></li>
 <li class="chapter" data-level="5.2.3" data-path="evidence.html"><a href="evidence.html#aggregating-and-appraising-the-evidence"><i class="fa fa-check"></i><b>5.2.3</b> Aggregating and appraising the evidence</a></li>
+<li class="chapter" data-level="5.2.4" data-path="evidence.html"><a href="evidence.html#evidence-synthesis"><i class="fa fa-check"></i><b>5.2.4</b> Evidence synthesis</a></li>
+<li class="chapter" data-level="5.2.5" data-path="evidence.html"><a href="evidence.html#meta-analysis"><i class="fa fa-check"></i><b>5.2.5</b> Meta-Analysis</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="assignments.html"><a href="assignments.html"><i class="fa fa-check"></i>Assignments</a>
@@ -392,6 +394,104 @@ Figure 5.2: Aggregate process
 <li><a href="https://www.acpjournals.org/doi/10.7326/M18-1376">Prognosis studies</a></li>
 <li><a href="https://www.nlm.nih.gov/nichsr/edu/healthecon/drummond_list.html">Economic evaluation</a></li>
 </ul>
+</div>
+</div>
+<div id="evidence-synthesis" class="section level3" number="5.2.4">
+<h3><span class="header-section-number">5.2.4</span> Evidence synthesis</h3>
+<div id="outcome-measures" class="section level4" number="5.2.4.1">
+<h4><span class="header-section-number">5.2.4.1</span> Outcome measures</h4>
+<ul>
+<li>Continuous: means</li>
+<li>Nominal data: proportions</li>
+<li>Nominal data: ranks</li>
+</ul>
+<p>Before conducting a meta-analysis, it is important to define the outcome of interest.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Types of data</th>
+<th align="center">Outcome measures</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Continous</td>
+<td align="center">Mean difrerence. Standardized mean diference</td>
+</tr>
+<tr class="even">
+<td align="center">Dichotomous</td>
+<td align="center">Risk difference. Relative Risk. Odds Ratio</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Use mean difference (MD) when studies have comparable outcome measures (i.e. same scale) <span class="math inline">\(m_1 -m_2\)</span></li>
+<li>Standardized mean diference (SMD) is used when studies use different outcome measurements which address the same clinical outcome (e.g. different instruments to measure pain intensity, anxiety…) <span class="math inline">\((m_1 -m_2)/sd_p\)</span> where <span class="math inline">\(sd_p= \sqrt{(sd_1+sd_2)/2}\)</span></li>
+<li>Risk difference (RD) <span class="math inline">\(p_1 - p_2\)</span></li>
+<li>Relative risk (RR) <span class="math inline">\(p_1/p_2\)</span></li>
+<li>Odds ratio (OR) <span class="math inline">\(\frac{p_1/(1-p1)}{p_2/(1-p2)}\)</span></li>
+</ul>
+<p>In general, health practitioners are more familiar to the concept of relative risk than odds ratios. Remember that point estimates may be misleading. therefore uncertainty can be expressed by confidence intervals.</p>
+</div>
+</div>
+<div id="meta-analysis" class="section level3" number="5.2.5">
+<h3><span class="header-section-number">5.2.5</span> Meta-Analysis</h3>
+<p>A meta-analysis is a statistical analysis that combines the results of multiple scientific studies (more than 2 comparative studies). Studies may differ in terms of results or sample size.</p>
+<ul>
+<li><p>The results of a study (e.g. effect size) with 1,000 subjects is assumed to be a more precise estimate than an estimate derived from a study
+based on 10 subjects.</p></li>
+<li><p>Larger studies should carry more weight than smaller studies</p></li>
+</ul>
+<div id="heterogeneity" class="section level4" number="5.2.5.1">
+<h4><span class="header-section-number">5.2.5.1</span> Heterogeneity</h4>
+<p>Patients, interventions or outcomes may differ within and between studies. This is what is called heterogeneity. In order to take into account this heterogeneity, two models have been proposed: fixed effects and random effects models:</p>
+<ul>
+<li>Fixed effects model: Every study evaluates a common effect size. Variation between studies only due by chance.</li>
+<li>Random effects model: The effect sizes are different between studies and they follow a distribution.</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="images/fixed.png" alt="Fixed vs Random effects" width="638" />
+<p class="caption">
+Figure 5.3: Fixed vs Random effects
+</p>
+</div>
+<p>In the presence of heterogeneity:</p>
+<ul>
+<li>Ignore heterogeneity</li>
+<li>Incorporate heterogeneity into a random effects model</li>
+<li>Explain heterogeneity by sub-group analyses or meta-regressions</li>
+</ul>
+<p>Presence of heterogeneity can bedetermined through a chi-squared test. Also, we can calculate a statistic (<span class="math inline">\(I^2\)</span>) that describes the percentage of
+variation across studies that is due to heterogeneity rather than chance (i.e. how much heterogeneity).</p>
+<p><strong>Which one to use?</strong> Heterogenity can be explained either by:</p>
+<ul>
+<li>Sub-group analyses</li>
+<li>Meta regression</li>
+</ul>
+</div>
+<div id="example" class="section level4" number="5.2.5.2">
+<h4><span class="header-section-number">5.2.5.2</span> Example</h4>
+<ul>
+<li>Type 2 Diabetes mellitus management
+<ul>
+<li>P: Type II DM</li>
+<li>I: Glitazones</li>
+<li>C: Sulfonylurea</li>
+<li>O: HbA1c</li>
+</ul></li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="images/fixed_example.png" alt="Fixed effects" width="651" />
+<p class="caption">
+Figure 5.4: Fixed effects
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="images/random_example.png" alt="Random effects" width="658" />
+<p class="caption">
+Figure 5.5: Random effects
+</p>
+</div>
 
 </div>
 </div>
