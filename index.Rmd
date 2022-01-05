@@ -72,7 +72,7 @@ tabl <- "
 | Item                | Percentage    | Due date      |
 |:-------------------:|:-------------:|:-------------:|
 | Assignment 1        | 15%           | Dec 5, 2021  |  
-| Assignment 2        | 15%           | Dec 23, 2021  |  
+| Assignment 2        | 15%           | jan 13, 2021  |  
 | Take-home exam      | 30%           | Jan 7, 2022   |
 | Project proposal    | 5%            | Dec 2, 2021  | 
 | Project presentation| 5%            | Jan 14, 2022  | 

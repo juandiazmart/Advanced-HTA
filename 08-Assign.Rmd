@@ -5,3 +5,8 @@
 1. Section 3.5 in *Edlin, R., McCabe, C., Hulme, C., Hall, P., & Wright, J. (2015). Cost effectiveness modelling for health technology assessment: a practical course. Springer.*
 2. Build the precious excercise in R.
 3. From Google Classroom week 2, fill the CHEERS table 1 checklist using the next CE [article](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2775235).
+
+## Assignment 2 {-}
+
+1. Chapter 9 in *Edlin, R., McCabe, C., Hulme, C., Hall, P., & Wright, J. (2015). Cost effectiveness modelling for health technology assessment: a practical course. Springer.*
+2. To the Markov model built in class (i.e. `Markov.R`), add the half-cycle correction as seen in the excel file from class (Chapter 9 from Gray et al.)
