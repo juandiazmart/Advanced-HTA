@@ -24,7 +24,7 @@
 <meta name="author" content="Juan Pablo Diaz Martinez" />
 
 
-<meta name="date" content="2022-01-06" />
+<meta name="date" content="2022-03-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -234,6 +234,19 @@ div.csl-indent {
 <li class="chapter" data-level="6" data-path="uncertainty.html"><a href="uncertainty.html"><i class="fa fa-check"></i><b>6</b> Uncertainty and decision-making</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="uncertainty.html"><a href="uncertainty.html#pre-session-readings-5"><i class="fa fa-check"></i><b>6.1</b> Pre-session readings</a></li>
+<li class="chapter" data-level="6.2" data-path="uncertainty.html"><a href="uncertainty.html#introduction-2"><i class="fa fa-check"></i><b>6.2</b> Introduction</a></li>
+<li class="chapter" data-level="6.3" data-path="uncertainty.html"><a href="uncertainty.html#sources-of-uncertainty-in-cost-effectiveness-models"><i class="fa fa-check"></i><b>6.3</b> Sources of uncertainty in cost-effectiveness models</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="uncertainty.html"><a href="uncertainty.html#sampling-variation"><i class="fa fa-check"></i><b>6.3.1</b> Sampling variation</a></li>
+<li class="chapter" data-level="6.3.2" data-path="uncertainty.html"><a href="uncertainty.html#generalisability"><i class="fa fa-check"></i><b>6.3.2</b> Generalisability</a></li>
+<li class="chapter" data-level="6.3.3" data-path="uncertainty.html"><a href="uncertainty.html#structural-uncertainty"><i class="fa fa-check"></i><b>6.3.3</b> Structural uncertainty</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="uncertainty.html"><a href="uncertainty.html#variability-heterogeneity-and-uncertainty"><i class="fa fa-check"></i><b>6.4</b> Variability, heterogeneity and uncertainty</a></li>
+<li class="chapter" data-level="6.5" data-path="uncertainty.html"><a href="uncertainty.html#how-to-deal-with-uncertainty"><i class="fa fa-check"></i><b>6.5</b> How to deal with uncertainty?</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="uncertainty.html"><a href="uncertainty.html#one-way-deterministic-sensitivity-analysis"><i class="fa fa-check"></i><b>6.5.1</b> One-way (deterministic) sensitivity analysis</a></li>
+<li class="chapter" data-level="6.5.2" data-path="uncertainty.html"><a href="uncertainty.html#probabilistic-sensitivity-analysis-psa"><i class="fa fa-check"></i><b>6.5.2</b> Probabilistic Sensitivity Analysis (PSA)</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="assignments.html"><a href="assignments.html"><i class="fa fa-check"></i>Assignments</a>
 <ul>
@@ -285,7 +298,157 @@ div.csl-indent {
 <div id="pre-session-readings-5" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> Pre-session readings</h2>
 <p><em>Edlin, R., McCabe, C., Hulme, C., Hall, P., &amp; Wright, J. (2015). Cost effectiveness modelling for health technology assessment: a practical course. Springer.</em> Chapters 4, 6 and 7.</p>
+<p><em>Briggs, A., Sculpher, M., &amp; Claxton, K. (2006). Decision modelling for health economic evaluation. Oxford University Press.</em>. Chapters 4.1, 4.2 and 4.3.</p>
+</div>
+<div id="introduction-2" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Introduction</h2>
+<p>The ultimate purpose of any economic evaluation is to inform decision-making; it is inherently concerned with estimating the expected future costs and outcomes of alternative courses of action; and because it is concerned with the future, uncertainty is a central concern for the analyst. In the context of decision-making, we always are interested to quantify the risk of making a wrong decision.</p>
+<p><strong>Questions</strong></p>
+<ol style="list-style-type: decimal">
+<li>What do you think I mean of making a wrong decision in the context of HTA?</li>
+</ol>
+<p>Decision uncertainty can be thought of as the probability that the decision maker will refuse to pay for a therapy that is good value or agree to pay for a therapy that is not good value. Uncertainty comes in different forms, so it is important to understand the different sources of uncertainty that can impact upon the results of an economic evaluation.</p>
+</div>
+<div id="sources-of-uncertainty-in-cost-effectiveness-models" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Sources of uncertainty in cost-effectiveness models</h2>
+<div id="sampling-variation" class="section level3" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Sampling variation</h3>
+<p>RCTs (or even observational studies) come from a subset of the population of interest. Therefore, a different sample from the same population will result in different estimates of efficacy in an experimental study.</p>
+</div>
+<div id="generalisability" class="section level3" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> Generalisability</h3>
+<p>Generalisability is concerned with the degree of confi dence with which data obtained in one setting can be used to inform a model of what should be expected in a different setting. Generalisability is a particularly acute concern when evaluating technologies close to launch, when almost all evidence is derived from the clinical trial development programme.</p>
+<p><strong>Questions</strong></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Think about COVID-19 vaccines. What issues arise with this type of uncertainty?</li>
+<li>In CEA, what other components are prone to generalisability issues?</li>
+</ol>
+</div>
+<div id="structural-uncertainty" class="section level3" number="6.3.3">
+<h3><span class="header-section-number">6.3.3</span> Structural uncertainty</h3>
+<p>A model structure attempts to describe the relevant clinical pathways for patients treated with the interventions being evaluated. Usually, the simpler the model the better. The question is whether the simplifi -
+cations exclude important characteristics of the potential care process that, if included in the model, would be likely to lead to a different decision?</p>
+<p>Methodological choices, and different methods will often lead to different predictions and very different estimates of the uncertainty in those predictions. It is important that the analyst be explicit about the rationale for the modelling strategy adopted, ensuring that the decision maker is aware of any uncertainty that this introduces.</p>
+</div>
+</div>
+<div id="variability-heterogeneity-and-uncertainty" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Variability, heterogeneity and uncertainty</h2>
+<p>We must distinguish between <em>variability</em> (the differences that occur between patients by chance) and <em>heterogeneity</em> (differences that occur between patients that can be explained) from decision <em>uncertainty</em> – the fundamental quantity that we wish to capture from our decision models.</p>
+<p>The best way to explain the difference between these 3 concepts is with a traditional linear regression model, i.e.,</p>
+<p><span class="math display">\[
+y_i=\beta_0 + \beta_px_{i,p} + \epsilon_i, \space \epsilon_i \sim \mathcal{N}(0,\sigma)
+\]</span></p>
+</div>
+<div id="how-to-deal-with-uncertainty" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> How to deal with uncertainty?</h2>
+<p>Different methods have been developed to address uncertainty in CEA. These methods fall under the umbrella term <em>sensitivity analysis</em>. Sensitivity analysis is the process of varying model input values and recording the impact of those changes on the model outputs. The next table shows the different ways to handle uncertainty in CEA.</p>
+<table>
+<colgroup>
+<col width="58%" />
+<col width="41%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Type of sensitivity analysis</th>
+<th align="center">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">One way</td>
+<td align="center">The variation of one parameter whilst all other parameters are held constant to observe the impact on the predicted costs and outcomes</td>
+</tr>
+<tr class="even">
+<td align="center">Multiway</td>
+<td align="center">The variation of more than one parameter whilst all other parameters are held constant to observe the impact on predicted costs and outcomes</td>
+</tr>
+<tr class="odd">
+<td align="center">Probabilistic sensitivity analysis</td>
+<td align="center">Using probability distributions to characterise the credible range and the likelihood of any given value being observed, combined with simulation to promulgate the uncertainty in the parameters to uncertainty in the predicted costs and outcomes</td>
+</tr>
+</tbody>
+</table>
+<div id="one-way-deterministic-sensitivity-analysis" class="section level3" number="6.5.1">
+<h3><span class="header-section-number">6.5.1</span> One-way (deterministic) sensitivity analysis</h3>
+<p>One-way sensitivity analysis examines how the ICER changes in response to changes in a single parameter whilst holding the value of all other model parameters constant. It is helpful to identify which parameters in a model have the strongest direct effect on the model results.</p>
+<p>One way to represent this variation is by using tornado diagrams (see Figure <a href="uncertainty.html#fig:fig5">6.1</a>).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig5"></span>
+<img src="images/tornado.png" alt="Tornado diagram" width="1530" />
+<p class="caption">
+Figure 6.1: Tornado diagram
+</p>
+</div>
+</div>
+<div id="probabilistic-sensitivity-analysis-psa" class="section level3" number="6.5.2">
+<h3><span class="header-section-number">6.5.2</span> Probabilistic Sensitivity Analysis (PSA)</h3>
+<p>PSA requires that each parameter is expressed as a probability distribution. Each input to the model is known with a certain degree of uncertainty. This uncertainty can be characterised as a probability density function with an associated probability
+distribution.</p>
+<p>Once a probability distribution has been described for each parameter in the cost effectiveness model, PSA allows the analyst to vary the value of each parameter simultaneously. Values are drawn from the probability distributions, and the outputs of the model for each draw are recorded.</p>
+<div id="distributions-for-probability-parameters" class="section level4" number="6.5.2.1">
+<h4><span class="header-section-number">6.5.2.1</span> Distributions for probability parameters</h4>
+<p>Probability parameters have an important constraint – all probabilities can only take values between the range of zero and one. Furthermore, probabilities of mutually exclusive events must sum to one.</p>
+<p>The beta distribution is a natural choice for representing uncertainty in a probability parameter where the data informing that parameter are binomial. The beta distribution is constrained on the interval 0–1 and is characterized by two parameters, <span class="math inline">\(alpha\)</span> and <span class="math inline">\(beta\)</span>. When data are binomially distributed, fitting the beta distribution turns out to be extremely straightforward. If the data are represented by a number of events of interest <span class="math inline">\(r\)</span>, observed from a given sample size <span class="math inline">\(n\)</span>, the proportion of events to the total sample gives the point estimate of the probability. Uncertainty in this probability can be represented by a beta
+$(,) $distribution, simply by setting <span class="math inline">\(\alpha = r\)</span> and <span class="math inline">\(\beta = n–r\)</span>. Let’s say that in a RCT, 4 adverse events were present in 20 patients. Therefore, shows the result of fitting a beta(4,16) distribution to the data of the previous example.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="uncertainty.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#define range</span></span>
+<span id="cb1-2"><a href="uncertainty.html#cb1-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">1</span>, <span class="at">length=</span><span class="dv">100</span>)</span>
+<span id="cb1-3"><a href="uncertainty.html#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="uncertainty.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#create custom plot of Beta distribution</span></span>
+<span id="cb1-5"><a href="uncertainty.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(p, <span class="fu">dbeta</span>(p, <span class="dv">4</span>, <span class="dv">16</span>), <span class="at">ylab=</span><span class="st">&#39;density&#39;</span>,</span>
+<span id="cb1-6"><a href="uncertainty.html#cb1-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">type =</span><span class="st">&#39;l&#39;</span>, <span class="at">col=</span><span class="st">&#39;purple&#39;</span>, <span class="at">main=</span><span class="st">&#39;Beta Distribution&#39;</span>)</span></code></pre></div>
+<p><img src="Advanced-HTA_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><strong>Questions</strong></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Why not using the normal distribution</li>
+</ol>
+<p>Most of the when times when fitting beta distributions to secondary data or meta-analysis results, it may
+only be the mean/proportion and standard error/variance that are reported. If this is the case then it is still possible to fit the beta distribution using an approach known as method of moments. Let <span class="math inline">\(\hat{p}\)</span> represents the sample proportion reported for example in a meta-analysis and <span class="math inline">\(\mathbb{se}(\hat{p})\)</span> the standard error associated to it. Then</p>
+<p><span class="math display">\[
+\alpha=\frac{\hat{p}^2(1-\hat{p})}{\mathbb{se}(\hat{p})^2}-\hat{p}
+\quad \beta=\alpha\frac{1-\hat{p}}{\hat{p}}
+\]</span></p>
+</div>
+<div id="distributions-for-relative-risks-or-odd-ratios-parameters" class="section level4" number="6.5.2.2">
+<h4><span class="header-section-number">6.5.2.2</span> Distributions for relative risks (or odd ratios) parameters</h4>
+<p>We will use the normal distribution for the log relative risks (odd ratios) (why?). Let’s say that we employ data again from a published meta-analysis where the authors employ a relative risk estimate of 0.51 with a quoted 95% confidence interval of
+0.365–0.710. Taking the natural logs of the point and interval estimates generates the following log scale estimates: −0.675
+(−1.008, − 0.342). Dividing the range through by 2 × 1.96 recovers the estimate of log scale standard error:</p>
+<p><span class="math display">\[
+\mathbb{se}(\ln(RR))=\frac{UL-LL}{2*1.96}    
+\]</span></p>
+<p>where <span class="math inline">\(UL\)</span> and <span class="math inline">\(LL\)</span> denothe the upper and lower limits of the confidence interval. Now we simply take a random draw from a <span class="math inline">\(\mathcal{N}(−0.675, 0.170)\)</span> distribution and exponentiate the result.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="uncertainty.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#define range</span></span>
+<span id="cb2-2"><a href="uncertainty.html#cb2-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="dv">2</span>, <span class="at">length=</span><span class="dv">100</span>)</span>
+<span id="cb2-3"><a href="uncertainty.html#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="uncertainty.html#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#create custom plot of Beta distribution</span></span>
+<span id="cb2-5"><a href="uncertainty.html#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, <span class="fu">dnorm</span>(x, <span class="sc">-</span>.<span class="dv">675</span>, .<span class="dv">17</span>), <span class="at">ylab=</span><span class="st">&#39;density&#39;</span>,</span>
+<span id="cb2-6"><a href="uncertainty.html#cb2-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">type =</span><span class="st">&#39;l&#39;</span>, <span class="at">col=</span><span class="st">&#39;red&#39;</span>, <span class="at">main=</span><span class="st">&#39;Normal Distribution&#39;</span>)</span>
+<span id="cb2-7"><a href="uncertainty.html#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span><span class="sc">-</span>.<span class="dv">675</span>, <span class="at">col=</span><span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<p><img src="Advanced-HTA_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+<div id="distributions-for-costs" class="section level4" number="6.5.2.3">
+<h4><span class="header-section-number">6.5.2.3</span> Distributions for costs</h4>
+<p>Just as our choice of distribution for probability data was based upon the range of the data, so it should be noted that cost data are constrained to be non-negative and are made up of counts of resource use weighted by unit costs.</p>
+<p>A natural choice is the gamma distribution. The reason is because this distribution is constrained on the interval 0 to
+positive infinity. To fit a gamma distribution to cost data we can again make use of the method of moments approach. The gamma distribution is parameterized as <span class="math inline">\(gamma(\alpha,\beta)\)</span>. Let <span class="math inline">\(\hat{\mu}\)</span> represents the mean cost and <span class="math inline">\(\mathbb{se}(\hat{\mu})\)</span> the standard error associated to it. Then</p>
+<p><span class="math display">\[
+\alpha=\frac{\hat{\mu^2}}{\mathbb{se}(\hat{\mu})^2}
+\quad \beta=\frac{\mathbb{se}(\hat{\mu})^2}{\hat{\mu}}
+\]</span></p>
+<p>As an example, we can consider the direct medical costs associated to a particular state of the model, which
+will be $6948 for the purposes of this example. Unfortunately, although this estimate seems to have been taken from a
+patient-level cost data set, no standard error was reported. For the purposes of this example, suppose that the standard error is the same value as the mean. Therefore</p>
+<p><span class="math display">\[
+\alpha = 6948/6948 = 1 \quad \beta = 69482/6948 = 6948,
+\]</span></p>
+</div>
+<div id="distributions-for-utilities" class="section level4" number="6.5.2.4">
+<h4><span class="header-section-number">6.5.2.4</span> Distributions for utilities</h4>
+<p>A pragmatic approach, often employed when health state utilities are far from zero, is to use a beta distribution. However, this is not appropriate for states close to death where values less than one are possible.</p>
+<p>A simple transformation of <span class="math inline">\(D= 1-U\)</span>, such that <span class="math inline">\(D\)</span> is a utility decrement or a
+disutility provides the solution. This utility decrement is now constrained on the interval 0 to positive infinity and the previous methods of fitting a gamma distribution can be applied.</p>
 
+</div>
+</div>
 </div>
 </div>
             </section>

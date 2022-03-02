@@ -11,6 +11,7 @@ fig:unnamed-chunk-2
 fig:unnamed-chunk-4
 fig:unnamed-chunk-5
 fig:unnamed-chunk-6
+fig:fig5
 HTA
 pre-session-readings
 definition-and-rationale
@@ -63,3 +64,16 @@ heterogeneity
 example
 uncertainty
 pre-session-readings-5
+introduction-2
+sources-of-uncertainty-in-cost-effectiveness-models
+sampling-variation
+generalisability
+structural-uncertainty
+variability-heterogeneity-and-uncertainty
+how-to-deal-with-uncertainty
+one-way-deterministic-sensitivity-analysis
+probabilistic-sensitivity-analysis-psa
+distributions-for-probability-parameters
+distributions-for-relative-risks-or-odd-ratios-parameters
+distributions-for-costs
+distributions-for-utilities
