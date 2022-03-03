@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>References | Advanced decision modelling in the context of Health Technology Assessment</title>
-  <meta name="description" content="References | Advanced decision modelling in the context of Health Technology Assessment" />
+  <title>Chapter 7 Presenting results from probabilistic models | Advanced decision modelling in the context of Health Technology Assessment</title>
+  <meta name="description" content="Chapter 7 Presenting results from probabilistic models | Advanced decision modelling in the context of Health Technology Assessment" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="References | Advanced decision modelling in the context of Health Technology Assessment" />
+  <meta property="og:title" content="Chapter 7 Presenting results from probabilistic models | Advanced decision modelling in the context of Health Technology Assessment" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | Advanced decision modelling in the context of Health Technology Assessment" />
+  <meta name="twitter:title" content="Chapter 7 Presenting results from probabilistic models | Advanced decision modelling in the context of Health Technology Assessment" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="introduction-to-r.html"/>
-
+<link rel="prev" href="uncertainty.html"/>
+<link rel="next" href="assignments.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -297,52 +297,25 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered">
-<h1>References</h1>
+<div id="results" class="section level1" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Presenting results from probabilistic models</h1>
+<p>In this chapter, we explore exactly how probabilistic models, with all parameters being represented by their respective distributions, should be handled in terms of producing, analysing and then presenting the results of
+the probabilistic analysis.</p>
+<div id="two-treatment-alternatives" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Two treatment alternatives</h2>
+<p>The cost-effectiveness plane is presented in Figure <a href="decision.html#fig:fig2">2.2</a> and shows the difference (treatment minus control) in effectiveness <span class="math inline">\(\Delta E\)</span> per patient against the difference in cost (<span class="math inline">\(\Delta C\)</span>) per patient.</p>
+<p><strong>Questions</strong></p>
+<ol style="list-style-type: decimal">
+<li>What is the interpretation of this plane in terms of being cost-effective or not?</li>
+</ol>
+<p>Of course, the above discussion assumes that we know with certainty the cost, effect and cost-effectiveness of an intervention, such that the appropriate decision is clear. In practice, the outputs of our probabilistic models give us the distribution over incremental cost, incremental effect and the joint distribution (see next Figure).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig6"></span>
+<img src="images/simulacionmc.png" alt="Estimated joint cost-effectiveness density for a model plotted on the cost-effectiveness plane." width="1989" />
+<p class="caption">
+Figure 7.1: Estimated joint cost-effectiveness density for a model plotted on the cost-effectiveness plane.
+</p>
+</div>
 
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div class="csl-entry">
-Birch, Stephen, and Amiram Gafni. 1992. <span>“Cost Effectiveness/Utility Analyses: Do Current Decision Rules Lead Us to Where We Want to Be?”</span> <em>Journal of Health Economics</em> 11 (3): 279–96.
-</div>
-<div class="csl-entry">
-Briggs, Andrew H, Milton C Weinstein, Elisabeth AL Fenwick, Jonathan Karnon, Mark J Sculpher, and A David Paltiel. 2012. <span>“Model Parameter Estimation and Uncertainty Analysis: A Report of the ISPOR-SMDM Modeling Good Research Practices Task Force Working Group–6.”</span> <em>Medical Decision Making</em> 32 (5): 722–32.
-</div>
-<div class="csl-entry">
-Caro, J Jaime, Andrew H Briggs, Uwe Siebert, and Karen M Kuntz. 2012. <span>“Modeling Good Research Practices—Overview: A Report of the ISPOR-SMDM Modeling Good Research Practices Task Force–1.”</span> <em>Medical Decision Making</em> 32 (5): 667–77.
-</div>
-<div class="csl-entry">
-Culyer, Anthony J. 1980. <em>The Political Economy of Social Policy</em>. St. Martin’s Press.
-</div>
-<div class="csl-entry">
-Dahabreh, Issa J, Thomas A Trikalinos, Ethan M Balk, and John B Wong. 2016. <span>“Guidance for the Conduct and Reporting of Modeling and Simulation Studies in the Context of Health Technology Assessment.”</span> <em>Methods Guide for Effectiveness and Comparative Effectiveness Reviews [Internet]</em>.
-</div>
-<div class="csl-entry">
-Goeree, Ron. 2015. <em>Health Technology Assessment: Using Biostatistics to Break the Barriers of Adopting New Medicines</em>. CRC Press.
-</div>
-<div class="csl-entry">
-Gray, Alastair M, Philip M Clarke, Jane L Wolstenholme, and Sarah Wordsworth. 2011. <em>Applied Methods of Cost-Effectiveness Analysis in Healthcare</em>. Vol. 3. Oxford University Press.
-</div>
-<div class="csl-entry">
-Green, Andrew, and Carol Barker. 1988. <span>“Priority Setting and Economic Appraisal: Whose Priorities—the Community or the Economist?”</span> <em>Social Science &amp; Medicine</em> 26 (9): 919–29.
-</div>
-<div class="csl-entry">
-Laupacis, Andreas, David Feeny, Allan S Detsky, and Peter X Tugwell. 1992. <span>“How Attractive Does a New Technology Have to Be to Warrant Adoption and Utilization? Tentative Guidelines for Using Clinical and Economic Evaluations.”</span> <em>CMAJ: Canadian Medical Association Journal</em> 146 (4): 473.
-</div>
-<div class="csl-entry">
-Philips, Zoe, Laura Bojke, Mark Sculpher, Karl Claxton, and Su Golder. 2006. <span>“Good Practice Guidelines for Decision-Analytic Modelling in Health Technology Assessment.”</span> <em>Pharmacoeconomics</em> 24 (4): 355–71.
-</div>
-<div class="csl-entry">
-Roberts, Mark, Louise B Russell, A David Paltiel, Michael Chambers, Phil McEwan, and Murray Krahn. 2012. <span>“Conceptualizing a Model: A Report of the ISPOR-SMDM Modeling Good Research Practices Task Force–2.”</span> <em>Medical Decision Making</em> 32 (5): 678–89.
-</div>
-<div class="csl-entry">
-Sculpher, Mark J, Karl Claxton, Mike Drummond, and Chris McCabe. 2006. <span>“Whither Trial-Based Economic Evaluation for Health Care Decision Making?”</span> <em>Health Economics</em> 15 (7): 677–87.
-</div>
-<div class="csl-entry">
-Weinstein, Milton C, and William B Stason. 1977. <span>“Foundations of Cost-Effectiveness Analysis for Health and Medical Practices.”</span> <em>New England Journal of Medicine</em> 296 (13): 716–21.
-</div>
-<div class="csl-entry">
-Williams, Alan et al. 2004. <span>“What Could Be Nicer Than NICE?”</span> <em>Monographs</em>.
-</div>
 </div>
 </div>
             </section>
@@ -350,8 +323,8 @@ Williams, Alan et al. 2004. <span>“What Could Be Nicer Than NICE?”</span> <e
           </div>
         </div>
       </div>
-<a href="introduction-to-r.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="uncertainty.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="assignments.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

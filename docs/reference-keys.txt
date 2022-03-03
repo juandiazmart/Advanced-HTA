@@ -12,6 +12,7 @@ fig:unnamed-chunk-4
 fig:unnamed-chunk-5
 fig:unnamed-chunk-6
 fig:fig5
+fig:fig6
 HTA
 pre-session-readings
 definition-and-rationale
@@ -75,5 +76,8 @@ one-way-deterministic-sensitivity-analysis
 probabilistic-sensitivity-analysis-psa
 distributions-for-probability-parameters
 distributions-for-relative-risks-or-odd-ratios-parameters
+distributions-for-probabilites-with-more-htan-2-categories.
 distributions-for-costs
 distributions-for-utilities
+results
+two-treatment-alternatives

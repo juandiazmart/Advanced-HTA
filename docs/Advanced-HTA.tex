@@ -6,7 +6,7 @@
 ]{book}
 \title{Advanced decision modelling in the context of Health Technology Assessment}
 \author{Juan Pablo Diaz Martinez}
-\date{2022-03-02}
+\date{2022-03-03}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -1593,8 +1593,7 @@ Once a probability distribution has been described for each parameter in the cos
 
 Probability parameters have an important constraint -- all probabilities can only take values between the range of zero and one. Furthermore, probabilities of mutually exclusive events must sum to one.
 
-The beta distribution is a natural choice for representing uncertainty in a probability parameter where the data informing that parameter are binomial. The beta distribution is constrained on the interval 0--1 and is characterized by two parameters, \(alpha\) and \(beta\). When data are binomially distributed, fitting the beta distribution turns out to be extremely straightforward. If the data are represented by a number of events of interest \(r\), observed from a given sample size \(n\), the proportion of events to the total sample gives the point estimate of the probability. Uncertainty in this probability can be represented by a beta
-\$(\alpha,\beta) \$distribution, simply by setting \(\alpha = r\) and \(\beta = n–r\). Let's say that in a RCT, 4 adverse events were present in 20 patients. Therefore, shows the result of fitting a beta(4,16) distribution to the data of the previous example.
+The beta distribution is a natural choice for representing uncertainty in a probability parameter where the data informing that parameter are binomial. The beta distribution is constrained on the interval 0--1 and is characterized by two parameters, \(\alpha\) and \(\beta\). When data are binomially distributed, fitting the beta distribution turns out to be extremely straightforward. If the data are represented by a number of events of interest \(r\), observed from a given sample size \(n\), the proportion of events to the total sample gives the point estimate of the probability. Uncertainty in this probability can be represented by a beta distribution, simply by setting \(\alpha = r\) and \(\beta = n–r\). Let's say that in a RCT, 4 adverse events were present in 20 patients. Therefore, shows the result of fitting a beta(4,16) distribution to the data of the previous example.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1654,6 +1653,11 @@ where \(UL\) and \(LL\) denothe the upper and lower limits of the confidence int
 
 \includegraphics{Advanced-HTA_files/figure-latex/unnamed-chunk-8-1.pdf}
 
+\hypertarget{distributions-for-probabilites-with-more-htan-2-categories.}{%
+\subsubsection{Distributions for probabilites with more htan 2 categories.}\label{distributions-for-probabilites-with-more-htan-2-categories.}}
+
+The Dirichlet distribution, which is the multivariate generalization of the beta distribution with parameters equal to the number of categories in the multinomial distribution, can be used to represent, in a probabilistic fashion, the transition probabilities for transiting among polytomous categories (or model states).
+
 \hypertarget{distributions-for-costs}{%
 \subsubsection{Distributions for costs}\label{distributions-for-costs}}
 
@@ -1672,7 +1676,7 @@ will be \$6948 for the purposes of this example. Unfortunately, although this es
 patient-level cost data set, no standard error was reported. For the purposes of this example, suppose that the standard error is the same value as the mean. Therefore
 
 \[
-\alpha = 6948/6948 = 1 \quad \beta = 69482/6948 = 6948,
+\alpha = 6948/6948 = 1 \quad \beta = 69482/6948 = 6948
 \]
 
 \hypertarget{distributions-for-utilities}{%
@@ -1680,8 +1684,38 @@ patient-level cost data set, no standard error was reported. For the purposes of
 
 A pragmatic approach, often employed when health state utilities are far from zero, is to use a beta distribution. However, this is not appropriate for states close to death where values less than one are possible.
 
-A simple transformation of \(D= 1-U\), such that \(D\) is a utility decrement or a
-disutility provides the solution. This utility decrement is now constrained on the interval 0 to positive infinity and the previous methods of fitting a gamma distribution can be applied.
+A simple transformation of \(D= 1-U\), such that \(D\) is a utility decrement or a disutility provides the solution. This utility decrement is now constrained on the interval 0 to positive infinity and the previous methods of fitting a gamma distribution can be applied.
+
+\hypertarget{results}{%
+\chapter{Presenting results from probabilistic models}\label{results}}
+
+In this chapter, we explore exactly how probabilistic models, with all parameters being represented by their respective distributions, should be handled in terms of producing, analysing and then presenting the results of
+the probabilistic analysis.
+
+\hypertarget{two-treatment-alternatives}{%
+\section{Two treatment alternatives}\label{two-treatment-alternatives}}
+
+The cost-effectiveness plane is presented in Figure \ref{fig:fig2} and shows the difference (treatment minus control) in effectiveness \(\Delta E\) per patient against the difference in cost (\(\Delta C\)) per patient.
+
+\textbf{Questions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  What is the interpretation of this plane in terms of being cost-effective or not?
+\end{enumerate}
+
+Of course, the above discussion assumes that we know with certainty the cost, effect and cost-effectiveness of an intervention, such that the appropriate decision is clear. In practice, the outputs of our probabilistic models give us the distribution over incremental cost, incremental effect and the joint distribution (see next Figure).
+
+\begin{figure}
+
+{\centering \includegraphics[width=55.25in]{images/simulacionmc} 
+
+}
+
+\caption{Estimated joint cost-effectiveness density for a model plotted on the cost-effectiveness plane.}\label{fig:fig6}
+\end{figure}
 
 \hypertarget{assignments}{%
 \chapter*{Assignments}\label{assignments}}

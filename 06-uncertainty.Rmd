@@ -85,8 +85,7 @@ Once a probability distribution has been described for each parameter in the cos
 
 Probability parameters have an important constraint – all probabilities can only take values between the range of zero and one. Furthermore, probabilities of mutually exclusive events must sum to one. 
 
-The beta distribution is a natural choice for representing uncertainty in a probability parameter where the data informing that parameter are binomial. The beta distribution is constrained on the interval 0–1 and is characterized by two parameters, $alpha$ and $beta$. When data are binomially distributed, fitting the beta distribution turns out to be extremely straightforward. If the data are represented by a number of events of interest $r$, observed from a given sample size $n$, the proportion of events to the total sample gives the point estimate of the probability. Uncertainty in this probability can be represented by a beta
-$(\alpha,\beta) $distribution, simply by setting $\alpha = r$ and $\beta = n–r$. Let's say that in a RCT, 4 adverse events were present in 20 patients. Therefore, shows the result of fitting a beta(4,16) distribution to the data of the previous example.
+The beta distribution is a natural choice for representing uncertainty in a probability parameter where the data informing that parameter are binomial. The beta distribution is constrained on the interval 0–1 and is characterized by two parameters, $\alpha$ and $\beta$. When data are binomially distributed, fitting the beta distribution turns out to be extremely straightforward. If the data are represented by a number of events of interest $r$, observed from a given sample size $n$, the proportion of events to the total sample gives the point estimate of the probability. Uncertainty in this probability can be represented by a beta distribution, simply by setting $\alpha = r$ and $\beta = n–r$. Let's say that in a RCT, 4 adverse events were present in 20 patients. Therefore, shows the result of fitting a beta(4,16) distribution to the data of the previous example.
 
 ```{r}
 #define range
@@ -131,6 +130,10 @@ plot(x, dnorm(x, -.675, .17), ylab='density',
 abline(v=-.675, col="blue")
 ```
 
+#### Distributions for probabilites with more htan 2 categories.
+
+The Dirichlet distribution, which is the multivariate generalization of the beta distribution with parameters equal to the number of categories in the multinomial distribution, can be used to represent, in a probabilistic fashion, the transition probabilities for transiting among polytomous categories (or model states).
+
 #### Distributions for costs
 
 Just as our choice of distribution for probability data was based upon the range of the data, so it should be noted that cost data are constrained to be non-negative and are made up of counts of resource use weighted by unit costs.
@@ -156,5 +159,4 @@ $$
 
 A pragmatic approach, often employed when health state utilities are far from zero, is to use a beta distribution. However, this is not appropriate for states close to death where values less than one are possible.
 
-A simple transformation of $D= 1-U$, such that $D$ is a utility decrement or a
-disutility provides the solution. This utility decrement is now constrained on the interval 0 to positive infinity and the previous methods of fitting a gamma distribution can be applied.
+A simple transformation of $D= 1-U$, such that $D$ is a utility decrement or a disutility provides the solution. This utility decrement is now constrained on the interval 0 to positive infinity and the previous methods of fitting a gamma distribution can be applied.
