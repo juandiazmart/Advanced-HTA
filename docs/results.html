@@ -24,7 +24,7 @@
 <meta name="author" content="Juan Pablo Diaz Martinez" />
 
 
-<meta name="date" content="2022-03-03" />
+<meta name="date" content="2022-03-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -250,7 +250,11 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="7" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>7</b> Presenting results from probabilistic models</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="results.html"><a href="results.html#two-treatment-alternatives"><i class="fa fa-check"></i><b>7.1</b> Two treatment alternatives</a></li>
+<li class="chapter" data-level="7.1" data-path="results.html"><a href="results.html#two-treatment-alternatives"><i class="fa fa-check"></i><b>7.1</b> Two treatment alternatives</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="results.html"><a href="results.html#quantifying-uncertainty"><i class="fa fa-check"></i><b>7.1.1</b> Quantifying uncertainty</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="results.html"><a href="results.html#multiple-treatment-options"><i class="fa fa-check"></i><b>7.2</b> Multiple treatment options</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="assignments.html"><a href="assignments.html"><i class="fa fa-check"></i>Assignments</a>
 <ul>
@@ -308,13 +312,45 @@ the probabilistic analysis.</p>
 <ol style="list-style-type: decimal">
 <li>What is the interpretation of this plane in terms of being cost-effective or not?</li>
 </ol>
-<p>Of course, the above discussion assumes that we know with certainty the cost, effect and cost-effectiveness of an intervention, such that the appropriate decision is clear. In practice, the outputs of our probabilistic models give us the distribution over incremental cost, incremental effect and the joint distribution (see next Figure).</p>
+<p>Of course, the above discussion assumes that we know with certainty the cost, effect and cost-effectiveness of an intervention, such that the appropriate decision is clear. In practice, the outputs of our probabilistic models give us the distribution over incremental cost, incremental effect and the joint distribution. Figure <a href="results.html#fig:fig6">7.1</a> shows 1000 Monte Carlo simulations of the output of a decision model.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig6"></span>
 <img src="images/simulacionmc.png" alt="Estimated joint cost-effectiveness density for a model plotted on the cost-effectiveness plane." width="1989" />
 <p class="caption">
 Figure 7.1: Estimated joint cost-effectiveness density for a model plotted on the cost-effectiveness plane.
 </p>
 </div>
+<p>The presentation of the simulated joint density in Figure <a href="results.html#fig:fig6">7.1</a> previous requires that the probabilistic output of our probabilistic models is recorded. As this is a straight forward repetitive process, it can be easily achieved in Excel using simple programs known as <code>macros</code>.</p>
+<div id="quantifying-uncertainty" class="section level3" number="7.1.1">
+<h3><span class="header-section-number">7.1.1</span> Quantifying uncertainty</h3>
+<p>Interval estimates can be obtained for outcomes of interest using the simulation results by using the percentile method. This simply involves taking the <span class="math inline">\(\alpha/2\)</span> and <span class="math inline">\((1 − \alpha/2)\)</span> percentiles of the simulation vector as the <span class="math inline">\((1 − \alpha)100%\)</span> uncertainty interval for outcomes of interest.</p>
+<div id="aceptability-curves" class="section level4" number="7.1.1.1">
+<h4><span class="header-section-number">7.1.1.1</span> Aceptability curves</h4>
+<p>If the estimated ICER lies below the threshold ratio <span class="math inline">\(\lambda\)</span>, reflecting the maximum that decision makers are willing to invest to achieve a unit of effectiveness, then it should be implemented. Therefore, in terms of the Monte Carlo simulations on the cost-effectiveness plane in, we could summarize uncertainty by considering how many of the simulations fall below and to the right of a line with slope equal to <span class="math inline">\(\lambda\)</span>, lending support to the cost-effectiveness of the intervention.</p>
+<p>The value of <span class="math inline">\(\lambda\)</span> is itself unknown. However, it can be varied in order to show how the evidence in favour of cost-effectiveness of the intervention varies with <span class="math inline">\(\lambda\)</span>.The resulting curve is shown in Figure <a href="results.html#fig:fig7">7.2</a> and has been termed a cost-effectiveness acceptability curve as it directly summarizes the evidence in support of the intervention being cost-effective (i.e. acceptable) for all potential values of the decision rule</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig7"></span>
+<img src="images/ceac.png" alt="CEAC." width="1545" />
+<p class="caption">
+Figure 7.2: CEAC.
+</p>
+</div>
+</div>
+<div id="the-net-benefit-framework" class="section level4" number="7.1.1.2">
+<h4><span class="header-section-number">7.1.1.2</span> The net-benefit framework</h4>
+<p>The algebraic formulation of the decision rule for cost-effectiveness analysis that a new treatment should be implemented
+only if its ICER lies below the threshold ratio, <span class="math inline">\(\frac{\Delta C}{\Delta E}&lt;\lambda\)</span>, can be rearranged in two equivalent ways to give two alternative inequalities on either the cost scale (net monetary benefit, NMB) or on the effect scale (net health benefit, NHB).</p>
+<p><span class="math display">\[
+\begin{aligned}
+ NMB &amp;: \lambda\Delta E - \Delta C&gt;0 \\
+ NHB &amp;: \Delta E - \frac{\Delta C}{\lambda}&gt;0
+\end{aligned}
+\]</span></p>
+<p>By using a net-benefit formulation, we can avoid the problem apparent with ICERs of conflating simulations of the same sign but in opposite quadrants of the cost-effectiveness plane.As such, it turns out to be much simpler to calculate acceptability curves from Monte Carlo simulations using net benefits than using the joint distribution of costs and effects.</p>
+</div>
+</div>
+</div>
+<div id="multiple-treatment-options" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Multiple treatment options</h2>
+<p>The standard presentation of the CEAC reflects the standard concern of cost-effectiveness analysis with the incremental comparison of an experimental treatment against a comparator treatment. The consequence is that, in a fully specified economic model, there are likely to be more than two treatment alternatives being compared.When this is the case, multiple CEACs can be presented.</p>
 
 </div>
 </div>

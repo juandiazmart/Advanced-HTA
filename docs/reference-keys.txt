@@ -13,6 +13,7 @@ fig:unnamed-chunk-5
 fig:unnamed-chunk-6
 fig:fig5
 fig:fig6
+fig:fig7
 HTA
 pre-session-readings
 definition-and-rationale
@@ -81,3 +82,7 @@ distributions-for-costs
 distributions-for-utilities
 results
 two-treatment-alternatives
+quantifying-uncertainty
+aceptability-curves
+the-net-benefit-framework
+multiple-treatment-options
